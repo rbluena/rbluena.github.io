@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import HeadTag from "../HeadTag";
-import Header from "../Header";
+import HeadTag from "@app-components/HeadTag";
+import Header from "@app-components/Header";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <HeadTag title="Home" />
-      <Header />
       <div
         style={{
           margin: `0 auto`,
