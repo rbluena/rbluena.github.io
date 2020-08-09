@@ -1,0 +1,28 @@
+{
+  "data": {
+    "am": {
+      "company": "AM2Studio",
+      "position": "Front-end Developer",
+      "location": "Remote",
+      "type": "contract",
+      "from": "Jul 2018",
+      "to": "Mar 2020"
+    },
+    "myzone": {
+      "company": "MyZone Media Inc",
+      "position": "Front-end Developer",
+      "location": "Remote",
+      "type": "contract",
+      "from": "Jul 2018",
+      "to": "Mar 2020"
+    },
+    "amazon": {
+      "company": "Amazon College",
+      "position": "Front-end Developer",
+      "location": "Remote",
+      "type": "contract",
+      "from": "Jul 2018",
+      "to": "Mar 2020"
+    }
+  }
+}
