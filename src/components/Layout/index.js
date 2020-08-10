@@ -1,7 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 import HeadTag from "@app-components/HeadTag";
+import Footer from "@app-components/Footer";
+
+const Wrapper = styled.div`
+  // font-family: "Fredoka One";
+  letter-spacing: 2px;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -15,7 +22,7 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
+    <Wrapper>
       <HeadTag title="Home" />
       <div
         style={{
@@ -25,15 +32,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} {data.site.siteMetadata.title}, Built
-          with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-          Hosted by GitHub Pages
-        </footer>
+        <Footer />
       </div>
-    </>
+    </Wrapper>
   );
 };
 
