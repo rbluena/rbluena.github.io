@@ -1,0 +1,12 @@
+{
+  "data": {
+    "greenrush": {
+      "title": "GreenRush",
+      "description": "Created cart and checkout process with react."
+    },
+    "cloudboost": {
+      "title": "CloudBoost",
+      "data": "Created authentication process on react, updated customers dashboard and worked on stripe intergration with expressjs"
+    }
+  }
+}

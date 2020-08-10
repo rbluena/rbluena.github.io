@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Layout from "../components/Layout";
+import Header from "@app-components/Header";
+import Layout from "@app-components/Layout";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ export default () => {
 
   return (
     <Layout>
+      <Header />
       <h2>Home Page</h2>
     </Layout>
   );

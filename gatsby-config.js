@@ -1,34 +1,27 @@
 module.exports = {
   siteMetadata: {
     title: `Rabii Luena`,
+    headline: `Software Engineer and JavaScript Enthusiast`,
     description: `Hi! I am Rabii Luena, a front-end and mobile application developer. `,
-    author: `@gatsbyjs`,
+    author: `@rbluena`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-module-resolver",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        root: "./src",
+        aliases: {
+          "@app-components": "./components",
+          "@app-helpers": "./helpers",
+          static: {
+            root: "./public",
+            alias: "./static",
+          },
+        },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

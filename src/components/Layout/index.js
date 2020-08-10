@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import HeadTag from "../HeadTag";
-import Header from "../Header";
+import HeadTag from "@app-components/HeadTag";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
@@ -18,7 +17,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <HeadTag title="Home" />
-      <Header />
       <div
         style={{
           margin: `0 auto`,

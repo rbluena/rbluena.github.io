@@ -1,0 +1,38 @@
+{
+  "data": {
+    "programming": {
+      "title": "Programming Languages",
+      "data": [
+        { "name": "JavaScript" },
+        { "name": "CSS" },
+        { "name": "SCSS" },
+        { "name": "Python *" }
+      ]
+    },
+    "databases": {
+      "title": "Databases",
+      "data": [{ "name": "MongoDB" }, { "name": "SQL" }]
+    },
+    "frameworks": {
+      "title": "Frameworks",
+      "data": [
+        { "name": "React" },
+        { "name": "React Native" },
+        { "name": "Gatsby" },
+        { "name": "NextJS" }
+      ]
+    },
+    "testing": {
+      "title": "Test",
+      "data": [{ "name": "Mocha" }, { "name": "Chai" }, { "name": "JEST" }]
+    },
+    "cloud": {
+      "title": "Cloud",
+      "data": [
+        { "name": "Heroku" },
+        { "name": "Digital Ocean" },
+        { "name": "Firebase *" }
+      ]
+    }
+  }
+}
