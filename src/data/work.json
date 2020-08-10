@@ -6,7 +6,8 @@
       "location": "Remote",
       "type": "contract",
       "from": "Jul 2018",
-      "to": "Mar 2020"
+      "to": "Mar 2020",
+      "project": "GreenRush"
     },
     "myzone": {
       "company": "MyZone Media Inc",
@@ -14,15 +15,24 @@
       "location": "Remote",
       "type": "contract",
       "from": "Jul 2018",
-      "to": "Mar 2020"
+      "to": "Mar 2020",
+      "Project": "ticketzone.com"
+    },
+    "cloudboost": {
+      "company": "CloudBoost",
+      "position": "software Developer",
+      "location": "Dar Es Salaam, Tanzania",
+      "type": "contract",
+      "from": "Nov 2017",
+      "to": "July 2018"
     },
     "amazon": {
       "company": "Amazon College",
       "position": "Front-end Developer",
-      "location": "Remote",
+      "location": "Dar Es Salaam, Tanzania",
       "type": "contract",
-      "from": "Jul 2018",
-      "to": "Mar 2020"
+      "from": "May 2013",
+      "to": "Oct 2015"
     }
   }
 }

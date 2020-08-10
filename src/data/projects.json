@@ -1,16 +1,12 @@
 {
   "data": {
-    "accessible": {
-      "title": "Accessibility",
-      "description": "Building accessible application is one of the things I put in consideration prior to building an application"
+    "greenrush": {
+      "title": "GreenRush",
+      "description": "Created cart and checkout process with react."
     },
-    "responsive": {
-      "title": "Responsive",
-      "data": "Using mobile-first approach..."
-    },
-    "optimization": {
-      "title": "Optimization",
-      "data": "Optimizing performance is..., be able to use tools like, lighthouse, bundlephobia for choosing right tool..."
+    "cloudboost": {
+      "title": "CloudBoost",
+      "data": "Created authentication process on react, updated customers dashboard and worked on stripe intergration with expressjs"
     }
   }
 }

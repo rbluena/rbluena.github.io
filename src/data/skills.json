@@ -2,7 +2,12 @@
   "data": {
     "programming": {
       "title": "Programming Languages",
-      "data": [{ "name": "JavaScript" }]
+      "data": [
+        { "name": "JavaScript" },
+        { "name": "CSS" },
+        { "name": "SCSS" },
+        { "name": "Python *" }
+      ]
     },
     "databases": {
       "title": "Databases",
@@ -26,7 +31,7 @@
       "data": [
         { "name": "Heroku" },
         { "name": "Digital Ocean" },
-        { "name": "Firebase" }
+        { "name": "Firebase *" }
       ]
     }
   }
