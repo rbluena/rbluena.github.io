@@ -6,13 +6,12 @@ const Heading = styled.h3``;
 const Item = styled.p``;
 
 function Skill({ data }) {
-  console.log(data);
   return (
     <Wrapper>
       <Heading>{data.title}</Heading>
 
       {data.items.map(item => {
-        return <Item>{item.name}</Item>;
+        return <Item key={item.name}>{item.name}</Item>;
       })}
     </Wrapper>
   );

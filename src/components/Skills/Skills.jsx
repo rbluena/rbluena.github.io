@@ -8,12 +8,10 @@ import Skill from "./Skill";
 const Skills = () => {
   const { data } = skills;
 
-  console.log(data);
-
   return (
     <ContentSection title="Skills">
       {Object.keys(data).map(key => {
-        return <Skill data={data[key]} />;
+        return <Skill key={key} data={data[key]} />;
       })}
     </ContentSection>
   );
