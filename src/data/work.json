@@ -7,7 +7,8 @@
       "type": "contract",
       "from": "Jul 2018",
       "to": "Mar 2020",
-      "project": "GreenRush"
+      "project": "GreenRush",
+      "companyUrl": ""
     },
     "myzone": {
       "company": "MyZone Media Inc",
@@ -16,7 +17,8 @@
       "type": "contract",
       "from": "Jul 2018",
       "to": "Mar 2020",
-      "Project": "ticketzone.com"
+      "Project": "ticketzone.com",
+      "companyUrl": ""
     },
     "cloudboost": {
       "company": "CloudBoost",
@@ -24,15 +26,17 @@
       "location": "Dar Es Salaam, Tanzania",
       "type": "contract",
       "from": "Nov 2017",
-      "to": "July 2018"
+      "to": "July 2018",
+      "companyUrl": ""
     },
     "amazon": {
-      "company": "Amazon College",
+      "company": "The Amazon College",
       "position": "Front-end Developer",
       "location": "Dar Es Salaam, Tanzania",
       "type": "contract",
       "from": "May 2013",
-      "to": "Oct 2015"
+      "to": "Oct 2015",
+      "companyUrl": ""
     }
   }
 }
