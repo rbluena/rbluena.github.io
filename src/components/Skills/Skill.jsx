@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Wrapper = styled.div``;
@@ -16,5 +17,9 @@ function Skill({ data }) {
     </Wrapper>
   );
 }
+
+Skill.propTypes = {
+  data: PropTypes.objectOf(PropTypes.shape).isRequired,
+};
 
 export default Skill;
