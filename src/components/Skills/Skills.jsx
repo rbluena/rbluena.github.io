@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import Section from "@app-components/ContentSection";
 import skills from "@app-data/skills.json";
 import ContentSection from "../ContentSection";
 import Skill from "./Skill";

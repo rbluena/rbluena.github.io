@@ -55,12 +55,18 @@ const Header = () => {
         <Fullname>About Me</Fullname>
         <Headline>{site.siteMetadata.description}</Headline>
         <Social>
-          <a className="icon" href="https://github.com/rbluena" target="_blank">
+          <a
+            className="icon"
+            href="https://github.com/rbluena"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FiGithub />
           </a>
           <a
             className="icon"
             href="https://www.linkedin.com/in/rbluena"
+            rel="noreferrer"
             target="_blank"
           >
             <FiLinkedin />
@@ -68,6 +74,7 @@ const Header = () => {
           <a
             className="icon"
             href="https://twitter.com/rbluena"
+            rel="noreferrer"
             target="_blank"
           >
             <FiTwitter />
