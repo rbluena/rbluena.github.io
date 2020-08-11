@@ -6,15 +6,15 @@
     },
     "responsive": {
       "title": "Responsive",
-      "data": "Using mobile-first approach..."
+      "description": "Using mobile-first approach..."
     },
     "optimization": {
       "title": "Optimization",
-      "data": "Optimizing performance is..., be able to use tools like, lighthouse, bundlephobia for choosing right tool..."
+      "description": "Optimizing performance is..., be able to use tools like, lighthouse, bundlephobia for choosing right tool..."
     },
     "styleguide": {
       "title": "Styleguide and Design System",
-      "data": "Being able to conceptualize and ... using tools like storybook, ...jira..."
+      "description": "Being able to conceptualize and ... using tools like storybook, ...jira..."
     },
     "userbility": {},
     "testability": {}
