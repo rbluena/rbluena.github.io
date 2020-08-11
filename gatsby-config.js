@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Rabii Luena`,
     headline: `Front-end Engineer and JavaScript Enthusiast`,
-    description: `Hi! I am Rabii Luena, a front-end and mobile application developer.`,
+    description: `I am front-end and mobile application developer.`,
     author: `@rbluena`,
   },
   plugins: [
@@ -29,6 +29,7 @@ module.exports = {
         aliases: {
           "@app-components": "./components",
           "@app-helpers": "./helpers",
+          "@app-data": "./data",
           static: {
             root: "./public",
             alias: "./static",

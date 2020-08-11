@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "@app-components/Layout";
+import Skills from "@app-components/Skills";
 
 export default () => {
   return (
     <Layout>
-      <h2>Home Page</h2>
+      <Skills />
     </Layout>
   );
 };

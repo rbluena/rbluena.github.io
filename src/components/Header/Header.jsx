@@ -1,11 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import Img from "gatsby-image";
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import Nav from "@app-components/Nav";
 
 const Wrapper = styled.header`
-  width: 100%;
-  height: 200px;
+  padding: 15px;
 `;
 
 const Logo = styled.div`
@@ -23,7 +23,13 @@ const Fullname = styled.h1``;
 
 const Headline = styled.p``;
 
-const Social = styled.div``;
+const Social = styled.div`
+  .icon {
+    font-size: 20px;
+    padding: 2px;
+    margin: 3px;
+  }
+`;
 
 const Header = () => {
   const { site } = useStaticQuery(
@@ -43,11 +49,30 @@ const Header = () => {
   return (
     <Wrapper>
       <Logo>Luena</Logo>
-
+      <Nav />
       <PersonalDetails>
-        <Fullname>{site.siteMetadata.title}</Fullname>
+        {/* <Fullname>{site.siteMetadata.title}</Fullname> */}
+        <Fullname>About Me</Fullname>
         <Headline>{site.siteMetadata.description}</Headline>
-        <Social>Social</Social>
+        <Social>
+          <a className="icon" href="https://github.com/rbluena" target="_blank">
+            <FiGithub />
+          </a>
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/rbluena"
+            target="_blank"
+          >
+            <FiLinkedin />
+          </a>
+          <a
+            className="icon"
+            href="https://twitter.com/rbluena"
+            target="_blank"
+          >
+            <FiTwitter />
+          </a>
+        </Social>
       </PersonalDetails>
     </Wrapper>
   );

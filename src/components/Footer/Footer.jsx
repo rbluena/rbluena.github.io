@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Text from "@app-components/Text";
@@ -15,7 +14,7 @@ const Left = styled.div``;
 
 const Right = styled.div``;
 
-const Footer = props => {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -44,7 +43,5 @@ const Footer = props => {
     </Wrapper>
   );
 };
-
-Footer.propTypes = {};
 
 export default Footer;
