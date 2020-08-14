@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Wrapper = styled.div``;
-const Heading = styled.h3``;
+const Heading = styled.h3`
+  margin: 0px;
+  padding: 0px;
+`;
 const Description = styled.p``;
 
 const Item = ({ data }) => {

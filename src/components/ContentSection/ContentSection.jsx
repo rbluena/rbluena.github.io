@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 const Section = styled.section``;
 
-const Heading = styled.h2``;
+const Heading = styled.h1``;
 const Content = styled.div``;
 
 const ContentSection = ({ title, children }) => {
   return (
     <Section>
-      <Heading>{title}</Heading>
+      {title && <Heading>{title}</Heading>}
       <Content>{children}</Content>
     </Section>
   );

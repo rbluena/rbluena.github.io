@@ -9,8 +9,8 @@ export default () => {
   return (
     <Layout>
       <GoodAt />
-      <Skills />
       <Companies />
+      <Skills />
     </Layout>
   );
 };

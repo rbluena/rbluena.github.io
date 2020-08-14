@@ -6,7 +6,7 @@ import Item from "./Item";
 const GoodAt = () => {
   const { data } = tags;
   return (
-    <ContentSection title="Good At">
+    <ContentSection title="Striving for">
       {Object.keys(data).map(key => {
         return <Item key={key} data={data[key]} />;
       })}

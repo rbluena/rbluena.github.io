@@ -7,7 +7,7 @@ const Companies = () => {
   const { data } = work;
 
   return (
-    <ContentSection title="Companies">
+    <ContentSection title="Work Experience">
       {Object.keys(data).map(key => {
         return <Item key={key} data={data[key]} />;
       })}
