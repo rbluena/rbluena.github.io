@@ -2,19 +2,19 @@
   "data": {
     "accessible": {
       "title": "Accessibility",
-      "description": "Building accessible application is one of the things I put in consideration prior to building an application"
+      "description": "Building wep application while in mind considering folks with imparements."
     },
     "responsive": {
-      "title": "Responsive",
-      "description": "Using mobile-first approach..."
+      "title": "Responsiveness",
+      "description": "Taking advantage of modern CSS to build applications that can be accessible with large audience from ariety of screen sizes."
     },
     "optimization": {
       "title": "Optimization",
       "description": "Optimizing performance is..., be able to use tools like, lighthouse, bundlephobia for choosing right tool..."
     },
-    "styleguide": {
-      "title": "Styleguide and Design System",
-      "description": "Being able to conceptualize and ... using tools like storybook, ...jira..."
+    "documentation": {
+      "title": "Documenting",
+      "description": "The ability to use style guides and design systems to document user interfaces(UI) and user experiences(UX) of an application."
     },
     "userbility": {},
     "testability": {}
