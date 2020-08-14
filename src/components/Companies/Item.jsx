@@ -14,9 +14,6 @@ const Image = styled.div`
 `;
 
 const Details = styled.div``;
-const Heading = styled.h2``;
-const Subheading = styled.h3``;
-const Description = styled.p``;
 
 const Item = ({ data }) => {
   const image = require(`../../images/${data.image}`);
@@ -25,7 +22,7 @@ const Item = ({ data }) => {
     <Wrapper>
       <Image>
         <a href={data.companyUrl}>
-          <img src={image} className="" alt={`Image for ${data.company}`} />
+          <img src={image} className="" alt={`${data.company}`} />
         </a>
       </Image>
       <Details>

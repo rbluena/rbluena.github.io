@@ -71,7 +71,7 @@ const PersonalDetails = () => {
           <FiTwitter />
         </a>
       </Social>
-      <hr class="devider" />
+      <hr className="devider" />
     </Wrapper>
   );
 };
