@@ -5,9 +5,7 @@ import HeadTag from "@app-components/HeadTag";
 import Header from "@app-components/Header";
 import Footer from "@app-components/Footer";
 
-const Wrapper = styled.div`
-  font-family: "Lato", Helvetic, Arial, sans-serif;
-`;
+const Wrapper = styled.div``;
 
 const Main = styled.main`
   margin: 0 auto;

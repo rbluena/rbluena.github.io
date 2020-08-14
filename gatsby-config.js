@@ -28,8 +28,9 @@ module.exports = {
         root: "./src",
         aliases: {
           "@app-components": "./components",
-          "@app-helpers": "./helpers",
           "@app-data": "./data",
+          "@app-helpers": "./helpers",
+          "@app-utils": "./utils",
           static: {
             root: "./public",
             alias: "./static",

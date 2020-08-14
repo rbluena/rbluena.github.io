@@ -1,10 +1,12 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// import "typeface-advent-pro";
-// import "typeface-great-vibes";
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, defaultTheme, invertTheme } from "@app-utils/themes";
 import "typeface-fredoka-one";
 import "typeface-lato";
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={defaultTheme}>
+    <GlobalStyle />
+    {element}
+  </ThemeProvider>
+);
