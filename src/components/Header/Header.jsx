@@ -6,6 +6,7 @@ import Nav from "@app-components/Nav";
 
 const Wrapper = styled.header`
   padding: 15px;
+  position: relative;
 `;
 
 const Logo = styled.div`
@@ -13,6 +14,7 @@ const Logo = styled.div`
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: "Fredoka One";
+  color: grey;
 `;
 
 const PersonalDetails = styled.section`
