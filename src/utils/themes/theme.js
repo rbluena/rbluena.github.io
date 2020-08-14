@@ -1,20 +1,25 @@
 export const defaultTheme = {
-  bgColor: {
+  bgColors: {
     primary: "#FFFFFF",
   },
-  color: {
+  colors: {
     primary: "#000000",
+    gray: "#9E9E9E",
   },
   fonts: {
     primary: '"Lato", Helvetic, Arial, sans-serif;',
+    size: {
+      h1: "3rem",
+      h2: "1.25rem",
+    },
   },
 };
 
 export const invertTheme = {
-  bgColor: {
+  bgColors: {
     primary: "#000000",
   },
-  color: {
+  colors: {
     primary: "#FFFFFF",
   },
   fonts: {

@@ -4,39 +4,43 @@
       "company": "AM2Studio",
       "position": "Front-end Developer",
       "location": "Remote",
-      "type": "contract",
+      "type": "Contract",
       "from": "Jul 2018",
       "to": "Mar 2020",
       "project": "GreenRush",
-      "companyUrl": ""
+      "companyUrl": "",
+      "image": "gatsby-astronaut.png"
     },
     "myzone": {
       "company": "MyZone Media Inc",
       "position": "Front-end Developer",
       "location": "Remote",
-      "type": "contract",
+      "type": "Contract",
       "from": "Jul 2018",
       "to": "Mar 2020",
       "Project": "ticketzone.com",
-      "companyUrl": ""
+      "companyUrl": "",
+      "image": "gatsby-astronaut.png"
     },
     "cloudboost": {
       "company": "CloudBoost",
       "position": "software Developer",
       "location": "Dar Es Salaam, Tanzania",
-      "type": "contract",
+      "type": "Contract",
       "from": "Nov 2017",
       "to": "July 2018",
-      "companyUrl": ""
+      "companyUrl": "",
+      "image": "gatsby-astronaut.png"
     },
     "amazon": {
       "company": "The Amazon College",
       "position": "Front-end Developer",
       "location": "Dar Es Salaam, Tanzania",
-      "type": "contract",
+      "type": "Contract",
       "from": "May 2013",
       "to": "Oct 2015",
-      "companyUrl": ""
+      "companyUrl": "",
+      "image": "gatsby-astronaut.png"
     }
   }
 }

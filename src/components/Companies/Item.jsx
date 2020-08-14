@@ -1,25 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Text from "@app-components/Text";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+`;
+
+const Image = styled.div`
+  img {
+    max-width: 140px;
+  }
+`;
+
 const Details = styled.div``;
 const Heading = styled.h2``;
 const Subheading = styled.h3``;
 const Description = styled.p``;
 
 const Item = ({ data }) => {
+  const image = require(`../../images/${data.image}`);
+
   return (
     <Wrapper>
-      <a href={data.companyUrl}>
-        <img className="" alt="company" />
-      </a>
+      <Image>
+        <a href={data.companyUrl}>
+          <img src={image} className="" alt={`Image for ${data.company}`} />
+        </a>
+      </Image>
       <Details>
-        <Heading>{data.company}</Heading>
-        <Subheading>
+        <Text.Heading>{data.company}</Text.Heading>
+        <Text.Subheading>
           {data.from}-{data.to}
-        </Subheading>
-        <Description>{data.description && data.description}</Description>
+        </Text.Subheading>
+        {/* <Text>{data.type}</Text> */}
       </Details>
     </Wrapper>
   );
