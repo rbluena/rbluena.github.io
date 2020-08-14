@@ -9,7 +9,7 @@ const Companies = () => {
   return (
     <ContentSection title="Companies">
       {Object.keys(data).map(key => {
-        return <Item data={data[key]} />;
+        return <Item key={key} data={data[key]} />;
       })}
     </ContentSection>
   );
