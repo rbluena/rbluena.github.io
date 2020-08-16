@@ -13,6 +13,9 @@ export const defaultTheme = {
       h2: "1.25rem",
     },
   },
+  spaces: {
+    padding: "0 1.0875rem 1.45rem",
+  },
 };
 
 export const invertTheme = {
@@ -26,3 +29,5 @@ export const invertTheme = {
     primary: '"Lato", Helvetic, Arial, sans-serif;',
   },
 };
+
+export const laxuryTheme = {};

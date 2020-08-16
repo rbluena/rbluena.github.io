@@ -5,12 +5,14 @@ import HeadTag from "@app-components/HeadTag";
 import Header from "@app-components/Header";
 import Footer from "@app-components/Footer";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding-bottom: 1.0875rem;
+`;
 
 const Main = styled.main`
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
+  padding: ${props => props.theme.spaces.padding};
 `;
 
 const Layout = ({ children }) => {

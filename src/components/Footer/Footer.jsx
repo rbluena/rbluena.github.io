@@ -5,9 +5,14 @@ import Text from "@app-components/Text";
 
 const Wrapper = styled.footer`
   width: 100%;
-  height; 50px;
-  display: flex;
-  justify-content: space-between;
+  height: 50px;
+  padding: ${props => props.theme.spaces.padding};
+  font-weight: bold;
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const Left = styled.div``;
