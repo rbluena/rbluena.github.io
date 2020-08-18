@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Children } from "react";
 
 const H1 = styled.h1`
   font-size: ${props => props.theme.typography.size.h1};
@@ -62,10 +61,19 @@ const Text = ({ children, size }) => {
     return <Small>{children}</Small>;
   }
   if (size === "xs") {
-    return <Small>{children}</Small>;
+    return <ExtraSmall>{children}</ExtraSmall>;
   }
 
   return <Base>{children}</Base>;
+};
+
+Text.defaultProps = {
+  size: undefined,
+};
+
+Text.propTypes = {
+  children: PropTypes.node.isRequired,
+  size: PropTypes.string,
 };
 
 export default Text;
