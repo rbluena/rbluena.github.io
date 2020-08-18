@@ -1,7 +1,7 @@
 import { typography, spacing, border } from "./tokens.json";
 
 export const defaultTheme = {
-  colors: {
+  color: {
     primary: "#63C7FF",
     secondary: "#FFFFFF",
     monochrome: {
