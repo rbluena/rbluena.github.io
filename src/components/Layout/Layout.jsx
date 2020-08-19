@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Main = styled.main`
   margin: 0 auto;
   max-width: 960px;
-  padding: ${props => props.theme.spaces.padding};
+  /* padding: ${props => props.theme.spaces.padding}; */
 `;
 
 const Layout = ({ children }) => {

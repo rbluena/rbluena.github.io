@@ -2,18 +2,25 @@ import { typography, spacing, border } from "./tokens.json";
 
 export const defaultTheme = {
   color: {
-    primary: "#63C7FF",
-    secondary: "#FFFFFF",
+    blue: {
+      100: "#3685A8",
+      200: "#63C7FF",
+      300: "#9BFAFF",
+    },
+    red: {
+      100: "#FF006E",
+      200: "#FF5C9C",
+    },
     monochrome: {
-      lightest: "#FFFFFF",
-      lighter: "#F8F8F8",
-      light: "#F3F3F3",
-      mediumlight: "#EEEEEE",
-      medium: "#DDDDDD",
-      mediumdark: "#999999",
-      dark: "#666666",
-      darker: "#444444",
-      darkest: "#333333",
+      100: "#333333",
+      200: "#444444",
+      300: "#666666",
+      400: "#999999",
+      500: "#DDDDDD",
+      600: "#EEEEEE",
+      700: "#F3F3F3",
+      800: "#F8F8F8",
+      900: "#FFFFFF",
     },
   },
   typography: { ...typography },
