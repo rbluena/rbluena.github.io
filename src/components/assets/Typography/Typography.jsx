@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const H1 = styled.h1`
@@ -13,17 +14,18 @@ const H3 = styled.h3`
   font-size: ${props => props.theme.typography.size.h3};
 `;
 
-const H4 = styled.h4`
-  font-size: ${props => props.theme.typography.size.h4};
-`;
+// const H4 = styled.h4`
+//   font-size: ${props => props.theme.typography.size.h4};
+// `;
 
-const H5 = styled.h5`
-  font-size: ${props => props.theme.typography.size.h5};
-`;
+// const H5 = styled.h5`
+//   font-size: ${props => props.theme.typography.size.h5};
+// `;
 
-const H6 = styled.h6`
-  font-size: ${props => props.theme.typography.size.h6};
-`;
+// const H6 = styled.h6`
+//   font-size: ${props => props.theme.typography.size.h6};
+// `;
+
 const Large = styled.p`
   font-size: ${props => props.theme.typography.size.large};
 `;
