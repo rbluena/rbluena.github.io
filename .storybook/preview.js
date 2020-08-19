@@ -1,3 +1,8 @@
+import React, { Fragment } from "react";
+import { addDecorator } from "@storybook/react";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "../src/utils/themes";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   // options: {
@@ -7,3 +12,11 @@ export const parameters = {
   //       : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   // },
 };
+
+export const decorators = [
+  Story => (
+    <ThemeProvider theme={defaultTheme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];
