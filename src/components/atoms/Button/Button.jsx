@@ -12,7 +12,6 @@ const StyledButton = styled.button`
   padding: ${props => props.theme.spacing.xs}px
     ${props => props.theme.spacing.sm}px;
   font-size: ${props => props.theme.typography.size.base}px;
-  font-weight: ${props => props.theme.typography.weight.bold};
   background-color: ${props => props.theme.color.monochrome[800]};
   color: ${props => props.theme.color.monochrome[300]};
   box-shadow: ${props => props.theme.elevation.default};
