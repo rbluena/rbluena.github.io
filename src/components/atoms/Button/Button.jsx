@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   text-decoration: none;
   border: 0;
   outline: none;
+  border-radius: 4px;
   padding: ${props => props.theme.spacing.xs}px
     ${props => props.theme.spacing.sm}px;
   font-size: ${props => props.theme.typography.size.base}px;
@@ -29,8 +30,17 @@ const StyledButton = styled.button`
     props.primary &&
     `
     background-color: ${props.theme.color.blue[200]};
-    background-color: ${props.theme.color.blue[200]};
     color: ${props.theme.color.monochrome[800]};
+  `}
+
+  /* Primary Outline */
+  ${props =>
+    props.primary &&
+    props.outline &&
+    `
+    background: transparent;
+    color: ${props.theme.color.monochrome[100]};
+    border: 2px solid ${props.theme.color.blue[200]}
   `}
 
   /* Secondary Button */
@@ -40,14 +50,51 @@ const StyledButton = styled.button`
     background-color: ${props.theme.color.red[200]};
     color: ${props.theme.color.monochrome[800]};
   `}
+
+  /* Secondary Outline */
+  ${props =>
+    props.secondary &&
+    props.outline &&
+    `
+    background: transparent;
+    color: ${props.theme.color.monochrome[100]};
+    border: 2px solid ${props.theme.color.red[200]}
+  `}
 `;
 
-const Button = ({ children, ...config }) => (
-  <StyledButton {...config}>{children}</StyledButton>
-);
+export const ButtonLink = styled.a`
+  padding: ${props => props.theme.spacing.xs}px
+    ${props => props.theme.spacing.sm}px;
+  color: ${props => props.theme.color.red[200]};
+  text-decoration: none;
+  opacity: 80%;
 
-Button.defaultProps = {};
+  &:hover {
+    cursor: pointer;
+    outline: none;
+    opacity: 100%;
+  }
+`;
 
-Button.propTypes = {};
+const Button = ({ children, type, ...rest }) => {
+  if (type === "link") {
+    return <ButtonLink>{children}</ButtonLink>;
+  }
+
+  return <StyledButton {...rest}>{children}</StyledButton>;
+};
+
+Button.defaultProps = {
+  primary: undefined,
+  secondary: undefined,
+  type: undefined,
+};
+
+Button.propTypes = {
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  outline: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+};
 
 export default Button;

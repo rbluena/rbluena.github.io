@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Typeset } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
 import { defaultTheme as theme } from "../../../utils/themes";
 import Button from "./Button";
 
@@ -6,33 +6,37 @@ import Button from "./Button";
 
 # Button
 
-export const Template = args => <Button {...args} />;
+export const Primary = args => <Button {...args}>{arg.children}</Button>;
+Primary.args = { primary: true, children: "Primary" };
+
+<ArgsTable of={Button} />
+
+### All
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      children: "Default",
-    }}
-  >
-    {Template.bind({})}
+  <Story name="All">
+    <Button>Default</Button>
+    <Button primary>Primary</Button>
+    <Button secondary>Secondary</Button>
+    <Button primary outline>
+      Primary
+    </Button>
+    <Button secondary outline>
+      Secondary
+    </Button>
   </Story>
-  <Story
-    name="Primary"
-    args={{
-      children: "Primary",
-      primary: true,
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-  <Story
-    name="Secondary"
-    args={{
-      children: "Secondary",
-      secondary: true,
-    }}
-  >
-    {Template.bind({})}
+</Canvas>
+
+### Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    <Button primary small>
+      Primary
+    </Button>
+    <Button primary>Secondary</Button>
+    <Button primary large>
+      Secondary
+    </Button>
   </Story>
 </Canvas>
