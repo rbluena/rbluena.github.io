@@ -59,6 +59,16 @@ const StyledButton = styled.button`
     color: ${props.theme.color.monochrome[100]};
     border: 2px solid ${props.theme.color.red[200]}
   `}
+
+  /* Small Button */
+  ${props =>
+    props.small &&
+    `
+    padding-top: ${props.theme.spacing.xxs}px;
+    padding-bottom: ${props.theme.spacing.xxs}px;
+    font-size: ${props.theme.typography.size.base}px
+
+  `}
 `;
 
 export const ButtonLink = styled.a`
