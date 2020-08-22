@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { addDecorator } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "../src/utils/themes";
+import { GlobalStyle, defaultTheme } from "../src/utils/themes";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -16,6 +16,7 @@ export const parameters = {
 export const decorators = [
   Story => (
     <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
       <Story />
     </ThemeProvider>
   ),
