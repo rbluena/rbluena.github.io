@@ -6,8 +6,21 @@ import data from "@app-data/main-nav.json";
 
 # Nav
 
+<ArgsTable of={Nav} />
+
+### Data
+
+```json
+(data = [
+  { "label": "Home", "url": "/" },
+  { "label": "Contact", "url": "/contact" },
+  { "label": "Blog", "url": "/blog" },
+  { "label": "Resume", "url": "https://google.com", "as": "a" }
+])
+```
+
 <Canvas>
   <Story name="Main Nav">
-    <Nav navList={data} />
+    <Nav navItems={data} />
   </Story>
 </Canvas>

@@ -8,10 +8,10 @@ const StyledNav = styled.div`
   justify-content: center;
 `;
 
-const Nav = ({ navList }) => {
+const Nav = ({ navItems }) => {
   return (
     <>
-      {navList.map(item => (
+      {navItems.map(item => (
         <Link key={item.label} data={item}>
           {item.label}
         </Link>
@@ -21,10 +21,11 @@ const Nav = ({ navList }) => {
 };
 
 Nav.propTypes = {
-  navList: PropTypes.arrayOf(
+  /** Navigation data */
+  navItems: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string.isRequired,
-      type: PropTypes.string,
+      as: PropTypes.string,
     })
   ),
 };
