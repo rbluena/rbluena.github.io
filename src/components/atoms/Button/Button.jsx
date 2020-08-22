@@ -84,7 +84,6 @@ export const ButtonLink = styled.a`
     opacity: 100%;
   }
 `;
-
 const Button = ({ children, type, ...rest }) => {
   if (type === "link") {
     return <ButtonLink>{children}</ButtonLink>;
@@ -93,17 +92,24 @@ const Button = ({ children, type, ...rest }) => {
   return <StyledButton {...rest}>{children}</StyledButton>;
 };
 
-Button.defaultProps = {
-  primary: undefined,
-  secondary: undefined,
-  type: undefined,
+Button.propTypes = {
+  /** Props is passed if primary button is created. */
+  primary: PropTypes.bool,
+
+  /** Props is passed if secondary button is created. */
+  secondary: PropTypes.bool,
+
+  /** Props is passed if outline button is created. */
+  outline: PropTypes.bool,
+
+  /** Content in between the button component, mostly is text of the button */
+  children: PropTypes.node.isRequired,
 };
 
-Button.propTypes = {
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool,
-  outline: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+Button.defaultProps = {
+  primary: false,
+  secondary: false,
+  type: undefined,
 };
 
 export default Button;
