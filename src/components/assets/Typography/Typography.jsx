@@ -62,6 +62,7 @@ const Text = ({ children, size }) => {
   if (size === "sm") {
     return <Small>{children}</Small>;
   }
+
   if (size === "xs") {
     return <ExtraSmall>{children}</ExtraSmall>;
   }
@@ -70,12 +71,25 @@ const Text = ({ children, size }) => {
 };
 
 Text.defaultProps = {
-  size: undefined,
+  size: "base",
 };
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.string,
+
+  /** Text comes in different sizes. Base is the default size, but you are free to use any of the options. */
+  size: PropTypes.oneOf([
+    "xs",
+    "sm",
+    "base",
+    "large",
+    "h6",
+    "h5",
+    "h4",
+    "h3",
+    "h2",
+    "h1",
+  ]),
 };
 
 export default Text;
