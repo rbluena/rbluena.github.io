@@ -6,7 +6,7 @@ import { Link as GatsbyLink } from "gatsby";
 const StyledLink = styled(GatsbyLink)`
   color: ${props => props.theme.color.red[200]};
   display: inline-block;
-  padding: ${props => props.theme.spacing.xxsm}px;
+  padding: ${props => props.theme.spacing.sm}px;
   text-decoration: none;
 `;
 
@@ -26,7 +26,6 @@ Link.propTypes = {
   children: PropTypes.node.isRequired,
   data: PropTypes.shape({
     url: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     as: PropTypes.string,
   }),
 };
