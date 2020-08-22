@@ -1,7 +1,7 @@
 {
   "name": "rbluena",
   "private": true,
-  "description": "This is personal site for Rabii Luena",
+  "description": "This is personal site for Rabii Luena.",
   "version": "0.1.0",
   "author": "Rabii Luena <rbluena@gmail.com>",
   "dependencies": {
@@ -51,7 +51,8 @@
     "size-limit": "^4.5.6"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "rabii"
   ],
   "license": "MIT",
   "scripts": {
