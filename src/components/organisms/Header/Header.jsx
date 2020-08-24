@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Logo from "@app-components/assets/Logo";
-import Nav from "@app-components/molecules/Nav";
+import Navbar from "@app-components/molecules/Navbar";
 import navItems from "@app-data/main-nav.json";
 import CoverBG from "@app-components/assets/CoverBG";
 import PersonalDetails from "./PersonalDetails";
@@ -50,7 +50,7 @@ const Hamburger = styled.button`
     color: white;
   }
 
-  /* Mobile De */
+  /* Mobile  */
   @media screen and (max-width: ${props => props.theme.mediaQuery.tablet}) {
     display: block;
   }
@@ -79,19 +79,7 @@ const Header = props => {
 
   return (
     <Wrapper>
-      {/* Topbar should be move to navigation bar. Make sure when toggle clicked does not make this code re-rendering */}
-      <TopBar>
-        <Brand>
-          <Logo />
-        </Brand>
-        <NavContainer>
-          <Nav navItems={navItems} />
-        </NavContainer>
-        <Hamburger onClick={() => setMenuToggle(!menuToggle)}>
-          <FiMenu />
-        </Hamburger>
-      </TopBar>
-
+      <Navbar navItems={navItems} />
       <ContentContainer>
         <CoverBG />
         <PersonalDetails />
