@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import Link from "@app-components/atoms/Link";
 import Text from "@app-components/assets/Typography";
 import Logo from "@app-components/assets/Logo";
+import navItems from "@app-data/main-nav.json";
 import { FiMenu } from "react-icons/fi";
 import { motion } from "framer-motion";
 import animation from "./animation";
@@ -114,7 +115,7 @@ const Toggler = styled.button`
   }
 `;
 
-const Navbar = ({ navItems }) => {
+const Navbar = () => {
   const [toggler, setToggler] = useState(false);
 
   return (
@@ -138,16 +139,6 @@ const Navbar = ({ navItems }) => {
       </Toggler>
     </StyledNavbar>
   );
-};
-
-Navbar.propTypes = {
-  /** Navigation data */
-  navItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      url: PropTypes.string.isRequired,
-      as: PropTypes.string,
-    })
-  ),
 };
 
 export default Navbar;
