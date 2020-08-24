@@ -1,12 +1,12 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
-import Nav from "./Nav";
+import Navbar from "./Navbar";
 import data from "@app-data/main-nav.json";
 
-<Meta title="Design System/Molecules/Nav" component={Nav} />
+<Meta title="Design System/Molecules" component={Navbar} />
 
-# Nav
+# Navbar
 
-<ArgsTable of={Nav} />
+<ArgsTable of={Navbar} />
 
 ### Data
 
@@ -20,7 +20,7 @@ import data from "@app-data/main-nav.json";
 ```
 
 <Canvas>
-  <Story name="Main Nav">
-    <Nav navItems={data} />
+  <Story name="Navbar">
+    <Navbar navItems={data} />
   </Story>
 </Canvas>
