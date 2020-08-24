@@ -27,48 +27,47 @@ const StyledButton = styled.button`
   /* Primary Button */
   ${props =>
     props.primary &&
-    `
-    background-color: ${props.theme.color.blue[200]};
-    color: ${props.theme.color.monochrome[800]};
-  `}
+    css`
+      background-color: ${props.theme.color.blue[200]};
+      color: ${props.theme.color.monochrome[800]};
+    `}
 
   /* Primary Outline */
   ${props =>
     props.primary &&
     props.outline &&
-    `
-    background: transparent;
-    color: ${props.theme.color.monochrome[100]};
-    border: 2px solid ${props.theme.color.blue[200]}
-  `}
+    css`
+      background: transparent;
+      color: ${props.theme.color.monochrome[100]};
+      border: 2px solid ${props.theme.color.blue[200]};
+    `}
 
   /* Secondary Button */
   ${props =>
     props.secondary &&
-    `
-    background-color: ${props.theme.color.red[200]};
-    color: ${props.theme.color.monochrome[800]};
-  `}
+    css`
+      background-color: ${props.theme.color.red[200]};
+      color: ${props.theme.color.monochrome[800]};
+    `}
 
   /* Secondary Outline */
   ${props =>
     props.secondary &&
     props.outline &&
-    `
-    background: transparent;
-    color: ${props.theme.color.monochrome[100]};
-    border: 2px solid ${props.theme.color.red[200]}
-  `}
+    css`
+      background: transparent;
+      color: ${props.theme.color.monochrome[100]};
+      border: 2px solid ${props.theme.color.red[200]};
+    `}
 
   /* Small Button */
   ${props =>
     props.small &&
-    `
-    padding-top: ${props.theme.spacing.xxs}px;
-    padding-bottom: ${props.theme.spacing.xxs}px;
-    font-size: ${props.theme.typography.size.base}px
-
-  `}
+    css`
+      padding-top: ${props.theme.spacing.xxs}px;
+      padding-bottom: ${props.theme.spacing.xxs}px;
+      font-size: ${props.theme.typography.size.base}px;
+    `}
 `;
 
 export const ButtonLink = styled.a`
