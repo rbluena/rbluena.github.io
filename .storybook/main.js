@@ -23,6 +23,8 @@ module.exports = {
     config.resolve.alias = {
       "@app-components": path.resolve(__dirname, "..", "src", "components"),
       "@app-data": path.resolve(__dirname, "..", "src", "data"),
+      "@app-utils": path.resolve(__dirname, "..", "src", "utils"),
+      "@app-images": path.resolve(__dirname, "..", "src", "images"),
     };
 
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.

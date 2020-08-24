@@ -32,6 +32,7 @@ module.exports = {
           "@app-data": "./data",
           "@app-helpers": "./helpers",
           "@app-utils": "./utils",
+          "@app-images": "./images",
           static: {
             root: "./public",
             alias: "./static",
