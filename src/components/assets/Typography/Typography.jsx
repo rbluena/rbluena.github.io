@@ -97,37 +97,66 @@ const ExtraSmall = styled.p`
   `}
 `;
 
-const Text = ({ children, size, weight }) => {
+const Text = ({ children, size, weight, className }) => {
   if (size === "title") {
-    return <H1 weight={weight}>{children}</H1>;
+    return (
+      <H1 weight={weight} className={className}>
+        {children}
+      </H1>
+    );
   }
 
   if (size === "heading") {
-    return <H2 weight={weight}>{children}</H2>;
+    return (
+      <H2 weight={weight} className={className}>
+        {children}
+      </H2>
+    );
   }
 
   if (size === "subheading") {
-    return <H3 weight={weight}>{children}</H3>;
+    return (
+      <H3 weight={weight} className={className}>
+        {children}
+      </H3>
+    );
   }
 
   if (size === "large") {
-    return <Large weight={weight}>{children}</Large>;
+    return (
+      <Large weight={weight} className={className}>
+        {children}
+      </Large>
+    );
   }
 
   if (size === "sm") {
-    return <Small weight={weight}>{children}</Small>;
+    return (
+      <Small weight={weight} className={className}>
+        {children}
+      </Small>
+    );
   }
 
   if (size === "xs") {
-    return <ExtraSmall weight={weight}>{children}</ExtraSmall>;
+    return (
+      <ExtraSmall weight={weight} className={className}>
+        {children}
+      </ExtraSmall>
+    );
   }
 
-  return <Base weight={weight}>{children}</Base>;
+  return (
+    <Base weight={weight} className={className}>
+      {children}
+    </Base>
+  );
 };
 
 Text.defaultProps = {
   size: "base",
   wight: "regular",
+  className: "",
 };
 
 Text.propTypes = {
@@ -146,6 +175,7 @@ Text.propTypes = {
     "title",
   ]),
   weight: PropTypes.oneOf(["thin", "regular", "medium", "semibold", "bold"]),
+  className: PropTypes.string,
 };
 
 export default Text;
