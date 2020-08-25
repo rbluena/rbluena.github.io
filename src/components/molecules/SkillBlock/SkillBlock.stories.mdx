@@ -3,12 +3,26 @@ import SkillBlock from "./SkillBlock";
 
 <Meta title="Design System/Molecules" component={SkillBlock} />
 
-# SkillBlock
+# Skill Block
+
+export const Template = args => <SkillBlock {...args} />;
 
 <br />
 
 <Canvas>
-  <Story name="SkillBlock Section">
-    <SkillBlock />
+  <Story
+    name="SkillBlock"
+    args={{
+      title: "Title",
+      children: (
+        <>
+          <li>First</li>
+          <li>Second</li>
+          <li>Third</li>
+        </>
+      ),
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>

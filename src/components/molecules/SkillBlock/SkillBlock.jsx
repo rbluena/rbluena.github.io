@@ -5,20 +5,22 @@ import Text from "@app-components/assets/Typography";
 
 const Wrapper = styled.div`
   border-left: 4px solid gray;
-  min-height: 200px;
+  min-height: 100px;
   padding-left: ${props => props.theme.spacing.sm}px;
-  max-width: 120x;
+  padding-bottom: ${props => props.theme.spacing.xs}px;
+  max-width: 300px;
 `;
 
-const Container = styled.div``;
 const ContentList = styled.ul`
   list-style: none;
   padding: 0;
-  column-count: 2;
+  margin-top: ${props => props.theme.spacing.large}px;
+  columns: 2;
 
   li {
-    padding: ${props => props.theme.spacing.xs}px 0;
+    margin-bottom: ${props => props.theme.spacing.sm}px;
     color: ${props => props.theme.color.blue[200]};
+    font-size: ${props => props.theme.typography.size.large}px;
   }
 `;
 
@@ -27,26 +29,24 @@ const Heading = styled(Text)`
   letter-spacing: 2px;
 `;
 
-const SkillBlock = ({ title = "Skill Block" }) => {
+const SkillBlock = ({ title, children }) => {
   return (
     <Wrapper>
       <Heading size="subheading" weight="thin">
         {title}
       </Heading>
 
-      <ContentList>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-        <li>JavaScript</li>
-      </ContentList>
+      <ContentList>{children}</ContentList>
     </Wrapper>
   );
 };
 
-SkillBlock.propTypes = {};
+SkillBlock.propTypes = {
+  /** Title of the block */
+  title: PropTypes.string.isRequired,
+
+  /** List items to be listed */
+  children: PropTypes.node.isRequired,
+};
 
 export default SkillBlock;
