@@ -50,8 +50,11 @@ const Work = () => {
 
               <div>
                 <Text size="subheading">{item.company}</Text>
-                <Text subheading="large" weight="thin">
+                <Text subheading="large" weight="bold">
                   {item.from} - {item.to}
+                </Text>
+                <Text subheading="large" weight="thin">
+                  {item.type}
                 </Text>
                 <Description>{item.description}</Description>
 
