@@ -33,51 +33,41 @@ const Image = styled.div`
 const Work = () => {
   return (
     <SectionBox title="Working Experience">
-      <>
-        {Object.keys(data).map(key => {
-          const item = data[key];
-          let imgPath = "";
+      {Object.keys(data).map(key => {
+        const item = data[key];
+        let imgPath = "";
 
-          if (item.image && item.image.length) {
-            imgPath = require(`../../../images/${item.image}`);
-          }
+        if (item.image && item.image.length) {
+          imgPath = require(`../../../images/${item.image}`);
+        }
 
-          return (
-            <ContentItem key={key}>
-              <Image hasImage={imgPath && imgPath.length}>
-                {imgPath && imgPath.length && <ReactSVG src={imgPath} />}
-              </Image>
+        return (
+          <ContentItem key={key}>
+            <Image hasImage={imgPath && imgPath.length}>
+              {imgPath && imgPath.length && <ReactSVG src={imgPath} />}
+            </Image>
 
-              <div>
-                <Text size="subheading">{item.company}</Text>
-                <Text subheading="large" weight="bold">
-                  {item.from} - {item.to}
-                </Text>
-                <Text subheading="large" weight="thin">
-                  {item.type}
-                </Text>
-                <Description>{item.description}</Description>
+            <div>
+              <Text size="subheading">{item.company}</Text>
+              <Text subheading="large" weight="bold">
+                {item.from} - {item.to}
+              </Text>
+              <Text subheading="large" weight="thin">
+                {item.type}
+              </Text>
+              <Description>{item.description}</Description>
 
-                {data.url && (
-                  <Button href="" type={data.url}>
-                    Visit
-                  </Button>
-                )}
-              </div>
-            </ContentItem>
-          );
-        })}
-      </>
+              {data.url && (
+                <Button href="" type={data.url}>
+                  Visit
+                </Button>
+              )}
+            </div>
+          </ContentItem>
+        );
+      })}
     </SectionBox>
   );
-};
-
-Work.defaultProps = {
-  button: null,
-};
-
-Work.propTypes = {
-  button: PropTypes.node,
 };
 
 export default Work;
