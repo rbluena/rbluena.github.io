@@ -42,10 +42,10 @@ const SkillBlock = ({ title, children }) => {
 };
 
 SkillBlock.propTypes = {
-  /** Title of the block */
+  /** Title of the block. */
   title: PropTypes.string.isRequired,
 
-  /** List items to be listed */
+  /** Items to be listed. */
   children: PropTypes.node.isRequired,
 };
 
