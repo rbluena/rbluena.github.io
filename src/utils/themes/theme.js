@@ -36,15 +36,6 @@ export const defaultTheme = {
   mediaQuery: { ...mediaQuery },
 };
 
-export const invertTheme = {
-  bgColors: {
-    primary: "#000000",
-  },
-  colors: {
-    primary: "#FFFFFF",
-  },
-  typography: { ...typography },
-  spacing: { ...spacing },
-};
+export const invertTheme = {};
 
-export const laxuryTheme = {};
+export const luxuryTheme = {};
