@@ -8,8 +8,8 @@
       "from": "Jul 2018",
       "to": "Mar 2020",
       "project": "GreenRush",
-      "companyUrl": "",
-      "image": "gatsby-astronaut.png"
+      "url": "http://am2studio.com",
+      "image": "am2studio.svg"
     },
     "myzone": {
       "company": "MyZone Media Inc",
@@ -19,18 +19,18 @@
       "from": "Jul 2018",
       "to": "Mar 2020",
       "Project": "ticketzone.com",
-      "companyUrl": "",
-      "image": "gatsby-astronaut.png"
+      "url": "https://myzone.com/",
+      "image": "myzone.svg"
     },
     "cloudboost": {
-      "company": "CloudBoost",
+      "company": "HackerBay Inc",
       "position": "software Developer",
       "location": "Dar Es Salaam, Tanzania",
       "type": "Contract",
       "from": "Nov 2017",
-      "to": "July 2018",
-      "companyUrl": "",
-      "image": "gatsby-astronaut.png"
+      "to": "June 2018",
+      "url": "https://hackerbay.io/",
+      "image": "hackerbay.svg"
     },
     "amazon": {
       "company": "The Amazon College",
@@ -39,8 +39,8 @@
       "type": "Contract",
       "from": "May 2013",
       "to": "Oct 2015",
-      "companyUrl": "",
-      "image": "gatsby-astronaut.png"
+      "url": "",
+      "image": ""
     }
   }
 }

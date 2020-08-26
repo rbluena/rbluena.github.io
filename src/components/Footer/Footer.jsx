@@ -1,12 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import Text from "@app-components/Text";
+import Text from "@app-components/assets/Typography";
 
 const Wrapper = styled.footer`
   width: 100%;
   height: 50px;
-  padding: ${props => props.theme.spaces.padding};
   font-weight: bold;
 
   @media only screen and (min-width: 720px) {

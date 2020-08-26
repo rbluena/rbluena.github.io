@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import Text from "@app-components/assets/Typography";
+import Link from "@app-components/atoms/Link";
 
 const Wrapper = styled.section`
   background-image: url("images/bg-wiggle.svg");
@@ -9,18 +11,15 @@ const Wrapper = styled.section`
   margin-top: 20px;
 `;
 
-const Fullname = styled.h1`
-  margin: 0;
-  padding: 0;
-`;
-
-const Headline = styled.p`
-  font-size: 1.5rem;
+const Block = styled.div`
+  margin: 1em;
 `;
 
 const Social = styled.div`
+  margin-top: 1.2em;
+
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.2em;
     padding: 2px;
     margin: 3px;
   }
@@ -42,9 +41,16 @@ const PersonalDetails = () => {
   );
   return (
     <Wrapper>
-      {/* <Fullname>{site.siteMetadata.title}</Fullname> */}
-      <Fullname>About Me</Fullname>
-      <Headline>{site.siteMetadata.description}</Headline>
+      <Block>
+        <Text size="title" weight="thin">
+          Rabii Luena
+        </Text>
+      </Block>
+      <Block>
+        <Text size="large" weight="bold">
+          {site.siteMetadata.description}
+        </Text>
+      </Block>
       <Social>
         <a
           className="icon"
@@ -71,7 +77,6 @@ const PersonalDetails = () => {
           <FiTwitter />
         </a>
       </Social>
-      <hr className="devider" />
     </Wrapper>
   );
 };

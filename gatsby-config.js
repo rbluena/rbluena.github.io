@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-flow`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +32,7 @@ module.exports = {
           "@app-data": "./data",
           "@app-helpers": "./helpers",
           "@app-utils": "./utils",
+          "@app-images": "./images",
           static: {
             root: "./public",
             alias: "./static",

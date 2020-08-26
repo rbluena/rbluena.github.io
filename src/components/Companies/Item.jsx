@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Text from "@app-components/Text";
+import Text from "@app-components/assets/Typography";
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,11 +26,10 @@ const Item = ({ data }) => {
         </a>
       </Image>
       <Details>
-        <Text.Heading>{data.company}</Text.Heading>
-        <Text.Subheading>
+        <Text size="heading">{data.company}</Text>
+        <Text size="subheading">
           {data.from}-{data.to}
-        </Text.Subheading>
-        {/* <Text>{data.type}</Text> */}
+        </Text>
       </Details>
     </Wrapper>
   );
