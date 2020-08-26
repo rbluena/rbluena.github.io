@@ -26,6 +26,9 @@ export const Template = args => <Button {...args} />;
       Outline
     </Button>
   </Story>
+  <Story name="Control" args={{ children: "Text" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ### Sizes
