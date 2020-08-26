@@ -25,14 +25,6 @@
     "testing": {
       "title": "Test",
       "items": [{ "name": "Mocha" }, { "name": "Chai" }, { "name": "JEST" }]
-    },
-    "cloud": {
-      "title": "Cloud",
-      "items": [
-        { "name": "Heroku" },
-        { "name": "Digital Ocean" },
-        { "name": "Firebase *" }
-      ]
     }
   }
 }
