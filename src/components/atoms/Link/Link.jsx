@@ -10,10 +10,10 @@ const StyledLink = styled(GatsbyLink)`
   text-decoration: none;
 `;
 
-const Link = ({ children, data, ...rest }) => {
+const Link = ({ children, data, className, ...rest }) => {
   if (data.as && data.as.length) {
     return (
-      <StyledLink href={data.url} {...rest} as={data.as}>
+      <StyledLink href={data.url} {...rest} as={data.as} className={className}>
         {children}
       </StyledLink>
     );
