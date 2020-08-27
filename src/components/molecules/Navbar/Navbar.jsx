@@ -7,18 +7,18 @@ import Logo from "@app-components/assets/Logo";
 import navItems from "@app-data/main-nav.json";
 import { FiMenu } from "react-icons/fi";
 import { motion } from "framer-motion";
-import animation from "./animation";
 
 const StyledNavbar = styled.nav`
-  position: absolute;
+  position: static;
   display: flex;
   justify-content: flex-end;
   top: 0px;
   left: 0;
   padding: ${props => props.theme.spacing.sm}px;
-  box-shadow: ${props => props.theme.elevation.default};
-  background-color: white;
+  border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
   width: 100%;
+  z-index: 1000;
+  background-color: ${props => props.theme.color.monochrome[900]};
 `;
 
 const Brand = styled.div`
@@ -26,45 +26,49 @@ const Brand = styled.div`
   margin-right: auto;
 `;
 
+const BrandLink = styled(Link)`
+  padding: 0px;
+`;
+
 const Menu = styled(motion.div)`
-  a {
-    display: inline-block;
-
-    &:hover,
-    &:active {
-      border: 0px;
-      outline: none !important;
-    }
-  }
-
   /* Mobile screens */
   @media screen and (max-width: ${props => props.theme.mediaQuery.tablet}) {
     text-align: center;
     width: 100%;
     position: absolute;
     right: 0px;
-    height: calc(100vh - 64px);
-    top: ${props => props.theme.spacing.xxxl}px;
     background-color: ${props => props.theme.color.monochrome[900]};
+    height: calc(100vh - 64px);
+    top: 64px;
     box-shadow: ${props => props.theme.elevation.default};
-    z-index: 0;
     display: ${props => (props.toggler ? "block" : "none")};
+  }
+`;
 
-    a {
-      display: block;
-      padding-left: ${props => props.theme.spacing.sm}px;
+const MenuLink = styled(Link)`
+  display: inline-block;
+  text-transform: uppercase;
+  padding: ${props => props.theme.spacing.xs}px
+    ${props => props.theme.spacing.sm}px;
 
-      &:hover,
-      &:active {
-        border: 0px;
-        outline: none !important;
-      }
-    }
+  &:hover,
+  &:active {
+    border: 0px;
+    outline: none !important;
+  }
+
+  /* Tablet and above */
+  @media screen and (max-width: ${props => props.theme.mediaQuery.tablet}) {
+    display: block;
+    padding: ${props => props.theme.spacing.medium}px 0;
   }
 `;
 
 const MobMenuHeading = styled.div`
-  /* Tablet */
+  padding: ${props => props.theme.spacing["xl"]}px 0;
+  letter-spacing: 2px;
+
+  /* Tablet and above*/
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     display: none;
   }
@@ -74,8 +78,9 @@ const Toggler = styled.button`
   font-size: ${props => props.theme.typography.size.h6}px;
   border: none;
   cursor: pointer;
+  height: 32px;
 
-  /* Tablet  */
+  /* Tablet  and above */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     display: none;
   }
@@ -87,24 +92,23 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <Brand>
-        <Link to="/">
+        <BrandLink to="/">
           <Logo />
-        </Link>
+        </BrandLink>
       </Brand>
       <Menu toggler={toggler}>
         <MobMenuHeading>
-          <Text size="subheading">Navigation</Text>
-          <hr />
+          <Text size="large">Navigation</Text>
         </MobMenuHeading>
 
         {navItems.map(item => (
-          <Link key={item.label} to={item.url} external={item.external}>
+          <MenuLink key={item.label} to={item.url} external={item.external}>
             {item.label}
-          </Link>
+          </MenuLink>
         ))}
       </Menu>
 
-      <Toggler onClick={() => setToggler(!toggler)}>
+      <Toggler onClick={() => setToggler(!toggler)} aria-label="Menu">
         <FiMenu />
       </Toggler>
     </StyledNavbar>
