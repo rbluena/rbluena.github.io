@@ -29,8 +29,7 @@ const Wrapper = styled.header`
 
   /* Tablet and greater */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    margin-top: ${props => props.theme.spacing.xxxxl}px;
-    height: 650px;
+    height: 650px; /* TODO: Use calculation of 8 */
   }
 `;
 

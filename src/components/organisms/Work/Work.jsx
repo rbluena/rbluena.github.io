@@ -17,10 +17,8 @@ const Description = styled.div``;
 
 const Image = styled.div`
   margin-right: ${props => props.theme.spacing.sm}px;
-  width: ${props => props.theme.spacing.xxxl}px;
-  height: ${props => props.theme.spacing.xxxl}px;
-  background-color: ${props =>
-    (!props.hasImage && props.theme.color.monochrome[700]) || ""};
+  width: ${props => props.theme.spacing["2xl"]}px;
+  background: transparent;
 
   svg {
     width: ${props => props.theme.spacing.xxxl}px;
@@ -40,6 +38,8 @@ const Work = () => {
         if (item.image && item.image.length) {
           imgPath = require(`../../../images/${item.image}`);
         }
+
+        console.log(imgPath);
 
         return (
           <ContentItem key={key}>
