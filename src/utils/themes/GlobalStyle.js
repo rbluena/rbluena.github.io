@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.color.monochrome[900]};
         color: ${props => props.theme.color.monochrome[100]};
         margin: 0;
-        padding: 0;
+        padding: 0 !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
