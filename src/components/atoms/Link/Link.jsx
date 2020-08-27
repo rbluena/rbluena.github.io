@@ -11,7 +11,13 @@ const StyledLink = styled.a`
   cursor: pointer;
 `;
 
-const StyledGatsbyLink = styled(StyledLink)``;
+const StyledGatsbyLink = styled(GatsbyLink)`
+  color: ${props => props.theme.color.red[200]};
+  display: inline-block;
+  padding: ${props => props.theme.spacing.sm}px;
+  text-decoration: none;
+  cursor: pointer;
+`;
 
 const Link = ({ children, to, external, className, ...rest }) => {
   if (external) {

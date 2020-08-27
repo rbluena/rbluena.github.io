@@ -136,7 +136,7 @@ const Footer = props => {
       <Right>
         <StyledText size="large">
           Built with{" "}
-          <StyledLink external to="https://gatsby.com">
+          <StyledLink external to="https://gatsbyjs.com">
             Gatsby
           </StyledLink>{" "}
           and hosted by{" "}
