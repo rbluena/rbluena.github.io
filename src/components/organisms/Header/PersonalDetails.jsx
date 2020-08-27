@@ -6,23 +6,39 @@ import Text from "@app-components/assets/Typography";
 import Link from "@app-components/atoms/Link";
 
 const Wrapper = styled.section`
-  background-image: url("images/bg-wiggle.svg");
   text-align: center;
-  margin-top: 20px;
-`;
+  height: 250px;
+  padding: calc(10 * 8px) 0px;
 
-const Block = styled.div`
-  margin: 1em;
+  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
+    text-align: left;
+    padding-top: calc(6 * 24px);
+  }
 `;
 
 const Social = styled.div`
-  margin-top: 1.2em;
-
+  margin-top: ${props => props.theme.spacing.sm}px;
   .icon {
-    font-size: 1.2em;
-    padding: 2px;
-    margin: 3px;
+    font-size: 24px;
   }
+
+  a {
+    padding: 0px;
+    padding-right: ${props => props.theme.spacing.xs}px;
+    color: ${props => props.theme.color.monochrome[100]};
+  }
+`;
+
+const Heading = styled(Text).attrs({ size: "heading" })`
+  font-size: ${props => props.theme.typography.size.h4}px;
+  margin-bottom: ${props => props.theme.spacing["medium"]}px;
+`;
+
+const Subheading = styled(Text).attrs({
+  size: "subheading",
+  weight: "regular",
+})`
+  font-size: ${[props => props.theme.typography.size.large]}px;
 `;
 
 const PersonalDetails = () => {
@@ -41,41 +57,39 @@ const PersonalDetails = () => {
   );
   return (
     <Wrapper>
-      <Block>
-        <Text size="title" weight="thin">
-          Rabii Luena
-        </Text>
-      </Block>
-      <Block>
-        <Text size="large" weight="bold">
-          {site.siteMetadata.description}
-        </Text>
-      </Block>
+      <Heading>Rabii Luena</Heading>
+      <Subheading>{site.siteMetadata.description}</Subheading>
       <Social>
-        <a
+        <Link
+          external
           className="icon"
-          href="https://github.com/rbluena"
+          to="https://github.com/rbluena"
           rel="noreferrer"
           target="_blank"
+          aria-label="Visit my GitHub profile"
         >
           <FiGithub />
-        </a>
-        <a
+        </Link>
+        <Link
+          external
           className="icon"
-          href="https://www.linkedin.com/in/rbluena"
+          to="https://www.linkedin.com/in/rbluena"
           rel="noreferrer"
           target="_blank"
+          aria-label="Visit my Linkedin profile"
         >
           <FiLinkedin />
-        </a>
-        <a
+        </Link>
+        <Link
+          external
           className="icon"
-          href="https://twitter.com/rbluena"
+          to="https://twitter.com/rbluena"
           rel="noreferrer"
           target="_blank"
+          aria-label="Visit my twitter profile"
         >
           <FiTwitter />
-        </a>
+        </Link>
       </Social>
     </Wrapper>
   );

@@ -7,17 +7,34 @@ import Illustration from "@app-components/assets/Illustration";
 import PersonalDetails from "./PersonalDetails";
 
 const Wrapper = styled.header`
-  margin-top: ${props => props.theme.spacing.xxxl}px;
+  color: white;
+  padding-top: ${props => props.theme.spacing.xxxl}px;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(
+    315deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
 
   /* Tablet and greater */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     margin-top: ${props => props.theme.spacing.xxxxl}px;
+    height: 650px;
   }
 `;
 
 const ContentContainer = styled.div`
-  background: transparent;
-
   svg#bg-wiggle {
     z-index: -10;
     margin: 0;
@@ -30,17 +47,15 @@ const ContentContainer = styled.div`
 
   svg#illustration {
     display: none;
-    position: absolute;
-    right: 0;
-    margin: 0p;
     padding: 0;
+    height: 550px;
   }
 
   /* Tablet and greater */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    width: 400px;
-    border: 1px dashed;
-    padding-top: ${props => props.theme.spacing.xxxxl}px;
+    display: flex;
+    justify-content: space-between;
+    padding: ${props => props.theme.spacing["2xl"]}px;
 
     svg#bg-wiggle {
       max-width: 50vw;
@@ -50,8 +65,6 @@ const ContentContainer = styled.div`
 
     svg#illustration {
       display: block;
-      width: 50vw;
-      top: ${props => props.theme.spacing.xxxl}px;
     }
   }
 `;
