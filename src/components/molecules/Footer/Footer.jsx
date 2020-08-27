@@ -74,7 +74,6 @@ const StyledText = styled(Text)`
 const StyledLink = styled(Link)`
   margin: 0;
   padding: 0;
-  color: ${props => props.theme.color.blue[100]};
 
   &:hover {
     font-weight: bold;

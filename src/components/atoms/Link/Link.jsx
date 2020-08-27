@@ -4,19 +4,27 @@ import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
 
 const StyledLink = styled.a`
-  color: ${props => props.theme.color.red[200]};
+  color: ${props => props.theme.color.blue[100]};
   display: inline-block;
   padding: ${props => props.theme.spacing.sm}px;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    font-weight: ${props => props.theme.typography.weight.bold};
+  }
 `;
 
 const StyledGatsbyLink = styled(GatsbyLink)`
-  color: ${props => props.theme.color.red[200]};
+  color: ${props => props.theme.color.blue[100]};
   display: inline-block;
   padding: ${props => props.theme.spacing.sm}px;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    font-weight: ${props => props.theme.typography.weight.bold};
+  }
 `;
 
 const Link = ({ children, to, external, className, ...rest }) => {

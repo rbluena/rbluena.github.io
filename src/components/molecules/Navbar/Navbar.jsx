@@ -34,8 +34,6 @@ const Menu = styled(motion.div)`
     &:active {
       border: 0px;
       outline: none !important;
-      background-color: ${props => props.theme.color.blue[200]};
-      color: white;
     }
   }
 
@@ -60,8 +58,6 @@ const Menu = styled(motion.div)`
       &:active {
         border: 0px;
         outline: none !important;
-        background-color: ${props => props.theme.color.blue[200]};
-        color: white;
       }
     }
   }
@@ -91,19 +87,23 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <Brand>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </Brand>
       <Menu toggler={toggler}>
         <MobMenuHeading>
           <Text size="subheading">Navigation</Text>
           <hr />
         </MobMenuHeading>
+
         {navItems.map(item => (
-          <Link key={item.label} data={item}>
+          <Link key={item.label} to={item.url} external={item.external}>
             {item.label}
           </Link>
         ))}
       </Menu>
+
       <Toggler onClick={() => setToggler(!toggler)}>
         <FiMenu />
       </Toggler>
