@@ -160,6 +160,7 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
+  /** Conent of the text.*/
   children: PropTypes.node.isRequired,
 
   /** Text comes in different sizes. Base is the default size, but you are free to use any of the options. */

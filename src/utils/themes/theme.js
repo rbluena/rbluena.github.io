@@ -3,13 +3,14 @@ import { typography, spacing, border, mediaQuery } from "./tokens.json";
 export const defaultTheme = {
   color: {
     blue: {
-      100: "#3685A8",
+      100: "#2f669b",
       200: "#63C7FF",
       300: "#9BFAFF",
     },
     red: {
-      100: "#FF006E",
+      100: "#c8206e",
       200: "#FF5C9C",
+      300: "#ff90cd",
     },
     monochrome: {
       100: "#333333",
