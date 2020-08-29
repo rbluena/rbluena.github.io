@@ -37,10 +37,10 @@ const Skills = () => {
           const skills = data[key];
 
           return (
-            <StyledSkillBlock title={skills.title}>
+            <StyledSkillBlock key={key} title={skills.title}>
               {skills.items &&
                 skills.items.map(skill => {
-                  return <li>{skill.name}</li>;
+                  return <li key={skill.name}>{skill.name}</li>;
                 })}
             </StyledSkillBlock>
           );

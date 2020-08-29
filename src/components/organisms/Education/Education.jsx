@@ -16,27 +16,25 @@ const Description = styled.div``;
 const Work = () => {
   return (
     <SectionBox title="Education" reverse>
-      <>
-        {Object.keys(data).map(key => {
-          const item = data[key];
+      {Object.keys(data).map(key => {
+        const item = data[key];
 
-          return (
-            <ContentItem key={key}>
-              <Text size="subheading">{item.name}</Text>
-              <Text subheading="large" weight="thin">
-                {item.year}
-              </Text>
-              <Description>{item.description}</Description>
+        return (
+          <ContentItem key={key}>
+            <Text size="subheading">{item.name}</Text>
+            <Text subheading="large" weight="thin">
+              {item.year}
+            </Text>
+            <Description>{item.description}</Description>
 
-              {data.url && (
-                <Button href="" type={data.url}>
-                  Visit
-                </Button>
-              )}
-            </ContentItem>
-          );
-        })}
-      </>
+            {data.url && (
+              <Button href="" type={data.url}>
+                Visit
+              </Button>
+            )}
+          </ContentItem>
+        );
+      })}
     </SectionBox>
   );
 };
