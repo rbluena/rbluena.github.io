@@ -9,6 +9,7 @@ const Wrapper = styled.section`
   text-align: center;
   height: 250px;
   padding: calc(10 * 8px) 0px;
+  margin-right: auto;
 
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     text-align: left;

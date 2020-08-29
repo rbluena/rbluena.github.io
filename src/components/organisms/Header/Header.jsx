@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "@app-components/organisms/Navbar";
+import { Hero, Navbar } from "@app-components";
 import CoverBG from "@app-components/assets/CoverBG";
 import Illustration from "@app-components/assets/Illustration";
 import PersonalDetails from "./PersonalDetails";
@@ -32,50 +32,15 @@ const Wrapper = styled.header`
   }
 `;
 
-const ContentContainer = styled.div`
-  svg#bg-wiggle {
-    z-index: -10;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: ${props => props.theme.color.blue[100]};
-    color: ${props => props.theme.color.blue[100]};
-  }
-
-  svg#illustration {
-    display: none;
-    padding: 0;
-    height: 550px;
-  }
-
-  /* Tablet and greater */
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    display: flex;
-    justify-content: space-between;
-    padding: ${props => props.theme.spacing["2xl"]}px;
-
-    svg#bg-wiggle {
-      max-width: 50vw;
-      top: -${props => props.theme.spacing.medium}px;
-      display: none;
-    }
-
-    svg#illustration {
-      display: block;
-    }
-  }
-`;
-
 const Header = () => {
   return (
     <Wrapper>
       <Navbar />
-      <ContentContainer>
+      <Hero>
         <CoverBG />
         <PersonalDetails />
         <Illustration />
-      </ContentContainer>
+      </Hero>
     </Wrapper>
   );
 };
