@@ -1,11 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import {
-  GlobalStyle,
-  ErrorWrapper,
-  defaultTheme,
-  invertTheme,
-} from "@app-utils/themes";
+import { GlobalStyle, defaultTheme, invertTheme } from "@app-utils/themes";
+import ErrorWrapper from "@app-utils/ErrorWrapper";
+
 import "typeface-fredoka-one";
 import "typeface-lato";
 

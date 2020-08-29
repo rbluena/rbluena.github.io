@@ -1,7 +1,7 @@
-import React, { PureComponent, Children } from "react";
+import React, { PureComponent } from "react";
 import { logError } from "@app-utils/general";
 
-export class ErrorWrapper extends PureComponent {
+class ErrorWrapper extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,11 @@ export class ErrorWrapper extends PureComponent {
   }
 
   render() {
-    return <>{this.state.hasError ? <h2>Error</h2> : this.props.children}</>;
+    if (this.state.hasError) {
+      return <h2>Error</h2>;
+    }
+
+    return <>{this.props.children}</>;
   }
 }
 
