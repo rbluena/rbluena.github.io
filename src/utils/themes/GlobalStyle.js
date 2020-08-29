@@ -1,13 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 
 const GlobalStyle = createGlobalStyle`
-    html {
-        box-sizing: border-box;
-    }
-
-    *, *:before, *:after {
-        box-sizing: inherit;
-    }
+    ${normalize};
 
     body {
         font-family: ${props => props.theme.typography.font.primary};
