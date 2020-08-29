@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 import Navbar from "@app-components/organisms/Navbar";
 import CoverBG from "@app-components/assets/CoverBG";
@@ -68,7 +67,7 @@ const ContentContainer = styled.div`
   }
 `;
 
-const Header = props => {
+const Header = () => {
   return (
     <Wrapper>
       <Navbar />
@@ -80,7 +79,5 @@ const Header = props => {
     </Wrapper>
   );
 };
-
-Header.propTypes = {};
 
 export default Header;

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Text from "@app-components/assets/Typography";
 import SectionBox from "@app-components/molecules/SectionBox";
 import styled from "styled-components";

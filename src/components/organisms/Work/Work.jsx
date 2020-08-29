@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import Text from "@app-components/assets/Typography";
 import SectionBox from "@app-components/molecules/SectionBox";
@@ -38,8 +37,6 @@ const Work = () => {
         if (item.image && item.image.length) {
           imgPath = require(`../../../images/${item.image}`);
         }
-
-        console.log(imgPath);
 
         return (
           <ContentItem key={key}>

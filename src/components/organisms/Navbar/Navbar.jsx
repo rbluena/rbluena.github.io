@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Link from "@app-components/atoms/Link";
 import Text from "@app-components/assets/Typography";
 import Logo from "@app-components/assets/Logo";
