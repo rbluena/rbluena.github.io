@@ -50,12 +50,19 @@ const SkillBlock = ({ title, children, className }) => {
   );
 };
 
+SkillBlock.defaultProps = {
+  className: "",
+};
+
 SkillBlock.propTypes = {
   /** Title of the block. */
   title: PropTypes.string.isRequired,
 
-  /** Items to be listed. */
+  /** Block contents */
   children: PropTypes.node.isRequired,
+
+  /** Class name used by styled-components */
+  className: PropTypes.string,
 };
 
 export default SkillBlock;
