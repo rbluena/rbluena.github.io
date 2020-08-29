@@ -64,7 +64,7 @@ const MenuLink = styled(Link)`
   }
 `;
 
-const MobMenuHeading = styled.div`
+const MobileMenuHeading = styled.div`
   padding: ${props => props.theme.spacing["xl"]}px 0;
   letter-spacing: 2px;
 
@@ -97,9 +97,9 @@ const Navbar = () => {
         </BrandLink>
       </Brand>
       <Menu toggler={toggler}>
-        <MobMenuHeading>
+        <MobileMenuHeading>
           <Text size="large">Navigation</Text>
-        </MobMenuHeading>
+        </MobileMenuHeading>
 
         {navItems.map(item => (
           <MenuLink key={item.label} to={item.url} external={item.external}>

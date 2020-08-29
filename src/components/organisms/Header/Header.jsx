@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Navbar from "@app-components/molecules/Navbar";
+import Navbar from "@app-components/organisms/Navbar";
 import CoverBG from "@app-components/assets/CoverBG";
 import Illustration from "@app-components/assets/Illustration";
 import PersonalDetails from "./PersonalDetails";
