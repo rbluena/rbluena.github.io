@@ -1,16 +1,11 @@
 import React from "react";
-import Layout from "@app-components/Layout";
-import Skills from "@app-components/Skills";
-import GoodAt from "@app-components/GoodAt";
-
-import Companies from "@app-components/Companies";
+import { Layout } from "@app-components";
+import { Header } from "@app-components";
 
 export default () => {
   return (
     <Layout>
-      <GoodAt />
-      <Companies />
-      <Skills />
+      <Header />
     </Layout>
   );
 };
