@@ -70,28 +70,22 @@ const StyledButton = styled.button`
     `}
 `;
 
-export const ButtonLink = styled.a`
-  padding: ${props => props.theme.spacing.xs}px
-    ${props => props.theme.spacing.sm}px;
-  color: ${props => props.theme.color.red[200]};
-  text-decoration: none;
-  opacity: 80%;
-
-  &:hover {
-    cursor: pointer;
-    outline: none;
-    opacity: 100%;
-  }
-`;
-const Button = ({ children, type, ...rest }) => {
-  if (type === "link") {
-    return <ButtonLink>{children}</ButtonLink>;
+const Button = ({ children, link, ...rest }) => {
+  if (link) {
+    return (
+      <StyledButton as="a" {...rest}>
+        {children}
+      </StyledButton>
+    );
   }
 
   return <StyledButton {...rest}>{children}</StyledButton>;
 };
 
 Button.propTypes = {
+  /** Specifying either button is a link button */
+  link: PropTypes.bool,
+
   /** Props is passed if primary button is created. */
   primary: PropTypes.bool,
 
@@ -108,7 +102,8 @@ Button.propTypes = {
 Button.defaultProps = {
   primary: false,
   secondary: false,
-  type: undefined,
+  outline: false,
+  link: false,
 };
 
 export default Button;
