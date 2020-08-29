@@ -6,6 +6,7 @@ import SkillBlock from "./molecules/SkillBlock";
 import Education from "./organisms/Education";
 import Footer from "./organisms/Footer";
 import Header from "./organisms/Header";
+import Hero from "./organisms/Hero";
 import Layout from "./organisms/Layout";
 import Navbar from "./organisms/Navbar";
 import SEO from "./organisms/SEO";
@@ -19,6 +20,7 @@ export {
   Education,
   Footer,
   Header,
+  Hero,
   Layout,
   Navbar,
   SEO,
