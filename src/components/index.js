@@ -1,4 +1,5 @@
 // Molecules components
+import Section from "./molecules/Section";
 import SectionBox from "./molecules/SectionBox";
 import SkillBlock from "./molecules/SkillBlock";
 
@@ -15,6 +16,7 @@ import Tags from "./organisms/Tags";
 import Work from "./organisms/Work";
 
 export {
+  Section,
   SectionBox,
   SkillBlock,
   Education,

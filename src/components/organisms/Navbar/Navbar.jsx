@@ -13,7 +13,8 @@ const StyledNavbar = styled.nav`
   justify-content: flex-end;
   top: 0px;
   left: 0;
-  padding: ${props => props.theme.spacing.sm}px;
+  padding: ${props => props.theme.spacing.sm}px
+    ${props => props.theme.spacing.large}px;
   border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
   background-color: ${props => props.theme.color.monochrome[900]};
 `;
@@ -28,14 +29,14 @@ const BrandLink = styled(Link)`
 `;
 
 const Menu = styled(motion.div)`
-  /* Mobile screens */
-  @media screen and (max-width: ${props => props.theme.mediaQuery.tablet}) {
+  @media ${props => props.theme.devices.max_tablet} {
     text-align: center;
     width: 100%;
     position: absolute;
+    overflow-y: scroll;
     right: 0px;
     background-color: ${props => props.theme.color.monochrome[900]};
-    height: calc(100vh - 64px);
+    height: 100vh;
     top: 64px;
     box-shadow: ${props => props.theme.elevation.default};
     display: ${props => (props.toggler ? "block" : "none")};
@@ -62,12 +63,13 @@ const MenuLink = styled(Link)`
 `;
 
 const MobileMenuHeading = styled.div`
+  color: ${props => props.theme.color.monochrome[200]};
   padding: ${props => props.theme.spacing["xl"]}px 0;
   letter-spacing: 2px;
+  display: none;
 
-  /* Tablet and above*/
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    display: none;
+  @media ${props => props.theme.devices.max_tablet} {
+    display: block;
   }
 `;
 
@@ -76,10 +78,10 @@ const Toggler = styled.button`
   border: none;
   cursor: pointer;
   height: 32px;
+  display: none;
 
-  /* Tablet  and above */
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    display: none;
+  @media ${props => props.theme.devices.max_tablet} {
+    display: block;
   }
 `;
 

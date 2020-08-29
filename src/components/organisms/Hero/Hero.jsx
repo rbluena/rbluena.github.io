@@ -1,41 +1,23 @@
 import React from "react";
+import { Section } from "@app-components";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  max-width: 1224px;
-  margin: 0 auto;
-
-  svg#bg-wiggle {
-    z-index: -10;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: ${props => props.theme.color.blue[100]};
-    color: ${props => props.theme.color.blue[100]};
-  }
+const Wrapper = styled(Section)`
+  padding-top: 0px;
 
   svg#illustration {
     display: none;
-    padding: 0;
     height: 550px;
   }
 
-  /* Tablet and greater */
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
+  @media ${props => props.theme.devices.tablet} {
     display: flex;
     justify-content: flex-end;
-    padding: 0px ${props => props.theme.spacing["4xl"]}px;
-
-    svg#bg-wiggle {
-      max-width: 50vw;
-      top: -${props => props.theme.spacing.medium}px;
-      display: none;
-    }
 
     svg#illustration {
       display: block;
+      width: 60vw;
     }
   }
 `;

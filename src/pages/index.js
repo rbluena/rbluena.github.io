@@ -1,11 +1,11 @@
 import React from "react";
-import { Layout } from "@app-components";
-import { Header } from "@app-components";
+import { Layout, Header, Footer } from "@app-components";
 
 export default () => {
   return (
     <Layout>
       <Header />
+      <Footer />
     </Layout>
   );
 };

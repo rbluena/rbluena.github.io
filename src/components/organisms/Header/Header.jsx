@@ -28,7 +28,7 @@ const Wrapper = styled.header`
 
   /* Tablet and greater */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    height: 650px; /* TODO: Use calculation of 8 */
+    height: 650px;
   }
 `;
 
