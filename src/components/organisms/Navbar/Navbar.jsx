@@ -15,8 +15,6 @@ const StyledNavbar = styled.nav`
   left: 0;
   padding: ${props => props.theme.spacing.sm}px;
   border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
-  width: 100%;
-  z-index: 1000;
   background-color: ${props => props.theme.color.monochrome[900]};
 `;
 
