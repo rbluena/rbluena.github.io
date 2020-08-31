@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const H1 = styled.h1`
   font-size: ${props => props.theme.typography.size.h1};
+  line-height: ${props => props.theme.typography.size.h1 * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -16,6 +17,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: ${props => props.theme.typography.size.h2};
+  line-height: ${props => props.theme.typography.size.h2 * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -28,8 +30,10 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   font-size: ${props => props.theme.typography.size.h3};
+  line-height: ${props => props.theme.typography.size.h3 * 1.5}px;
   margin: 0;
   padding: 0;
+  line-height: ${props => props.theme.typography.size[""]};
 
   ${props =>
     props.weight &&
@@ -52,6 +56,7 @@ const H3 = styled.h3`
 
 const XL = styled.p`
   font-size: ${props => props.theme.typography.size["xlarge"]}px;
+  line-height: ${props => props.theme.typography.size["xlarge"] * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -63,7 +68,8 @@ const XL = styled.p`
 `;
 
 const Large = styled.p`
-  font-size: ${props => props.theme.typography.size.large};
+  font-size: ${props => props.theme.typography.size.large}px;
+  line-height: ${props => props.theme.typography.size.large * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -76,8 +82,11 @@ const Large = styled.p`
 
 const Base = styled.p`
   font-size: ${props => props.theme.typography.size.base};
+  line-height: ${props => props.theme.typography.size.base * 1.5}px;
   margin: 0;
   padding: 0;
+  line-height: ${props => props.theme.typography.size[""]};
+
   ${props =>
     props.weight &&
     `
@@ -87,6 +96,7 @@ const Base = styled.p`
 
 const Small = styled.p`
   font-size: ${props => props.theme.typography.size.sm};
+  line-height: ${props => props.theme.typography.size.sm * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -99,6 +109,7 @@ const Small = styled.p`
 
 const ExtraSmall = styled.p`
   font-size: ${props => props.theme.typography.size.xs};
+  line-height: ${props => props.theme.typography.size.xs * 1.5}px;
   margin: 0;
   padding: 0;
 
