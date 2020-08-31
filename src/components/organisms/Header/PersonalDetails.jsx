@@ -20,6 +20,7 @@ const Wrapper = styled.section`
 
 const Social = styled.div`
   margin-top: ${props => props.theme.spacing.large}px;
+
   .icon {
     font-size: 24px;
   }
@@ -31,14 +32,13 @@ const Social = styled.div`
   }
 `;
 
-const Title = styled(Text).attrs({ size: "title" })``;
+const Title = styled(Text).attrs({ size: "title" })`
+  margin-bottom: ${props => props.theme.spacing["2xl"]}px;
+`;
 
 const Heading = styled(Text).attrs({
   size: "heading",
-  weight: "thin",
-})`
-  line-height: ${props => props.theme.spacing.large}px;
-`;
+})``;
 
 const PersonalDetails = () => {
   const { site } = useStaticQuery(
