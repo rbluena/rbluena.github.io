@@ -35,21 +35,9 @@ const H3 = styled.h3`
   `}
 `;
 
-// const H4 = styled.h4`
-//   font-size: ${props => props.theme.typography.size.h4};
-// `;
-
-// const H5 = styled.h5`
-//   font-size: ${props => props.theme.typography.size.h5};
-// `;
-
-// const H6 = styled.h6`
-//   font-size: ${props => props.theme.typography.size.h6};
-// `;
-
 const XL = styled.p`
   font-size: ${props => props.theme.typography.size["xl"]}px;
-  line-height: ${props => props.theme.typography.size.xl * 0.8}px;
+  line-height: ${props => props.theme.typography.size.xl * 1.5}px;
   margin: 0;
 
   ${props =>
@@ -61,7 +49,7 @@ const XL = styled.p`
 
 const Large = styled.p`
   font-size: ${props => props.theme.typography.size.large}px;
-  line-height: ${props => props.theme.typography.size.large * 0.8}px;
+  line-height: ${props => props.theme.typography.size.large * 1.5}px;
   margin: 0;
 
   ${props =>
@@ -73,7 +61,7 @@ const Large = styled.p`
 
 const Base = styled.p`
   font-size: ${props => props.theme.typography.size.base};
-  line-height: ${props => props.theme.typography.size.base * 0.8}px;
+  line-height: ${props => props.theme.typography.size.base * 1.5}px;
   margin: 0;
 
   ${props =>
@@ -85,7 +73,7 @@ const Base = styled.p`
 
 const Small = styled.p`
   font-size: ${props => props.theme.typography.size.sm};
-  line-height: ${props => props.theme.typography.size.sm * 0.8}px;
+  line-height: ${props => props.theme.typography.size.sm * 1.5}px;
   margin: 0;
   padding: 0;
 
@@ -98,7 +86,7 @@ const Small = styled.p`
 
 const ExtraSmall = styled.p`
   font-size: ${props => props.theme.typography.size.xs};
-  line-height: ${props => props.theme.typography.size.xs * 0.8}px;
+  line-height: ${props => props.theme.typography.size.xs * 1.5}px;
   margin: 0;
   padding: 0;
 
