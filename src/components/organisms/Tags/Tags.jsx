@@ -6,8 +6,6 @@ import { data } from "@app-data/tags.json";
 
 const ContentItem = styled.div`
   flex-basis: 40%;
-  margin: ${props => props.theme.spacing.large}px
-    ${props => props.theme.spacing.sm}px;
   color: ${props => props.theme.color.monochrome[700]};
 `;
 
@@ -19,12 +17,10 @@ const Tags = () => {
 
         return (
           <ContentItem key={key}>
-            <Text size="subheading" weight="bold">
-              {item.title}
-            </Text>
+            <Text size="heading">{item.title}</Text>
             <br />
             <div>
-              <Text>{item.description}</Text>
+              <Text size="large">{item.description}</Text>
             </div>
           </ContentItem>
         );

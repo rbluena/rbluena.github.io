@@ -11,30 +11,25 @@ const Wrapper = styled.section`
 
   /* Tablet and greater */
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    height: 450px;
+    min-height: 450px;
     flex-direction: ${props => (props.reverse ? "row-reverse" : "row")};
   }
 `;
 
-const ContentContainer = styled.div`
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-  }
-`;
+const ContentContainer = styled.div``;
 
 const LeftContent = styled(ContentContainer)`
   text-align: center;
-  padding-top: 3em;
-  margin-bottom: 3em;
+  padding: ${props => props.theme.spacing["xl"] * 3}px
+    ${props => props.theme.spacing.large}px;
 
   @media ${props => props.theme.devices.tablet} {
     padding: 0;
-    padding-bottom: 2em;
     min-width: 100px;
     width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
 `;
 
