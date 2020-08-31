@@ -50,6 +50,18 @@ const H3 = styled.h3`
 //   font-size: ${props => props.theme.typography.size.h6};
 // `;
 
+const XL = styled.p`
+  font-size: ${props => props.theme.typography.size["xlarge"]}px;
+  margin: 0;
+  padding: 0;
+
+  ${props =>
+    props.weight &&
+    `
+    font-weight: ${props.theme.typography.weight[props.weight]}
+  `}
+`;
+
 const Large = styled.p`
   font-size: ${props => props.theme.typography.size.large};
   margin: 0;
@@ -119,6 +131,14 @@ const Text = ({ children, size, weight, className }) => {
       <H3 weight={weight} className={className}>
         {children}
       </H3>
+    );
+  }
+
+  if (size === "xl") {
+    return (
+      <XL weight={weight} className={className}>
+        {children}
+      </XL>
     );
   }
 
