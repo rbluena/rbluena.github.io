@@ -4,7 +4,7 @@ import { Layout, Header, Footer } from "@app-components";
 export default () => {
   return (
     <Layout>
-      <Header />
+      <Header showHero />
       <Footer />
     </Layout>
   );
