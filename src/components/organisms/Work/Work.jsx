@@ -29,7 +29,7 @@ const Image = styled.div`
 
 const Work = () => {
   return (
-    <SectionBox title="Working Experience">
+    <SectionBox title="Working Experience" reverse>
       {Object.keys(data).map(key => {
         const item = data[key];
         let imgPath = "";
