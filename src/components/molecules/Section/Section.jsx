@@ -21,6 +21,20 @@ const Section = ({ children, as, className, ...rest }) => {
   );
 };
 
-Section.propTypes = {};
+Section.defaultProps = {
+  as: undefined,
+  className: "",
+};
+
+Section.propTypes = {
+  /** Content inside component. */
+  children: PropTypes.node.isRequired,
+
+  /** Alias tag can be used to chenge original tag. Can be div, footer or any container. */
+  as: PropTypes.string,
+
+  /**  Used by styled-components' to modify classes. */
+  className: PropTypes.string,
+};
 
 export default Section;
