@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ title, description, lang, newMeta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            baseUrl
             title
             description
             author
@@ -18,50 +19,70 @@ function SEO({ description, lang, meta, title }) {
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const { siteMetadata: metaData } = site;
+
+  const metaTitle = title || metaData.title;
+  const metaDescription = description || metaData.description;
+  const { baseUrl } = metaData;
+
+  const meta = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:title`,
+      content: title,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:creator`,
+      content: site.siteMetadata.author,
+    },
+    {
+      name: `twitter:title`,
+      content: title,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
+  ].concat(newMeta || []);
+
+  console.log(meta);
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
+      <html lang="en" amp />
+      <title>{metaTitle}</title>
+      <link rel="canonical" href={baseUrl} />
+
+      {meta &&
+        meta.length &&
+        meta.map((item, idx) => {
+          const key = `${idx}_${item.name}`;
+
+          if (item.name) {
+            return <meta key={key} name={item.name} content={item.content} />;
+          }
+
+          return (
+            <meta key={key} property={item.property} content={item.content} />
+          );
+        })}
+      <meta name="keywords" content="" />
+    </Helmet>
   );
 }
 
