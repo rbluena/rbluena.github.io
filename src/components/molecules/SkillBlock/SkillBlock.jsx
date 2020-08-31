@@ -33,18 +33,15 @@ const ContentList = styled.ul`
   }
 `;
 
-const Heading = styled(Text)`
+const Subheading = styled(Text).attrs({ size: "heading", weight: "thin" })`
   color: ${props => props.theme.color.monochrome[300]};
-  letter-spacing: 2px;
+  margin-bottom: ${props => props.theme.spacing["xl"]}px;
 `;
 
 const SkillBlock = ({ title, children, className }) => {
   return (
     <Wrapper className={className}>
-      <Heading size="subheading" weight="thin">
-        {title}
-      </Heading>
-
+      <Subheading>{title}</Subheading>
       <ContentList>{children}</ContentList>
     </Wrapper>
   );

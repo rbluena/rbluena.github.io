@@ -26,10 +26,9 @@ const LeftContent = styled(ContentContainer)`
   padding-top: 3em;
   margin-bottom: 3em;
 
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
+  @media ${props => props.theme.devices.tablet} {
     padding: 0;
     padding-bottom: 2em;
-    height: 100%;
     min-width: 100px;
     width: 45%;
     display: flex;
@@ -44,7 +43,6 @@ const RightContent = styled(ContentContainer)`
   padding: ${props => props.theme.spacing.large}px;
 
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    height: 100%;
     width: 70%;
     display: flex;
     justify-content: center;
