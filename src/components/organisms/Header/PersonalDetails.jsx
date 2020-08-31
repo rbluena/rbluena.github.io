@@ -10,6 +10,7 @@ const Wrapper = styled.section`
   height: 250px;
   padding: calc(10 * 8px) 0px;
   margin-right: auto;
+  max-width: calc(80 * 8px);
 
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     text-align: left;
@@ -18,7 +19,7 @@ const Wrapper = styled.section`
 `;
 
 const Social = styled.div`
-  margin-top: ${props => props.theme.spacing.sm}px;
+  margin-top: ${props => props.theme.spacing.large}px;
   .icon {
     font-size: 24px;
   }
@@ -26,20 +27,17 @@ const Social = styled.div`
   a {
     padding: 0px;
     padding-right: ${props => props.theme.spacing.xs}px;
-    color: ${props => props.theme.color.monochrome[100]};
+    color: ${props => props.theme.color.monochrome[400]};
   }
 `;
 
-const Heading = styled(Text).attrs({ size: "heading" })`
-  font-size: ${props => props.theme.typography.size.h4}px;
-  margin-bottom: ${props => props.theme.spacing["medium"]}px;
-`;
+const Title = styled(Text).attrs({ size: "title" })``;
 
-const Subheading = styled(Text).attrs({
-  size: "subheading",
-  weight: "regular",
+const Heading = styled(Text).attrs({
+  size: "heading",
+  weight: "thin",
 })`
-  font-size: ${[props => props.theme.typography.size.large]}px;
+  line-height: ${props => props.theme.spacing.large}px;
 `;
 
 const PersonalDetails = () => {
@@ -49,17 +47,20 @@ const PersonalDetails = () => {
         site {
           siteMetadata {
             title
-            headline
             description
           }
         }
       }
     `
   );
+
+  const { siteMetadata: metadata } = site;
   return (
     <Wrapper>
-      <Heading>Rabii Luena</Heading>
-      <Subheading>{site.siteMetadata.description}</Subheading>
+      <Title>Rabii Luena</Title>
+
+      <Heading>{metadata.description}</Heading>
+
       <Social>
         <Link
           external

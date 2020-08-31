@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
+    baseUrl: `https://rabiiluena.com`,
     title: `Rabii Luena`,
-    headline: `Front-end Engineer and JavaScript Enthusiast`,
-    description: `I am front-end and mobile application developer.`,
+    description: `CSS and JavaScript enthusiast. Just striving to become a better front-end engineer today than yesterday.`,
     author: `@rbluena`,
   },
   plugins: [
