@@ -1,7 +1,10 @@
+import Text from "./assets/Typography";
+
 // Molecules components
 import Section from "./molecules/Section";
 import SectionBox from "./molecules/SectionBox";
 import SkillBlock from "./molecules/SkillBlock";
+import Main from "./molecules/Main";
 
 // Organism components
 import Education from "./organisms/Education";
@@ -16,9 +19,11 @@ import Tags from "./organisms/Tags";
 import Work from "./organisms/Work";
 
 export {
+  Text,
   Section,
   SectionBox,
   SkillBlock,
+  Main,
   Education,
   Footer,
   Header,
