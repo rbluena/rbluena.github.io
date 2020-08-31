@@ -60,8 +60,6 @@ function SEO({ title, description, lang, newMeta }) {
     },
   ].concat(newMeta || []);
 
-  console.log(meta);
-
   return (
     <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
       <html lang="en" amp />
