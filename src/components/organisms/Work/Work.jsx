@@ -12,6 +12,19 @@ const ContentItem = styled.div`
   color: ${props => props.theme.color.monochrome[700]};
   display: flex;
 `;
+
+const Heading = styled(Text).attrs({ size: "heading" })`
+  line-height: 18px;
+`;
+
+const Subheading = styled(Text).attrs({ size: "subheading" })`
+  line-height: 56px;
+`;
+
+const Large = styled(Text).attrs({ size: "large" })`
+  line-height: inherit;
+`;
+
 const Description = styled.div``;
 
 const Image = styled.div`
@@ -20,10 +33,8 @@ const Image = styled.div`
   background: transparent;
 
   svg {
-    width: ${props => props.theme.spacing.xxxl}px;
-    height: ${props => props.theme.spacing.xxxl}px;
-    margin: 0;
-    padding: 0px;
+    width: ${props => props.theme.spacing["2xl"]}px;
+    height: ${props => props.theme.spacing["2xl"]}px;
   }
 `;
 
@@ -40,18 +51,14 @@ const Work = () => {
 
         return (
           <ContentItem key={key}>
-            <Image hasImage={imgPath && imgPath.length}>
-              {imgPath && imgPath.length && <ReactSVG src={imgPath} />}
-            </Image>
+            <ReactSVG src={imgPath} />
 
             <div>
-              <Text size="subheading">{item.company}</Text>
-              <Text subheading="large" weight="bold">
+              <Heading>{item.company}</Heading>
+              <Subheading size="subheading" weight="bold">
                 {item.from} - {item.to}
-              </Text>
-              <Text subheading="large" weight="thin">
-                {item.type}
-              </Text>
+              </Subheading>
+              <Large size="large">{item.position}</Large>
               <Description>{item.description}</Description>
 
               {data.url && (
