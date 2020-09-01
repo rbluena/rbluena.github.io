@@ -10,7 +10,7 @@ const Wrapper = styled.section`
   flex-direction: column;
 
   /* Tablet and greater */
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
+  @media ${props => props.theme.devices.tablet} {
     min-height: 450px;
     flex-direction: ${props => (props.reverse ? "row-reverse" : "row")};
   }
@@ -35,7 +35,9 @@ const LeftContent = styled(ContentContainer)`
 
 const RightContent = styled(ContentContainer)`
   background-color: ${props => props.theme.color.blue[200]};
-  padding: ${props => props.theme.spacing.large}px;
+  /* padding: ${props => props.theme.spacing.large}px; */
+  padding: ${props => props.theme.spacing["xl"] * 3}px
+    ${props => props.theme.spacing.large}px;
 
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
     width: 70%;

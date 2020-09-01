@@ -10,6 +10,8 @@ const Wrapper = styled.section`
   /* For large devices content should not be wider than 1224px */
   @media ${props => props.theme.devices.tablet} {
     max-width: 1224px;
+    padding: ${props => props.theme.spacing["xl"] * 2}px
+      ${props => props.theme.spacing.large}px;
   }
 `;
 
