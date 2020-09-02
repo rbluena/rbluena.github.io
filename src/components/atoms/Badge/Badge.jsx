@@ -7,21 +7,31 @@ const Wrapper = styled.span`
   display: inline-block;
   background-color: ${props => props.theme.color.monochrome[400]};
   color: ${props => props.theme.color.monochrome[900]};
-  padding: ${props =>
-    `${props.theme.spacing.xs}px ${props.theme.spacing.xs}px`};
+  line-height: 1;
+  vertical-align: baseline;
+  text-align: center;
+  font-size: 80%;
   border-radius: ${props => props.theme.border.radius.medium};
+  padding: ${props => `${props.theme.spacing.xs}px`};
 
   ${props =>
     props.size === "sm" &&
     `
       padding: ${props.theme.spacing.xxs}px;
-      font-size: ${props.theme.typography.xs}px;
+      font-size: 75%;
+    `};
+
+  ${props =>
+    props.size === "large" &&
+    `
+      padding: ${props.theme.spacing.xm}px;
+      font-size: 100%;
     `};
 
   ${props =>
     props.primary &&
     `
-    background-color: ${props.theme.color.blue[200]};
+    background-color: ${props.theme.color.blue[100]};
     color: ${props.theme.color.monochrome[800]};
   `}
 
