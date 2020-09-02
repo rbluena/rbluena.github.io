@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import Project from "./Project";
+
+<Meta title="Design System/Organisms" component={Project} />
+
+# Project Section
+
+<br />
+
+export const data = {
+  title: "Portfolio",
+  description:
+    "It was a great learning experience while I was building my own portifolio. I was trying to properly documenting UI components with storybook, creating reusable components and taking advantage of css-in-js approach with styled-components library.",
+  url: "https://rabiiluena.com",
+  repo: "https://github.com/rbluena/rbluena",
+  tools: [
+    "Gatsby",
+    "Styled Component",
+    "Storybook",
+    "Figma",
+    "Google Analytics",
+  ],
+};
+
+<Canvas>
+  <Story name="Project">
+    <Project project={data} />
+  </Story>
+</Canvas>

@@ -1,12 +1,36 @@
 {
   "data": {
+    "engineer guide": {
+      "title": "Software Engineering Knowledge Base",
+      "description": "This started as personal guidance to becoming the GOAT of software engineering, but I realised it wouldn't hurt if there will be multiple version of me. It is work in progress therefore should be used with coutious.",
+      "url": "https://softwareengineer.guide",
+      "repo": "https://github.com/rbluena/SE-knowledge-base",
+      "tools": ["Markdown", "React", "Notion"]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "It was a great learning experience while I was building my own portifolio. I was trying to properly documenting UI components with storybook, creating reusable components and taking advantage of css-in-js approach with styled-components library.",
+      "url": "/",
+      "repo": "https://github.com/rbluena/rbluena",
+      "tools": [
+        "Gatsby",
+        "Styled Component",
+        "Storybook",
+        "Figma",
+        "Google Analytics"
+      ]
+    },
     "greenrush": {
       "title": "GreenRush",
-      "description": "Created cart and checkout process with react."
+      "description": "Created cart and checkout process with react.",
+      "url": "https://greenrush.com/shop",
+      "tools": ["React", "Redux", "redux-sage", "Google Analytics"]
     },
     "cloudboost": {
       "title": "CloudBoost",
-      "description": "Created authentication process on react, updated customers dashboard and worked on stripe intergration with expressjs"
+      "description": "Created authentication process on react, updated customers dashboard and worked on stripe intergration with expressjs",
+      "url": "https://cloudboost.io",
+      "tools": ["React", "Redux", "Stripe Client", "ExpressJS"]
     }
   }
 }
