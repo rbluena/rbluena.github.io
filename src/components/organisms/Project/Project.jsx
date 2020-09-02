@@ -1,14 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  SectionBox,
-  Main,
-  Text,
-  Section,
-  Badge,
-  Link,
-  Button,
-} from "@app-components";
+import { SectionBox, Text, Badge, Button } from "@app-components";
 import styled from "styled-components";
 
 const Wrapper = styled(SectionBox)`
@@ -45,10 +37,10 @@ const Project = ({ project, reverse }) => {
             project.tools.length &&
             project.tools.map(tool => {
               return (
-                <>
+                <React.Fragment key={tool}>
                   <Badge label={tool} primary />
                   &nbsp;&nbsp;
-                </>
+                </React.Fragment>
               );
             })}
         </Tags>
@@ -83,6 +75,16 @@ const Project = ({ project, reverse }) => {
   );
 };
 
-Project.propTypes = {};
+Project.defaultProps = {
+  reverse: false,
+};
+
+Project.propTypes = {
+  /** Project's data.  */
+  project: PropTypes.objectOf(PropTypes.any).isRequired,
+
+  /** Reversing the order between title's container and project description container. */
+  reverse: PropTypes.bool,
+};
 
 export default Project;
