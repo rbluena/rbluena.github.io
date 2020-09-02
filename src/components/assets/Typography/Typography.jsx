@@ -71,11 +71,9 @@ const Base = styled.p`
 `}
 `;
 
-const Small = styled.p`
+const Small = styled.span`
   font-size: ${props => props.theme.typography.size.sm};
   line-height: ${props => props.theme.typography.size.sm * 1.5}px;
-  margin: 0;
-  padding: 0;
 
   ${props =>
     props.weight &&
@@ -84,7 +82,7 @@ const Small = styled.p`
   `}
 `;
 
-const ExtraSmall = styled.p`
+const ExtraSmall = styled.span`
   font-size: ${props => props.theme.typography.size.xs};
   line-height: ${props => props.theme.typography.size.xs * 1.5}px;
   margin: 0;
