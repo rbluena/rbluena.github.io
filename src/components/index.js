@@ -1,4 +1,5 @@
 import Text from "./assets/Typography";
+import Badge from "./atoms/Badge";
 
 // Molecules components
 import Section from "./molecules/Section";
@@ -20,6 +21,7 @@ import Work from "./organisms/Work";
 
 export {
   Text,
+  Badge,
   Section,
   SectionBox,
   SkillBlock,
