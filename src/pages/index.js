@@ -3,6 +3,7 @@ import {
   Layout,
   Header,
   Footer,
+  Main,
   SEO,
   Work,
   Skills,
@@ -14,9 +15,11 @@ export default () => {
     <Layout>
       <SEO title="Home" />
       <Header showHero />
-      <Tags />
-      <Skills />
-      <Work />
+      <Main>
+        <Tags />
+        <Skills />
+        <Work />
+      </Main>
       <Footer />
     </Layout>
   );
