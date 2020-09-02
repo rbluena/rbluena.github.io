@@ -5,12 +5,15 @@ import styled from "styled-components";
 
 const Wrapper = styled(SectionBox)`
   margin-bottom: ${props => props.theme.spacing["2xl"] * 3}px;
+  position: relative;
 `;
 
 const Content = styled.div`
-  padding: ${props => props.theme.spacing["4xl"]}px
-    ${props => props.theme.spacing.large}px;
   color: ${props => props.theme.color.monochrome[300]};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Tags = styled.div`
@@ -23,53 +26,62 @@ const Buttons = styled.div`
 
 const StyledLink = styled(Button)``;
 
+const Description = styled(Text).attrs({ size: "large", weight: "thin" })`
+  font-size: 150%;
+  position: relative;
+`;
+
+const Footer = styled.footer``;
+
 const Project = ({ project, reverse }) => {
   return (
     <Wrapper title={project.title.toUpperCase()} reverse={reverse}>
       <Content>
-        <Text size="heading">
+        <Description>
           <span dangerouslySetInnerHTML={{ __html: project.description }} />
-        </Text>
+        </Description>
 
-        {/* start: end of buttons */}
-        <Tags>
-          {project.tools &&
-            project.tools.length &&
-            project.tools.map(tool => {
-              return (
-                <React.Fragment key={tool}>
-                  <Badge label={tool} primary />
-                  &nbsp;&nbsp;
-                </React.Fragment>
-              );
-            })}
-        </Tags>
-        {/* end: end of buttons */}
+        <Footer>
+          {/* start: end of buttons */}
+          <Tags>
+            {project.tools &&
+              project.tools.length &&
+              project.tools.map(tool => {
+                return (
+                  <React.Fragment key={tool}>
+                    <Badge label={tool} primary />
+                    &nbsp;&nbsp;
+                  </React.Fragment>
+                );
+              })}
+          </Tags>
+          {/* end: end of buttons */}
 
-        {/* start: end of buttons */}
-        <Buttons>
-          <StyledLink
-            href={project.url}
-            link
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project
-          </StyledLink>
-          &nbsp; &nbsp;
-          {project.repo && project.repo.length && (
+          {/* start: end of buttons */}
+          <Buttons>
             <StyledLink
-              href={project.repo}
+              href={project.url}
               link
-              target="blank"
+              target="_blank"
               rel="noopener noreferrer"
-              secondary
             >
-              Repository
+              View Project
             </StyledLink>
-          )}
-        </Buttons>
-        {/* end: end of buttons */}
+            &nbsp; &nbsp;
+            {project.repo && project.repo.length && (
+              <StyledLink
+                href={project.repo}
+                link
+                target="blank"
+                rel="noopener noreferrer"
+                secondary
+              >
+                Repository
+              </StyledLink>
+            )}
+          </Buttons>
+          {/* end: end of buttons */}
+        </Footer>
       </Content>
     </Wrapper>
   );

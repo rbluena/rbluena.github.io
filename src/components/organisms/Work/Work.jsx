@@ -7,8 +7,8 @@ import { ReactSVG } from "react-svg";
 import { data } from "@app-data/work.json";
 
 const ContentItem = styled.div`
-  flex-basis: 40%;
-  margin: ${props => props.theme.spacing.large}px 0px;
+  flex-basis: 45%;
+  /* margin: ${props => props.theme.spacing.large}px 0px; */
   color: ${props => props.theme.color.monochrome[700]};
   display: flex;
 `;
@@ -40,7 +40,7 @@ const Image = styled.div`
 
 const Work = () => {
   return (
-    <SectionBox title="Working Experience" reverse>
+    <SectionBox title="Working Experience" displayContent="column" reverse>
       {Object.keys(data).map(key => {
         const item = data[key];
         let imgPath = "";

@@ -24,9 +24,7 @@ const LeftContent = styled(ContentContainer)`
     ${props => props.theme.spacing.large}px;
 
   @media ${props => props.theme.devices.tablet} {
-    padding: 0;
-    min-width: 100px;
-    width: 45%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,42 +33,60 @@ const LeftContent = styled(ContentContainer)`
 
 const RightContent = styled(ContentContainer)`
   background-color: ${props => props.theme.color.blue[200]};
-  /* padding: ${props => props.theme.spacing.large}px; */
-  padding: ${props => props.theme.spacing["xl"] * 3}px
+  padding: ${props => props.theme.spacing["xl"] * 2}px
     ${props => props.theme.spacing.large}px;
 
-  @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  @media ${props => props.theme.devices.tablet} {
+    width: 65%;
+
+    ${props =>
+      props.displayContent === "column" &&
+      `
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    `}
   }
 `;
 
-const SectionBox = ({ reverse, title, children }) => {
+const SectionBox = ({
+  reverse,
+  title,
+  children,
+  displayContent,
+  className,
+}) => {
   return (
-    <Wrapper reverse={reverse}>
+    <Wrapper reverse={reverse} className={className}>
       <LeftContent>
         <Text size="title">{title}</Text>
       </LeftContent>
-      <RightContent>{children}</RightContent>
+      <RightContent displayContent={displayContent}>{children}</RightContent>
     </Wrapper>
   );
 };
 
 SectionBox.defaultProps = {
   reverse: false,
+  className: "",
+  displayContent: "",
 };
 
 SectionBox.propTypes = {
-  /** Reversing columns of the containers */
+  /** Reversing columns of the containers. Left and right containers. */
   reverse: PropTypes.bool,
 
   /** Title of the section */
   title: PropTypes.string.isRequired,
 
-  /** Content of the section */
+  /** Showing content inside right container(content container) in flex or accupying the whole container.*/
+  displayContent: PropTypes.string,
+
+  /** Content of the section. */
   children: PropTypes.node.isRequired,
+
+  /** Class names provided by styled-components. */
+  className: PropTypes.string,
 };
 
 export default SectionBox;
