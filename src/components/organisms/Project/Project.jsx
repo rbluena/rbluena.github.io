@@ -35,7 +35,9 @@ const Project = ({ project, reverse }) => {
   return (
     <Wrapper title={project.title.toUpperCase()} reverse={reverse}>
       <Content>
-        <Text size="heading">{project.description}</Text>
+        <Text size="heading">
+          <span dangerouslySetInnerHTML={{ __html: project.description }} />
+        </Text>
 
         {/* start: end of buttons */}
         <Tags>
@@ -44,7 +46,7 @@ const Project = ({ project, reverse }) => {
             project.tools.map(tool => {
               return (
                 <>
-                  <Badge label={tool} size="sm" secondary />
+                  <Badge label={tool} primary />
                   &nbsp;&nbsp;
                 </>
               );
