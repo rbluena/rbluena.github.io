@@ -35,7 +35,7 @@ const InputText = styled.input.attrs({ type: "text" })`
 const Error = styled.div`
   display: block;
   font-size: ${props => props.theme.typography.size.sm}px;
-  padding: ${props => props.theme.spacing.sm}px;
+  padding: ${props => props.theme.spacing.sm}px 0;
   color: ${props => props.theme.color.red[100]};
 `;
 
