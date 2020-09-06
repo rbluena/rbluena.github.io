@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactSVG } from "react-svg";
 import styled from "styled-components";
 import { Section } from "@app-components";
 import Text from "@app-components/assets/Typography";
@@ -7,10 +8,19 @@ import { FiTwitter } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import linksData from "@app-data/main-nav.json";
+import waveImage from "@app-images/wave.svg";
 
 const Wrapper = styled.footer`
   background-color: ${props => props.theme.color.blue[300]};
   color: ${props => props.theme.color.monochrome[200]};
+`;
+
+const WaveContainer = styled.div`
+  svg {
+    fill: ${props => props.theme.color.blue[300]};
+    padding: 0;
+    margin-bottom: -5px;
+  }
 `;
 
 const StyledContainer = styled(Section)`
@@ -64,71 +74,77 @@ const StyledLink = styled(Link)`
 
 const Footer = props => {
   return (
-    <Wrapper>
-      <StyledContainer>
-        <Left>
-          <StyledText weight="bold">
-            &copy; {new Date().getFullYear()}{" "}
-            <StyledLink to="/">Rabii Luena</StyledLink>
-          </StyledText>
+    <>
+      <WaveContainer>
+        <ReactSVG src={waveImage} />
+      </WaveContainer>
 
-          <Social>
-            <li id="my-twitter-account">
-              <StyledLink
-                external
-                to="https://twitter.com/rbluena"
-                aria-label="Visit my Twitter account"
-              >
-                <FiTwitter />
-              </StyledLink>
-            </li>
-            <li id="my-github-account">
-              <StyledLink
-                external
-                to="https://github.com/rbluena"
-                aria-label="Visit my Github profile"
-              >
-                <FiGithub />
-              </StyledLink>
-            </li>
-            <li>
-              <StyledLink
-                external
-                to="https://linkedin.com/u/rbluena"
-                aria-label="Visit my Linkedin profile"
-              >
-                <FiLinkedin />
-              </StyledLink>
-            </li>
-          </Social>
-        </Left>
+      <Wrapper>
+        <StyledContainer>
+          <Left>
+            <StyledText weight="bold">
+              &copy; {new Date().getFullYear()}{" "}
+              <StyledLink to="/">Rabii Luena</StyledLink>
+            </StyledText>
 
-        <FooterNav>
-          {linksData.map(item => {
-            return (
-              <li key={item.label}>
-                <StyledLink to={item.url} external={item.external || false}>
-                  {item.label}
+            <Social>
+              <li id="my-twitter-account">
+                <StyledLink
+                  external
+                  to="https://twitter.com/rbluena"
+                  aria-label="Visit my Twitter account"
+                >
+                  <FiTwitter />
                 </StyledLink>
               </li>
-            );
-          })}
-        </FooterNav>
+              <li id="my-github-account">
+                <StyledLink
+                  external
+                  to="https://github.com/rbluena"
+                  aria-label="Visit my Github profile"
+                >
+                  <FiGithub />
+                </StyledLink>
+              </li>
+              <li>
+                <StyledLink
+                  external
+                  to="https://linkedin.com/u/rbluena"
+                  aria-label="Visit my Linkedin profile"
+                >
+                  <FiLinkedin />
+                </StyledLink>
+              </li>
+            </Social>
+          </Left>
 
-        <Right>
-          <StyledText size="large">
-            Built with{" "}
-            <StyledLink external to="https://gatsbyjs.com">
-              Gatsby
-            </StyledLink>{" "}
-            and hosted by{" "}
-            <StyledLink external to="https://github.com">
-              GitHub.
-            </StyledLink>
-          </StyledText>
-        </Right>
-      </StyledContainer>
-    </Wrapper>
+          <FooterNav>
+            {linksData.map(item => {
+              return (
+                <li key={item.label}>
+                  <StyledLink to={item.url} external={item.external || false}>
+                    {item.label}
+                  </StyledLink>
+                </li>
+              );
+            })}
+          </FooterNav>
+
+          <Right>
+            <StyledText size="large">
+              Built with{" "}
+              <StyledLink external to="https://gatsbyjs.com">
+                Gatsby
+              </StyledLink>{" "}
+              and hosted by{" "}
+              <StyledLink external to="https://github.com">
+                GitHub.
+              </StyledLink>
+            </StyledText>
+          </Right>
+        </StyledContainer>
+      </Wrapper>
+    </>
   );
 };
 
