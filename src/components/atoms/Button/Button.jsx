@@ -23,6 +23,7 @@ const StyledButton = styled.button`
   &:active {
     box-shadow: ${props => props.theme.elevation.elevated};
   }
+  
 
   /* Primary Button */
   ${props =>
@@ -60,13 +61,36 @@ const StyledButton = styled.button`
       border: 2px solid ${props.theme.color.red[200]};
     `}
 
+    /* Dark */
+
+  ${props =>
+    props.dark &&
+    `
+    background: ${props.theme.color.monochrome[200]};
+    color: white;
+    font-weight: bold;
+  `}
+
   /* Small Button */
   ${props =>
     props.small &&
     css`
-      padding-top: ${props.theme.spacing.xxs}px;
-      padding-bottom: ${props.theme.spacing.xxs}px;
+      padding-top: ${props.theme.spacing.xxs}px 0;
       font-size: ${props.theme.typography.size.base}px;
+    `}
+
+    /* Large button */
+    ${props =>
+      props.large &&
+      `
+      padding: ${props.theme.spacing.sm}px;
+    `}
+
+    /* Wide button */
+    ${props =>
+      props.large &&
+      `
+      width: 100%;
     `}
 `;
 
