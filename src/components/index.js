@@ -5,6 +5,7 @@ import Badge from "./atoms/Badge";
 import Link from "./atoms/Link";
 import Button from "./atoms/Button";
 import InputText from "./atoms/InputText";
+import TextArea from "./atoms/TextArea";
 
 // Molecules
 import Section from "./molecules/Section";
@@ -30,6 +31,7 @@ export {
   Badge,
   Button,
   InputText,
+  TextArea,
   Link,
   Section,
   SectionBox,

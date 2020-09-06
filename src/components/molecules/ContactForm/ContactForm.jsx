@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { InputText, Button } from "@app-components";
+import { InputText, TextArea, Button } from "@app-components";
 
 const Form = styled.form``;
 
@@ -19,8 +19,11 @@ const ContactForm = ({ onSubmit }) => {
         <InputText id="email" label="Your Email" />
       </FormGroup>
       <FormGroup>
+        <TextArea id="description" label="Tell me some good news!" />
+      </FormGroup>
+      <FormGroup>
         <Button type="submit" dark large wide>
-          Send
+          Submit
         </Button>
       </FormGroup>
     </Form>
