@@ -18,7 +18,7 @@ const Label = styled.label`
   `}
 `;
 
-const InputText = styled.input.attrs({ type: "text" })`
+const Input = styled.input.attrs({ type: "text" })`
   border: 0px;
   appearance: none;
   box-sizing: border-box;
@@ -44,17 +44,16 @@ const Wrapper = styled.div`
   border: ${props => props.theme.border.width.medium}px solid;
   border-color: ${props => props.theme.color.monochrome[200]};
   height: 50px;
-  max-width: 400px;
   padding: 0;
   margin: 0px;
 
-  ${InputText} {
+  ${Input} {
     &:focus {
     }
   }
 `;
 
-const Input = ({ id, label, value, error, onChange, ...rest }) => {
+const InputText = ({ id, label, value, error, onChange, ...rest }) => {
   const [focused, setFocused] = useState(false);
 
   const errorId = `${id}-error`;
@@ -69,7 +68,7 @@ const Input = ({ id, label, value, error, onChange, ...rest }) => {
       >
         {label}
       </Label>
-      <InputText
+      <Input
         id={id}
         value={value}
         onFocus={() => setFocused(true)}
@@ -86,12 +85,12 @@ const Input = ({ id, label, value, error, onChange, ...rest }) => {
   );
 };
 
-Input.defaultProps = {
+InputText.defaultProps = {
   value: "",
   onChange: () => {},
 };
 
-Input.propTypes = {
+InputText.propTypes = {
   /** Unique identifier of a form input.  */
   id: PropTypes.string.isRequired,
 
@@ -105,4 +104,4 @@ Input.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default Input;
+export default InputText;
