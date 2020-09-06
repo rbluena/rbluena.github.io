@@ -1,0 +1,18 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import ContactForm from "./ContactForm";
+
+<Meta title="Design System/Molecules" component={ContactForm} />
+
+# ContactForm
+
+<br />
+
+## Props for ContactForm
+
+<ArgsTable of={ContactForm} />
+
+<Canvas>
+  <Story name="ContactForm">
+    <ContactForm onSubmit={evt => evt.preventDetault()} />
+  </Story>
+</Canvas>
