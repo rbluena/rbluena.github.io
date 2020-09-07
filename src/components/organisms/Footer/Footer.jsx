@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { Section } from "@app-components";
 import Text from "@app-components/assets/Typography";
 import Link from "@app-components/atoms/Link";
+import Wave from "@app-components/assets/images/Wave";
 import { FiTwitter } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import linksData from "@app-data/main-nav.json";
-import waveImage from "@app-images/wave.svg";
 
 const Wrapper = styled.footer`
   background-color: ${props => props.theme.color.blue[300]};
@@ -16,10 +16,11 @@ const Wrapper = styled.footer`
 `;
 
 const WaveContainer = styled.div`
-  svg {
+  #wave-image {
     fill: ${props => props.theme.color.blue[300]};
     padding: 0;
-    margin-bottom: -5px;
+    margin: -5px 0;
+    width: 100%;
   }
 `;
 
@@ -73,10 +74,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Footer = props => {
+  const waveImage = require("../../../images/wave.svg");
+
   return (
     <>
       <WaveContainer>
-        <ReactSVG src={waveImage} />
+        <Wave />
       </WaveContainer>
 
       <Wrapper>
