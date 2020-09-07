@@ -4,7 +4,8 @@ import Text from "./assets/Typography";
 import Badge from "./atoms/Badge";
 import Link from "./atoms/Link";
 import Button from "./atoms/Button";
-import Input from "./atoms/Input";
+import InputText from "./atoms/InputText";
+import TextArea from "./atoms/TextArea";
 
 // Molecules
 import Section from "./molecules/Section";
@@ -29,7 +30,8 @@ export {
   Text,
   Badge,
   Button,
-  Input,
+  InputText,
+  TextArea,
   Link,
   Section,
   SectionBox,

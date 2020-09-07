@@ -18,7 +18,7 @@ const Label = styled.label`
   `}
 `;
 
-const InputText = styled.input.attrs({ type: "text" })`
+const Input = styled.input.attrs({ type: "text" })`
   border: 0px;
   appearance: none;
   box-sizing: border-box;
@@ -35,7 +35,7 @@ const InputText = styled.input.attrs({ type: "text" })`
 const Error = styled.div`
   display: block;
   font-size: ${props => props.theme.typography.size.sm}px;
-  padding: ${props => props.theme.spacing.sm}px 0;
+  padding: ${props => props.theme.spacing.xs}px 0;
   color: ${props => props.theme.color.red[100]};
 `;
 
@@ -44,54 +44,55 @@ const Wrapper = styled.div`
   border: ${props => props.theme.border.width.medium}px solid;
   border-color: ${props => props.theme.color.monochrome[200]};
   height: 50px;
-  max-width: 400px;
   padding: 0;
-  margin: 0px;
+  margin: 0;
 
-  ${InputText} {
+  ${Input} {
     &:focus {
     }
   }
 `;
 
-const Input = ({ id, label, value, error, onChange, ...rest }) => {
+const InputText = ({ id, label, value, error, onChange, ...rest }) => {
   const [focused, setFocused] = useState(false);
 
   const errorId = `${id}-error`;
   const errorMessage = error;
 
   return (
-    <Wrapper>
-      <Label
-        htmlFor={id}
-        focused={focused}
-        notEmpty={value && value.length > 0}
-      >
-        {label}
-      </Label>
-      <InputText
-        id={id}
-        value={value}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        onChange={onChange}
-        aria-describedby={errorId}
-        {...rest}
-      />
-
+    <>
+      <Wrapper>
+        <Label
+          htmlFor={id}
+          focused={focused}
+          notEmpty={value && value.length > 0}
+        >
+          {label}
+        </Label>
+        <Input
+          id={id}
+          name={id}
+          value={value}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          onChange={onChange}
+          aria-describedby={errorId}
+          {...rest}
+        />
+      </Wrapper>
       {errorMessage && errorMessage.length && (
         <Error id={errorId}>{errorMessage}</Error>
       )}
-    </Wrapper>
+    </>
   );
 };
 
-Input.defaultProps = {
+InputText.defaultProps = {
   value: "",
   onChange: () => {},
 };
 
-Input.propTypes = {
+InputText.propTypes = {
   /** Unique identifier of a form input.  */
   id: PropTypes.string.isRequired,
 
@@ -105,4 +106,4 @@ Input.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default Input;
+export default InputText;
