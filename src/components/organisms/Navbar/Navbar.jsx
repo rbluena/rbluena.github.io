@@ -40,6 +40,8 @@ const Menu = styled(motion.div)`
     top: 64px;
     box-shadow: ${props => props.theme.elevation.default};
     display: ${props => (props.toggler ? "block" : "none")};
+    z-index: 1;
+    opacity: 0.9;
   }
 `;
 
