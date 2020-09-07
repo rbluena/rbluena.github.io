@@ -27,17 +27,6 @@ const Large = styled(Text).attrs({ size: "large" })`
 
 const Description = styled.div``;
 
-const Image = styled.div`
-  margin-right: ${props => props.theme.spacing.sm}px;
-  width: ${props => props.theme.spacing["2xl"]}px;
-  background: transparent;
-
-  svg {
-    width: ${props => props.theme.spacing["2xl"]}px;
-    height: ${props => props.theme.spacing["2xl"]}px;
-  }
-`;
-
 const Work = () => {
   return (
     <SectionBox title="Working Experience" displayContent="column" reverse>
