@@ -1,13 +1,10 @@
 import React from "react";
-import { ReactSVG } from "react-svg";
 import styled from "styled-components";
 import { Section } from "@app-components";
 import Text from "@app-components/assets/Typography";
 import Link from "@app-components/atoms/Link";
 import Wave from "@app-components/assets/images/Wave";
-import { FiTwitter } from "react-icons/fi";
-import { FiGithub } from "react-icons/fi";
-import { FiLinkedin } from "react-icons/fi";
+import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
 import linksData from "@app-data/main-nav.json";
 
 const Wrapper = styled.footer`
@@ -74,8 +71,6 @@ const StyledLink = styled(Link)`
 `;
 
 const Footer = props => {
-  const waveImage = require("../../../images/wave.svg");
-
   return (
     <>
       <WaveContainer>
