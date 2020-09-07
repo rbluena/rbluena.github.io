@@ -77,4 +77,27 @@ const TextArea = ({ id, label, value, error, onChange, ...rest }) => {
   );
 };
 
+TextArea.defaultProps = {
+  value: "",
+  error: "",
+  onChange: () => {},
+};
+
+TextArea.propTypes = {
+  /** Unique identifier of a form input.  */
+  id: PropTypes.string.isRequired,
+
+  /** Label of a form input. */
+  label: PropTypes.string.isRequired,
+
+  /** Value of a form input. */
+  value: PropTypes.string,
+
+  /**  Form input error message from a user. */
+  error: PropTypes.string,
+
+  /** Change handler of a form input. */
+  onChange: PropTypes.func,
+};
+
 export default TextArea;
