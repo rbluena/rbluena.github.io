@@ -21,6 +21,7 @@ const Label = styled.label`
 const Input = styled.input.attrs({ type: "text" })`
   border: 0px;
   appearance: none;
+  background: transparent;
   box-sizing: border-box;
   outline: none;
   padding: 0px;
@@ -40,6 +41,7 @@ const Error = styled.div`
 `;
 
 const Wrapper = styled.div`
+  background-color: white;
   position: relative;
   border: ${props => props.theme.border.width.medium}px solid;
   border-color: ${props => props.theme.color.monochrome[200]};

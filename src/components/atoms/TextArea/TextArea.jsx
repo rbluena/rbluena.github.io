@@ -24,6 +24,7 @@ const StyledTextArea = styled.textarea.attrs({ rows: 10 })`
   margin: 0;
   padding: 0;
   resize: none;
+  background: transparent;
   padding-left: ${props => props.theme.spacing.sm}px;
   width: calc(100% - ${props => props.theme.spacing.sm}px);
   padding-top: ${props => props.theme.spacing.sm}px;
@@ -38,6 +39,7 @@ const Error = styled.div`
 `;
 
 const Wrapper = styled.div`
+  background-color: white;
   position: relative;
   border: ${props => props.theme.border.width.medium}px solid;
   border-color: ${props => props.theme.color.monochrome[200]};
@@ -66,9 +68,8 @@ const TextArea = ({ id, label, value, error, onChange, ...rest }) => {
           onBlur={() => setFocused(false)}
           onChange={onChange}
           aria-describedby={errorId}
-        >
-          {value}
-        </StyledTextArea>
+          value={value}
+        />
       </Wrapper>
       {errorMessage && errorMessage.length && (
         <Error id={errorId}>{errorMessage}</Error>

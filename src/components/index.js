@@ -11,6 +11,7 @@ import TextArea from "./atoms/TextArea";
 import Section from "./molecules/Section";
 import SectionBox from "./molecules/SectionBox";
 import SkillBlock from "./molecules/SkillBlock";
+import ContactForm from "./molecules/ContactForm";
 import Main from "./molecules/Main";
 
 // Organisms
@@ -25,6 +26,8 @@ import Skills from "./organisms/Skills";
 import Tags from "./organisms/Tags";
 import Work from "./organisms/Work";
 import Project from "./organisms/Project";
+import ContactMe from "./organisms/ContactMe";
+import ContactInfo from "./organisms/ContactInfo";
 
 export {
   Text,
@@ -36,6 +39,7 @@ export {
   Section,
   SectionBox,
   SkillBlock,
+  ContactForm,
   Main,
   Education,
   Footer,
@@ -48,4 +52,6 @@ export {
   Tags,
   Work,
   Project,
+  ContactMe,
+  ContactInfo,
 };
