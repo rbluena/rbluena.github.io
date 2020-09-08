@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { SectionBox, ContactForm, Text } from "@app-components";
 
-const FormSection = styled(SectionBox)`
-  /* position: relative; */
-`;
+const FormSection = styled(SectionBox)``;
 
 const FormContainer = styled.div`
   /* min-width: 550px; */
