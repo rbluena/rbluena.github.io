@@ -82,15 +82,14 @@ const InputText = ({ id, label, value, error, onChange, ...rest }) => {
           {...rest}
         />
       </Wrapper>
-      {errorMessage && errorMessage.length && (
-        <Error id={errorId}>{errorMessage}</Error>
-      )}
+      <Error id={errorId}>{errorMessage}</Error>
     </>
   );
 };
 
 InputText.defaultProps = {
   value: "",
+  error: null,
   onChange: () => {},
 };
 
@@ -103,6 +102,9 @@ InputText.propTypes = {
 
   /** Value of a form input. */
   value: PropTypes.string,
+
+  /** Error message from user. */
+  error: PropTypes.string,
 
   /** Change handler a form input. */
   onChange: PropTypes.func,

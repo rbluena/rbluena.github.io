@@ -71,16 +71,14 @@ const TextArea = ({ id, label, value, error, onChange, ...rest }) => {
           value={value}
         />
       </Wrapper>
-      {errorMessage && errorMessage.length && (
-        <Error id={errorId}>{errorMessage}</Error>
-      )}
+      <Error id={errorId}>{errorMessage}</Error>
     </>
   );
 };
 
 TextArea.defaultProps = {
   value: "",
-  error: "",
+  error: null,
   onChange: () => {},
 };
 
@@ -94,7 +92,7 @@ TextArea.propTypes = {
   /** Value of a form input. */
   value: PropTypes.string,
 
-  /**  Form input error message from a user. */
+  /** Error message from user. */
   error: PropTypes.string,
 
   /** Change handler of a form input. */
