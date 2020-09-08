@@ -5,7 +5,7 @@ module.exports = {
     description: `CSS and JavaScript enthusiast. Just striving to become a better front-end engineer today than yesterday.`,
     author: `@rbluena`,
   },
-  pathPrefix: "/rbluena",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
