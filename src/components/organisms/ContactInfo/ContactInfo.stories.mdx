@@ -1,0 +1,14 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import ContactInfo from "./ContactInfo";
+
+<Meta title="Design System/Organisms" component={ContactInfo} />
+
+# Contact Information Section
+
+export const Template = args => <ContactInfo />;
+
+<br />
+
+<Canvas>
+  <Story name="ContactInfo">{Template.bind({})}</Story>
+</Canvas>
