@@ -123,7 +123,7 @@ const ContactInfo = () => {
               <StyledLink
                 external
                 to="https://codepen.io/rbluena"
-                aria-label="Visit my Twitter account"
+                aria-label="Visit my Codepen account"
               >
                 <FiCodepen />
               </StyledLink>
