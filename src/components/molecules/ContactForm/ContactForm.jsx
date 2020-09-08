@@ -72,6 +72,8 @@ const ContactForm = ({ handleSubmit }) => {
           value={name}
           onChange={evt => setName(evt.target.value)}
           error={(error && error.name && error.name) || ""}
+          required
+          aria-required="true"
         />
       </FormGroup>
       <FormGroup>
@@ -81,6 +83,8 @@ const ContactForm = ({ handleSubmit }) => {
           value={email}
           onChange={evt => setEmail(evt.target.value)}
           error={(error && error.email && error.email) || ""}
+          required
+          aria-required="true"
         />
       </FormGroup>
       <FormGroup>
@@ -90,6 +94,8 @@ const ContactForm = ({ handleSubmit }) => {
           value={description}
           onChange={evt => setDescription(evt.target.value)}
           error={(error && error.description && error.description) || ""}
+          required
+          aria-required="true"
         />
       </FormGroup>
       <FormGroup>
