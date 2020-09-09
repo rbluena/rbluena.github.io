@@ -72,7 +72,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
     "build-storybook": "build-storybook",
-    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public -b master",
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master",
     "flow": "flow ./src/"
   },
   "size-limit": [
