@@ -8,19 +8,21 @@ import { FiMenu } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const StyledNavbar = styled.nav`
-  position: static;
-  display: flex;
-  justify-content: flex-end;
-  top: 0px;
-  left: 0;
   padding: ${props => props.theme.spacing.sm}px
     ${props => props.theme.spacing.large}px;
   border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
   background-color: ${props => props.theme.color.monochrome[900]};
 `;
 
+const Container = styled.div`
+  max-width: 1224px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Brand = styled.div`
-  display: inline-block;
   margin-right: auto;
 `;
 
@@ -28,29 +30,27 @@ const BrandLink = styled(Link)`
   padding: 0px;
 `;
 
-const Menu = styled(motion.div)`
+const Menu = styled.div`
   @media ${props => props.theme.devices.max_tablet} {
     text-align: center;
     width: 100%;
     position: absolute;
     overflow-y: scroll;
-    right: 0px;
     background-color: ${props => props.theme.color.monochrome[900]};
-    height: 100vh;
     top: 64px;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.95;
     box-shadow: ${props => props.theme.elevation.default};
     display: ${props => (props.toggler ? "block" : "none")};
-    z-index: 1;
-    opacity: 0.9;
   }
 `;
 
 const MenuLink = styled(Link)`
-  display: inline-block;
-  text-transform: uppercase;
   padding: ${props => props.theme.spacing.xs}px
     ${props => props.theme.spacing.sm}px;
-
+  display: inline-block;
+  text-transform: uppercase;
   &:hover,
   &:active {
     border: 0px;
@@ -92,26 +92,29 @@ const Navbar = () => {
 
   return (
     <StyledNavbar>
-      <Brand>
-        <BrandLink to="/">
-          <Logo />
-        </BrandLink>
-      </Brand>
-      <Menu toggler={toggler}>
-        <MobileMenuHeading>
-          <Text size="large">Navigation</Text>
-        </MobileMenuHeading>
+      <Container>
+        <Brand>
+          <BrandLink to="/">
+            <Logo />
+          </BrandLink>
+        </Brand>
 
-        {navItems.map(item => (
-          <MenuLink key={item.label} to={item.url} external={item.external}>
-            {item.label}
-          </MenuLink>
-        ))}
-      </Menu>
+        <Menu toggler={toggler}>
+          <MobileMenuHeading>
+            <Text size="large">Navigation</Text>
+          </MobileMenuHeading>
 
-      <Toggler onClick={() => setToggler(!toggler)} aria-label="Menu">
-        <FiMenu />
-      </Toggler>
+          {navItems.map(item => (
+            <MenuLink key={item.label} to={item.url} external={item.external}>
+              {item.label}
+            </MenuLink>
+          ))}
+        </Menu>
+
+        <Toggler onClick={() => setToggler(!toggler)} aria-label="Menu">
+          <FiMenu />
+        </Toggler>
+      </Container>
     </StyledNavbar>
   );
 };
