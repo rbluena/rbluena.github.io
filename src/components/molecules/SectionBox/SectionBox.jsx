@@ -40,7 +40,7 @@ const RightContent = styled.div`
     width: 65%;
 
     ${props =>
-      props.displayContent === "column" &&
+      props.flexDirection === "row" &&
       `
       flex-direction: row;
       justify-content: flex-start;
@@ -49,19 +49,13 @@ const RightContent = styled.div`
   }
 `;
 
-const SectionBox = ({
-  reverse,
-  title,
-  children,
-  displayContent,
-  className,
-}) => {
+const SectionBox = ({ reverse, title, children, flexDirection, className }) => {
   return (
     <Wrapper reverse={reverse} className={className}>
       <LeftContent>
         <Text size="title">{title}</Text>
       </LeftContent>
-      <RightContent displayContent={displayContent}>{children}</RightContent>
+      <RightContent flexDirection={flexDirection}>{children}</RightContent>
     </Wrapper>
   );
 };
@@ -69,7 +63,7 @@ const SectionBox = ({
 SectionBox.defaultProps = {
   reverse: false,
   className: "",
-  displayContent: "",
+  flexDirection: "",
 };
 
 SectionBox.propTypes = {
@@ -80,7 +74,7 @@ SectionBox.propTypes = {
   title: PropTypes.string.isRequired,
 
   /** Showing content inside right container(content container) in flex or accupying the whole container.*/
-  displayContent: PropTypes.string,
+  flexDirection: PropTypes.string,
 
   /** Content of the section. */
   children: PropTypes.node.isRequired,

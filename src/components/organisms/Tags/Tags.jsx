@@ -16,7 +16,7 @@ const ContentItem = styled.div`
 
 const Tags = () => {
   return (
-    <SectionBox title="I strive for" displayContent="column">
+    <SectionBox title="I strive for" flexDirection="row">
       {Object.keys(data).map(key => {
         const item = data[key];
 

@@ -5,31 +5,40 @@ import SectionBox from "@app-components/molecules/SectionBox";
 import { data } from "@app-data/work.json";
 
 const ContentItem = styled.div`
-  flex-basis: 35%;
-  padding: 0 ${props => props.theme.spacing["xl"]}px;
+  margin-bottom: ${props => props.theme.spacing["3xl"]}px;
   color: ${props => props.theme.color.monochrome[700]};
-  display: flex;
+
+  @media ${props => props.theme.devices.desktop} {
+    flex-basis: 40%;
+    padding: 0 ${props => props.theme.spacing["sm"]}px;
+  }
 `;
 
-const Heading = styled(Text).attrs({ size: "heading" })`
-  line-height: 1;
+const CompanyInfo = styled.div`
+  display: flex;
   margin-bottom: ${props => props.theme.spacing["sm"]}px;
 `;
 
-const ImageBox = styled.div`
-  width: ${props => props.theme.spacing["3xl"]}px;
-  height: ${props => props.theme.spacing["3xl"]}px;
-  margin-right: ${props => props.theme.spacing.sm}px;
+const CompanyDetails = styled.div``;
+
+const Heading = styled(Text).attrs({ size: "heading" })`
+  line-height: 1;
+  margin-bottom: ${props => props.theme.spacing["xs"]}px;
 `;
 
+const ImageBox = styled.div``;
+
 const Image = styled.img`
-  width: ${props => props.theme.spacing["3xl"]}px;
-  height: ${props => props.theme.spacing["3xl"]}px;
+  width: ${props => props.theme.spacing["2xl"]}px;
+  height: ${props => props.theme.spacing["2xl"]}px;
+  margin-right: ${props => props.theme.spacing["sm"]}px;
 `;
+
+const Description = styled.div``;
 
 const Work = () => {
   return (
-    <SectionBox title="Working Experience" displayContent="column" reverse>
+    <SectionBox title="Working Experience" flexDirection="row" reverse>
       {Object.keys(data).map(key => {
         const item = data[key];
         let imgPath = "";
@@ -40,18 +49,24 @@ const Work = () => {
 
         return (
           <ContentItem key={key}>
-            <ImageBox>
-              {item.image && item.image.length && <Image src={imgPath} />}
-            </ImageBox>
+            <CompanyInfo>
+              <ImageBox>
+                {item.image && item.image.length && <Image src={imgPath} />}
+              </ImageBox>
+              <CompanyDetails>
+                <Heading>{item.company}</Heading>
+                <Text size="large">{item.position}</Text>
+                <Text size="sm">
+                  {item.from} - {item.to}
+                </Text>
+              </CompanyDetails>
+            </CompanyInfo>
 
-            <div>
-              <Heading>{item.company}</Heading>
-              <Text size="large">{item.position}</Text>
-              <Text size="sm">
-                {item.from} - {item.to}
-              </Text>
-              {item.description && <Text>{item.description}</Text>}
-            </div>
+            {item.description && (
+              <Description>
+                <Text size="large">{item.description}</Text>
+              </Description>
+            )}
           </ContentItem>
         );
       })}
