@@ -2,30 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import Text from "@app-components/assets/Typography";
 import SectionBox from "@app-components/molecules/SectionBox";
-import Button from "@app-components/atoms/Button";
 import { ReactSVG } from "react-svg";
 import { data } from "@app-data/work.json";
 
 const ContentItem = styled.div`
-  flex-basis: 45%;
-  /* margin: ${props => props.theme.spacing.large}px 0px; */
+  flex-basis: 35%;
+  padding: 0 ${props => props.theme.spacing["xl"]}px;
   color: ${props => props.theme.color.monochrome[700]};
   display: flex;
 `;
 
 const Heading = styled(Text).attrs({ size: "heading" })`
-  line-height: 18px;
+  line-height: 1;
+  margin-bottom: ${props => props.theme.spacing["sm"]}px;
 `;
 
-const Subheading = styled(Text).attrs({ size: "subheading" })`
-  line-height: 56px;
+const ImageBox = styled.div`
+  width: ${props => props.theme.spacing["3xl"]}px;
+  height: ${props => props.theme.spacing["3xl"]}px;
+  margin-right: ${props => props.theme.spacing.sm}px;
 `;
 
-const Large = styled(Text).attrs({ size: "large" })`
-  line-height: inherit;
+const Image = styled.img`
+  width: ${props => props.theme.spacing["3xl"]}px;
+  height: ${props => props.theme.spacing["3xl"]}px;
 `;
-
-const Description = styled.div``;
 
 const Work = () => {
   return (
@@ -40,21 +41,17 @@ const Work = () => {
 
         return (
           <ContentItem key={key}>
-            <ReactSVG src={imgPath} />
+            <ImageBox>
+              {item.image && item.image.length && <Image src={imgPath} />}
+            </ImageBox>
 
             <div>
               <Heading>{item.company}</Heading>
-              <Subheading size="subheading" weight="bold">
+              <Text size="large">{item.position}</Text>
+              <Text size="sm">
                 {item.from} - {item.to}
-              </Subheading>
-              <Large size="large">{item.position}</Large>
-              <Description>{item.description}</Description>
-
-              {data.url && (
-                <Button href="" type={data.url}>
-                  Visit
-                </Button>
-              )}
+              </Text>
+              <Text>{item.description}</Text>
             </div>
           </ContentItem>
         );

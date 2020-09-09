@@ -5,13 +5,15 @@ import styled from "styled-components";
 import { data } from "@app-data/tags.json";
 
 const ContentItem = styled.div`
-  flex-basis: 45%;
+  flex-basis: 35%;
   color: ${props => props.theme.color.monochrome[700]};
+  margin-bottom: ${props => props.theme.spacing["xl"]}px;
+  padding: 0 ${props => props.theme.spacing["xl"]}px;
 `;
 
 const Tags = () => {
   return (
-    <SectionBox title="What am I striving for?" displayContent="column">
+    <SectionBox title="I strive for" displayContent="column">
       {Object.keys(data).map(key => {
         const item = data[key];
 
