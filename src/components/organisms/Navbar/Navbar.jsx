@@ -5,7 +5,6 @@ import Text from "@app-components/assets/Typography";
 import Logo from "@app-components/assets/Logo";
 import navItems from "@app-data/main-nav.json";
 import { FiMenu } from "react-icons/fi";
-import { motion } from "framer-motion";
 
 const StyledNavbar = styled.nav`
   padding: ${props => props.theme.spacing.sm}px

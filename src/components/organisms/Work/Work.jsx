@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Text from "@app-components/assets/Typography";
 import SectionBox from "@app-components/molecules/SectionBox";
-import { ReactSVG } from "react-svg";
 import { data } from "@app-data/work.json";
 
 const ContentItem = styled.div`
@@ -51,7 +50,7 @@ const Work = () => {
               <Text size="sm">
                 {item.from} - {item.to}
               </Text>
-              <Text>{item.description}</Text>
+              {item.description && <Text>{item.description}</Text>}
             </div>
           </ContentItem>
         );
