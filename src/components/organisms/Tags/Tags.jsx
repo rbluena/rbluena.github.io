@@ -5,10 +5,13 @@ import styled from "styled-components";
 import { data } from "@app-data/tags.json";
 
 const ContentItem = styled.div`
-  flex-basis: 35%;
   color: ${props => props.theme.color.monochrome[700]};
   margin-bottom: ${props => props.theme.spacing["xl"]}px;
-  padding: 0 ${props => props.theme.spacing["xl"]}px;
+
+  @media ${props => props.theme.devices.desktop} {
+    flex-basis: 40%;
+    padding: 0 ${props => props.theme.spacing["sm"]}px;
+  }
 `;
 
 const Tags = () => {
@@ -18,7 +21,7 @@ const Tags = () => {
         const item = data[key];
 
         return (
-          <ContentItem key={key}>
+          <ContentItem key={key} displayContent="column">
             <Text size="heading">{item.title}</Text>
             <br />
             <div>

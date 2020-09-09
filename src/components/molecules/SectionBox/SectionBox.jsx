@@ -16,9 +16,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const ContentContainer = styled.div``;
-
-const LeftContent = styled(ContentContainer)`
+const LeftContent = styled.div`
   text-align: center;
   padding: ${props => props.theme.spacing["xl"] * 3}px
     ${props => props.theme.spacing.large}px;
@@ -31,18 +29,20 @@ const LeftContent = styled(ContentContainer)`
   }
 `;
 
-const RightContent = styled(ContentContainer)`
+const RightContent = styled.div`
   background-color: ${props => props.theme.color.blue[200]};
   padding: ${props => props.theme.spacing["xl"] * 2}px
     ${props => props.theme.spacing.large}px;
+  display: flex;
+  flex-direction: column;
 
-  @media ${props => props.theme.devices.tablet} {
+  @media ${props => props.theme.devices.desktop} {
     width: 65%;
 
     ${props =>
       props.displayContent === "column" &&
       `
-      display: flex;
+      flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap;
     `}
