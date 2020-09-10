@@ -4,9 +4,11 @@
       "title": "Programming Languages",
       "items": [
         { "name": "JavaScript" },
+        { "name": "TypeScript" },
         { "name": "CSS" },
         { "name": "SCSS" },
-        { "name": "Python *" }
+        { "name": "Python **" },
+        { "name": "Rust **" }
       ]
     },
     "databases": {

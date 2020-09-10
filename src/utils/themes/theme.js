@@ -9,14 +9,17 @@ import {
 export const defaultTheme = {
   color: {
     blue: {
-      100: "#2f669b",
+      100: "#2643b9",
       200: "#63C7FF",
-      300: "#9BFAFF",
+      300: "#21edfc",
     },
     red: {
       100: "#c8206e",
       200: "#FF5C9C",
       300: "#ff90cd",
+    },
+    green: {
+      200: "#00ffa2",
     },
     monochrome: {
       100: "#333333",

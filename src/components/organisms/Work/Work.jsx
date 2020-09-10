@@ -6,7 +6,7 @@ import { data } from "@app-data/work.json";
 
 const ContentItem = styled.div`
   margin-bottom: ${props => props.theme.spacing["3xl"]}px;
-  color: ${props => props.theme.color.monochrome[700]};
+  color: ${props => props.theme.color.blue[100]};
 
   @media ${props => props.theme.devices.desktop} {
     flex-basis: 40%;

@@ -9,7 +9,6 @@ const Wrapper = styled(SectionBox)`
 `;
 
 const Content = styled.div`
-  color: ${props => props.theme.color.monochrome[300]};
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -27,8 +26,10 @@ const Buttons = styled.div`
 const StyledLink = styled(Button)``;
 
 const Description = styled(Text).attrs({ size: "large", weight: "thin" })`
+  color: ${props => props.theme.color.blue[100]};
   font-size: 150%;
   position: relative;
+  line-height: 150%;
 `;
 
 const Footer = styled.footer``;
@@ -44,12 +45,12 @@ const Project = ({ project, reverse }) => {
         <Footer>
           {/* start: end of buttons */}
           <Tags>
-            {project.tools &&
-              project.tools.length &&
-              project.tools.map(tool => {
+            {project.tags &&
+              project.tags.length &&
+              project.tags.map(tag => {
                 return (
-                  <React.Fragment key={tool}>
-                    <Badge label={tool} primary />
+                  <React.Fragment key={tag}>
+                    <Badge label={tag} primary />
                     &nbsp;&nbsp;
                   </React.Fragment>
                 );
