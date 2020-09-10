@@ -2,23 +2,25 @@
   "data": {
     "accessible": {
       "title": "Accessibility",
-      "description": "Building wep application while in mind considering folks with imparements."
+      "description": "Aligning my apps with WAI-ARIA specs.  Building applications that inclusively targeting folks with impairments has been one of development satisfactory to me."
     },
     "responsive": {
       "title": "Responsiveness",
-      "description": "Taking advantage of modern CSS to build applications that can be accessible with large audience from ariety of screen sizes."
+      "description": "As I am striving to be the mobile-first kind of developer, one of my development checklist is to make sure an app is widely accessible from all sort of devices with different screen sizes.",
+      "checklist": [
+        "Responsive Containers",
+        "Responsive Typography",
+        "Responsive Images",
+        "Tappable Buttons"
+      ]
     },
     "optimization": {
       "title": "Optimization",
-      "description": "Optimizing performance is..., be able to use tools like, lighthouse, bundlephobia for choosing right tool..."
+      "description": "Light weight engineered, offline accessible with PWA, and SEO optimized are the things make me call myself a progressive learner."
     },
     "documentation": {
-      "title": "Documenting",
-      "description": "The ability to use style guides and design systems to document user interfaces(UI) and user experiences(UX) of an application."
-    },
-    "ux": {
-      "title": "UX",
-      "description": "The ability to use style guides and design systems to document user interfaces(UI) and user experiences(UX) of an application."
+      "title": "Documentation",
+      "description": "Documenting UI and UX of reusable components of an application using style guides and design systems."
     }
   }
 }
