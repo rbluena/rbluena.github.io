@@ -1,40 +1,49 @@
 {
   "data": {
-    "engineer guide": {
-      "title": "Software Engineering Knowledge Base",
-      "description": "This started as personal guidance to becoming the GOAT of software engineering, but I realised it wouldn't hurt if there will be multiple version of me. It is work in progress therefore should be used with coutious.",
-      "url": "https://softwareengineer.guide",
-      "repo": "https://github.com/rbluena/SE-knowledge-base",
-      "tools": ["Markdown", "React", "Notion"]
-    },
     "portfolio": {
       "title": "Portfolio",
-      "description": "It's been a great learning experience while building my portifolio. Though most of the tools were used and concepts I was applying were little bit new to me, but I managed to achieve core important things. <ul><li>Documenting UI components with storybook.</li> <li>Creating reusable components with atomic design approach.</li> <li>Using stitic site generator for SEO optimization.</li></ul>",
-      "url": "/",
+      "description": "This is personal portfolio where you are reading this article from. <ul><li>Documenting UI components with storybook.</li> <li>Creating reusable components with atomic design approach.</li> <li>Using static site generator for SEO optimization.</li></ul>",
+      "url": "https://rabiiluena.com",
       "repo": "https://github.com/rbluena/rbluena",
       "styleguide": "https://styleguide.rabiiluena.com",
       "designs": "https://figma.com/portflio",
-      "workflow": "https://notion.com",
-      "tools": [
+      "workflow": "https://www.notion.so/Personal-Portfolio-d57689fdba3244f282ad04e61e4bc173",
+      "tags": [
         "Gatsby",
         "Styled Component",
         "Storybook",
         "Figma",
         "Google Analytics",
-        "Notion"
+        "Notion",
+        "https://colorable.jxnblk.com/"
       ]
     },
+    "engineer guide": {
+      "title": "Software Engineering Knowledge Base",
+      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"View Project\" button. <ul><li>JavaScript Guide</li><li>Data Structure and Algorithms Guide.</li></ul>",
+      "url": "https://softwareengineer.guide",
+      "repo": "https://github.com/rbluena/SE-knowledge-base",
+      "tags": ["Markdown", "Notion"]
+    },
+    "pinning": {
+      "title": "Pinning",
+      "description": "Chrome extension that can be used to pin comments on any part of any webiste's UI. Pins and comments can also be shared with other people who are having similar extension installed in their browser. This is WIP experimental project.",
+      "features": ["Real-time Communication"],
+      "repo": "https://github.com/rbluena/pinning",
+      "tags": ["React", "Chrome Extension"]
+    },
+
     "greenrush": {
       "title": "GreenRush",
-      "description": "Created cart and checkout process with react.",
+      "description": "One of the largest online marketplaces for cannabis patients in US and Canada.<ul><li>Built the whole backbone of the front-end from scratch.</li><li>Optimized and improved the checkout process.</li><li>Introduced into agile world using scrum framework.</li>",
       "url": "https://greenrush.com/shop",
-      "tools": ["React", "Redux", "redux-sage", "Google Analytics"]
+      "tags": ["React", "Redux", "redux-saga", "Google Analytics"]
     },
     "cloudboost": {
       "title": "CloudBoost",
-      "description": "Created authentication process on react, updated customers dashboard and worked on stripe intergration with expressjs",
+      "description": "I was mostly responsible with ReactJS on the front-end, and partially responsible with ExpressJS and MongoDB in the back-end. It was a great experience to be hired as junior full-stack developer. <ul><li>Re-created a new authentication process with React.</li><li>Refactored customers' dashboard.</li><li>Refactored back-end payment process with TDD approach.</li></ul>",
       "url": "https://cloudboost.io",
-      "tools": ["React", "Redux", "Stripe Client", "ExpressJS"]
+      "tags": ["React", "Redux", "Stripe", "ExpressJS", "Mocha", "Chai"]
     }
   }
 }
