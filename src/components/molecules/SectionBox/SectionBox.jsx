@@ -30,7 +30,7 @@ const LeftContent = styled.div`
 `;
 
 const RightContent = styled.div`
-  background-color: ${props => props.theme.color.blue[200]};
+  background-color: ${props => props.theme.color.blue[300]};
   padding: ${props => props.theme.spacing["xl"] * 2}px
     ${props => props.theme.spacing.large}px;
   display: flex;

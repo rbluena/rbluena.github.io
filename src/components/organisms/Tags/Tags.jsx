@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { data } from "@app-data/tags.json";
 
 const ContentItem = styled.div`
-  color: ${props => props.theme.color.monochrome[700]};
+  color: ${props => props.theme.color.blue[100]};
   margin-bottom: ${props => props.theme.spacing["xl"]}px;
 
   @media ${props => props.theme.devices.desktop} {
