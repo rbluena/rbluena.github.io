@@ -29,6 +29,10 @@ const Social = styled.div`
     padding: 0px;
     padding-right: ${props => props.theme.spacing.xs}px;
     color: ${props => props.theme.color.monochrome[400]};
+
+    &:hover {
+      color: ${props => props.theme.color.blue[100]};
+    }
   }
 `;
 
