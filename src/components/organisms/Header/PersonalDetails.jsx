@@ -67,7 +67,7 @@ const PersonalDetails = () => {
       <div
         className="LI-profile-badge"
         data-version="v1"
-        data-size="large"
+        data-size="medium"
         data-locale="en_US"
         data-type="horizontal"
         data-theme="dark"
