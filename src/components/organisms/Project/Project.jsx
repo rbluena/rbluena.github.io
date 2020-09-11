@@ -44,7 +44,7 @@ const Project = ({ project, reverse }) => {
           {project.achievements && project.achievements.length > 0 && (
             <ul>
               {project.achievements.map(item => (
-                <li>{item}</li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           )}

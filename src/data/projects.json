@@ -25,10 +25,13 @@
     },
     "engineer guide": {
       "title": "Software Engineering Knowledge Base",
-      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"View Project\" button.",
+      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"Repository\" button.",
       "achievements": [
-        "JavaScript Guide.",
-        "Data Structure and Algorithms Guide."
+        "Programming Guide.",
+        "Data Structure and Algorithms Guide.",
+        "Industrial 4.0 Guide",
+        "Soft Skills Guide",
+        "Job Applications Guide"
       ],
       "url": "https://softwareengineer.guide",
       "repo": "https://github.com/rbluena/SE-knowledge-base",
@@ -48,7 +51,7 @@
       "achievements": [
         "Built the whole backbone of the front-end from scratch.",
         "Optimized and improved the checkout process.",
-        "Introduced into agile world using scrum framework."
+        "I was introduced into agile world using scrum framework."
       ],
       "url": "https://greenrush.com/shop",
       "tags": ["React", "Redux", "redux-saga", "Google Analytics"]
