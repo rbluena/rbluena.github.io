@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiCodepen } from "react-icons/fi";
 import Text from "@app-components/assets/Typography";
 import Link from "@app-components/atoms/Link";
 
@@ -38,7 +38,9 @@ const Title = styled(Text).attrs({ size: "title" })`
 
 const Heading = styled(Text).attrs({
   size: "heading",
-})``;
+})`
+  margin-bottom: ${props => props.theme.spacing["2xl"]}px;
+`;
 
 const PersonalDetails = () => {
   const { site } = useStaticQuery(
@@ -55,11 +57,29 @@ const PersonalDetails = () => {
   );
 
   const { siteMetadata: metadata } = site;
+
   return (
     <Wrapper>
       <Title>Rabii Luena</Title>
 
       <Heading>{metadata.description}</Heading>
+
+      <div
+        className="LI-profile-badge"
+        data-version="v1"
+        data-size="large"
+        data-locale="en_US"
+        data-type="horizontal"
+        data-theme="dark"
+        data-vanity="rbluena"
+      >
+        <a
+          className="LI-simple-link"
+          href="https://ke.linkedin.com/in/rbluena?trk=profile-badge"
+        >
+          Rabii Luena
+        </a>
+      </div>
 
       <Social>
         <Link
@@ -75,12 +95,12 @@ const PersonalDetails = () => {
         <Link
           external
           className="icon"
-          to="https://www.linkedin.com/in/rbluena"
+          to="https://www.codepen.com/rbluena"
           rel="noreferrer"
           target="_blank"
-          aria-label="Visit my Linkedin profile"
+          aria-label="Visit my codepen profile"
         >
-          <FiLinkedin />
+          <FiCodepen />
         </Link>
         <Link
           external

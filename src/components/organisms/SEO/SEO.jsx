@@ -24,7 +24,6 @@ function SEO({ title, description, lang, newMeta }) {
 
   const metaTitle = title || metaData.title;
   const metaDescription = description || metaData.description;
-  const { siteUrl } = metaData;
 
   const meta = [
     {
@@ -80,6 +79,12 @@ function SEO({ title, description, lang, newMeta }) {
           );
         })}
       <meta name="keywords" content={metaData.keywords} />
+      <script
+        type="text/javascript"
+        src="https://platform.linkedin.com/badges/js/profile.js"
+        async
+        defer
+      ></script>
     </Helmet>
   );
 }

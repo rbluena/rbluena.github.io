@@ -4,7 +4,7 @@ import { Section } from "@app-components";
 import Text from "@app-components/assets/Typography";
 import Link from "@app-components/atoms/Link";
 import Wave from "@app-components/assets/images/Wave";
-import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiTwitter, FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
 import linksData from "@app-data/main-nav.json";
 
 const Wrapper = styled.footer`
@@ -86,13 +86,13 @@ const Footer = props => {
             </StyledText>
 
             <Social>
-              <li id="my-twitter-account">
+              <li>
                 <StyledLink
                   external
-                  to="https://twitter.com/rbluena"
-                  aria-label="Visit my Twitter account"
+                  to="https://linkedin.com/u/rbluena"
+                  aria-label="Visit my Linkedin profile"
                 >
-                  <FiTwitter />
+                  <FiLinkedin />
                 </StyledLink>
               </li>
               <li id="my-github-account">
@@ -107,10 +107,22 @@ const Footer = props => {
               <li>
                 <StyledLink
                   external
-                  to="https://linkedin.com/u/rbluena"
-                  aria-label="Visit my Linkedin profile"
+                  className="icon"
+                  to="https://www.codepen.com/rbluena"
+                  rel="noreferrer"
+                  target="_blank"
+                  aria-label="Visit my codepen profile"
                 >
-                  <FiLinkedin />
+                  <FiCodepen />
+                </StyledLink>
+              </li>
+              <li id="my-twitter-account">
+                <StyledLink
+                  external
+                  to="https://twitter.com/rbluena"
+                  aria-label="Visit my Twitter account"
+                >
+                  <FiTwitter />
                 </StyledLink>
               </li>
             </Social>
