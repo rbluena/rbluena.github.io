@@ -27,6 +27,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.rabiiluena.com`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-module-resolver",
       options: {
         root: "./src",
