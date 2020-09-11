@@ -49,6 +49,7 @@
     "@storybook/react": "^6.0.18",
     "@storybook/theming": "^6.0.18",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.1.0",
     "cz-conventional-changelog": "^3.2.0",
     "env-cmd": "^10.1.0",
     "flow-bin": "^0.131.0",

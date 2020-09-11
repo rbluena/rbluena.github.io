@@ -83,9 +83,21 @@ const Project = ({ project, reverse }) => {
                 link
                 target="blank"
                 rel="noopener noreferrer"
-                secondary
+                dark
               >
                 Repository
+              </StyledLink>
+            )}
+            &nbsp; &nbsp;
+            {project.styleguide && project.styleguide.length && (
+              <StyledLink
+                href={project.styleguide}
+                link
+                target="blank"
+                rel="noopener noreferrer"
+                secondary
+              >
+                Style Guide
               </StyledLink>
             )}
           </Buttons>
