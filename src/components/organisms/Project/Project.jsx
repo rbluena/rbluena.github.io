@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { SectionBox, Text, Badge, Button } from "@app-components";
+import { SectionBox, Badge, Button } from "@app-components";
 import styled from "styled-components";
 
 const Wrapper = styled(SectionBox)`
@@ -25,9 +25,10 @@ const Buttons = styled.div`
 
 const StyledLink = styled(Button)``;
 
-const Description = styled(Text).attrs({ size: "large", weight: "thin" })`
+const Description = styled.div`
   color: ${props => props.theme.color.blue[100]};
   font-size: 150%;
+  font-weight: ${props => props.theme.typography.weight.thin};
   position: relative;
   line-height: 150%;
 `;
@@ -39,7 +40,14 @@ const Project = ({ project, reverse }) => {
     <Wrapper title={project.title.toUpperCase()} reverse={reverse}>
       <Content>
         <Description>
-          <span dangerouslySetInnerHTML={{ __html: project.description }} />
+          {project.description}
+          {project.achievements && project.achievements.length > 0 && (
+            <ul>
+              {project.achievements.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )}
         </Description>
 
         <Footer>

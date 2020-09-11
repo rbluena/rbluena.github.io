@@ -2,7 +2,12 @@
   "data": {
     "portfolio": {
       "title": "Portfolio",
-      "description": "This is personal portfolio where you are reading this article from. <ul><li>Documenting UI components with storybook.</li> <li>Creating reusable components with atomic design approach.</li> <li>Using static site generator for SEO optimization.</li></ul>",
+      "description": "This is personal portfolio where you are reading this article from.",
+      "achievements": [
+        "Documenting UI components with storybook.",
+        "Creating reusable components with atomic design approach.",
+        "Using static site generator for SEO optimization."
+      ],
       "url": "https://rabiiluena.com",
       "repo": "https://github.com/rbluena/rbluena",
       "styleguide": "https://styleguide.rabiiluena.com",
@@ -20,7 +25,11 @@
     },
     "engineer guide": {
       "title": "Software Engineering Knowledge Base",
-      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"View Project\" button. <ul><li>JavaScript Guide</li><li>Data Structure and Algorithms Guide.</li></ul>",
+      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"View Project\" button.",
+      "achievements": [
+        "JavaScript Guide.",
+        "Data Structure and Algorithms Guide."
+      ],
       "url": "https://softwareengineer.guide",
       "repo": "https://github.com/rbluena/SE-knowledge-base",
       "tags": ["Markdown", "Notion"]
@@ -35,13 +44,23 @@
 
     "greenrush": {
       "title": "GreenRush",
-      "description": "One of the largest online marketplaces for cannabis patients in US and Canada.<ul><li>Built the whole backbone of the front-end from scratch.</li><li>Optimized and improved the checkout process.</li><li>Introduced into agile world using scrum framework.</li>",
+      "description": "One of the largest online marketplaces for cannabis patients in US and Canada.",
+      "achievements": [
+        "Built the whole backbone of the front-end from scratch.",
+        "Optimized and improved the checkout process.",
+        "Introduced into agile world using scrum framework."
+      ],
       "url": "https://greenrush.com/shop",
       "tags": ["React", "Redux", "redux-saga", "Google Analytics"]
     },
     "cloudboost": {
       "title": "CloudBoost",
-      "description": "I was mostly responsible with ReactJS on the front-end, and partially responsible with ExpressJS and MongoDB in the back-end. It was a great experience to be hired as junior full-stack developer. <ul><li>Re-created a new authentication process with React.</li><li>Refactored customers' dashboard.</li><li>Refactored back-end payment process with TDD approach.</li></ul>",
+      "description": "I was mostly responsible with ReactJS on the front-end, and partially responsible with ExpressJS and MongoDB in the back-end. It was a great experience to be hired as junior full-stack developer.",
+      "achievements": [
+        "Re-created a new authentication process with React.",
+        "Refactored customers' dashboard.",
+        "Refactored back-end payment process with TDD approach."
+      ],
       "url": "https://cloudboost.io",
       "tags": ["React", "Redux", "Stripe", "ExpressJS", "Mocha", "Chai"]
     }
