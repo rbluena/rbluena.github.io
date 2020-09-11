@@ -136,7 +136,7 @@ const Footer = props => {
               </StyledLink>{" "}
               and hosted by{" "}
               <StyledLink external to="https://github.com">
-                GitHub.
+                GitHub Pages.
               </StyledLink>
             </StyledText>
           </Right>
