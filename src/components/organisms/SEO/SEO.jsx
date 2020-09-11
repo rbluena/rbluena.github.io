@@ -9,7 +9,7 @@ function SEO({ title, description, lang, newMeta }) {
       query {
         site {
           siteMetadata {
-            baseUrl
+            siteUrl
             title
             description
             author
@@ -24,7 +24,7 @@ function SEO({ title, description, lang, newMeta }) {
 
   const metaTitle = title || metaData.title;
   const metaDescription = description || metaData.description;
-  const { baseUrl } = metaData;
+  const { siteUrl } = metaData;
 
   const meta = [
     {
@@ -63,9 +63,9 @@ function SEO({ title, description, lang, newMeta }) {
 
   return (
     <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
-      <html lang="en" amp />
+      <html lang={lang} amp />
       <title>{metaTitle}</title>
-      <link rel="canonical" href={baseUrl} />
+      <link rel="canonical" href={siteUrl} />
 
       {meta &&
         meta.length &&
