@@ -65,7 +65,6 @@ function SEO({ title, description, lang, newMeta }) {
     <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
       <html lang={lang} amp />
       <title>{metaTitle}</title>
-      <link rel="canonical" href={siteUrl} />
 
       {meta &&
         meta.length &&
