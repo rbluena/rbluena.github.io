@@ -81,7 +81,7 @@ const PersonalDetails = () => {
           className="LI-simple-link"
           href="https://ke.linkedin.com/in/rbluena?trk=profile-badge"
         >
-          Rabii Luena
+          LinkedIn Badge
         </a>
       </div>
 
