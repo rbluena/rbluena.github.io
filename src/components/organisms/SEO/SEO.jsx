@@ -13,6 +13,7 @@ function SEO({ title, description, lang, newMeta }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -79,7 +80,7 @@ function SEO({ title, description, lang, newMeta }) {
             <meta key={key} property={item.property} content={item.content} />
           );
         })}
-      <meta name="keywords" content="" />
+      <meta name="keywords" content={metaData.keywords} />
     </Helmet>
   );
 }

@@ -4,11 +4,14 @@ module.exports = {
     title: `Rabii Luena`,
     description: `CSS and JavaScript enthusiast. Just striving to become a better front-end engineer today than yesterday.`,
     author: `@rbluena`,
+    keywords:
+      "rabii luena, luena, rabii, software engineer, software developer, hiring, web developer, react developer, front-end developer, front-end engineer, javascript developer",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-flow`,
     {
       resolve: `gatsby-source-filesystem`,
