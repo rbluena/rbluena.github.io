@@ -18,6 +18,7 @@ export const Template = args => <Button {...args} />;
   <Story name="All">
     <Button>Default</Button>
     <Button primary>Primary</Button>
+    <Button dark>Dark</Button>
     <Button secondary>Secondary</Button>
     <Button primary outline>
       Outline Primary
@@ -25,8 +26,8 @@ export const Template = args => <Button {...args} />;
     <Button secondary outline>
       Outline Secondary
     </Button>
-    <Button secondary outline link href="https://google.com">
-      Link Button
+    <Button primary link href="https://google.com">
+      Link Button Primary
     </Button>
   </Story>
   <Story name="Control" args={{ children: "Text" }}>
@@ -38,9 +39,21 @@ export const Template = args => <Button {...args} />;
 
 <Canvas>
   <Story name="Sizes">
-    <Button primary small>
+    <Button primary size="sm">
       Small
     </Button>
+    <br />
+    <br />
     <Button primary>Medium</Button>
+    <br />
+    <br />
+    <Button primary size="large">
+      Large
+    </Button>
+    <br />
+    <br />
+    <Button primary size="wide">
+      Wide
+    </Button>
   </Story>
 </Canvas>

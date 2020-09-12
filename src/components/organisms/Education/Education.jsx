@@ -9,7 +9,7 @@ import { data } from "@app-data/education.json";
 const ContentItem = styled.div`
   flex-basis: 40%;
   margin: ${props => props.theme.spacing.large}px 0px;
-  color: ${props => props.theme.color.monochrome[700]};
+  color: ${props => props.theme.color.blue[100]};
 `;
 const Description = styled.div``;
 
@@ -21,7 +21,7 @@ const Work = () => {
 
         return (
           <ContentItem key={key}>
-            <Text size="subheading">{item.name}</Text>
+            <Text size="heading">{item.name}</Text>
             <Text subheading="large" weight="thin">
               {item.year}
             </Text>

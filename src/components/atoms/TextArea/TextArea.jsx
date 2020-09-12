@@ -33,8 +33,7 @@ const StyledTextArea = styled.textarea.attrs({ rows: 10 })`
 const Error = styled.div`
   display: block;
   font-size: ${props => props.theme.typography.size.sm}px;
-  padding: ${props =>
-    `${props.theme.spacing.xs}px ${props.theme.spacing.sm}px`};
+  padding: ${props => `${props.theme.spacing.xs}px 0`};
   color: ${props => props.theme.color.red[100]};
 `;
 

@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   ${props =>
     props.primary &&
     css`
-      background-color: ${props.theme.color.blue[200]};
+      background-color: ${props.theme.color.blue[100]};
       color: ${props.theme.color.monochrome[800]};
     `}
 
@@ -40,14 +40,14 @@ const StyledButton = styled.button`
     css`
       background: transparent;
       color: ${props.theme.color.monochrome[100]};
-      border: 2px solid ${props.theme.color.blue[200]};
+      border: 2px solid ${props.theme.color.blue[100]};
     `}
 
   /* Secondary Button */
   ${props =>
     props.secondary &&
     css`
-      background-color: ${props.theme.color.red[200]};
+      background-color: ${props.theme.color.red[100]};
       color: ${props.theme.color.monochrome[800]};
     `}
 
@@ -73,37 +73,43 @@ const StyledButton = styled.button`
 
   /* Small Button */
   ${props =>
-    props.small &&
+    props.size === "sm" &&
     css`
       padding-top: ${props.theme.spacing.xxs}px 0;
-      font-size: ${props.theme.typography.size.base}px;
+      font-size: ${props.theme.typography.size.sm}px;
     `}
 
     /* Large button */
     ${props =>
-      props.large &&
+      props.size === "large" &&
       `
       padding: ${props.theme.spacing.sm}px;
+      min-width: 100px;
+      font-size: ${props.theme.typography.size.large}px;
     `}
 
     /* Wide button */
     ${props =>
-      props.large &&
+      props.size === "wide" &&
       `
       width: 100%;
     `}
 `;
 
-const Button = ({ children, link, ...rest }) => {
+const Button = ({ children, link, size, ...rest }) => {
   if (link) {
     return (
-      <StyledButton as="a" {...rest}>
+      <StyledButton size={size} as="a" {...rest}>
         {children}
       </StyledButton>
     );
   }
 
-  return <StyledButton {...rest}>{children}</StyledButton>;
+  return (
+    <StyledButton size={size} {...rest}>
+      {children}
+    </StyledButton>
+  );
 };
 
 Button.propTypes = {
@@ -121,6 +127,9 @@ Button.propTypes = {
 
   /** Content in between the button component, mostly is text of the button */
   children: PropTypes.node.isRequired,
+
+  /** Size of the button. */
+  size: PropTypes.oneOf(["sm", "large", "wide"]),
 };
 
 Button.defaultProps = {
@@ -128,6 +137,7 @@ Button.defaultProps = {
   secondary: false,
   outline: false,
   link: false,
+  size: null,
 };
 
 export default Button;

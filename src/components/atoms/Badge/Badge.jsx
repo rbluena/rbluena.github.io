@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.span`
   display: inline-block;
-  background-color: ${props => props.theme.color.monochrome[400]};
+  background-color: ${props => props.theme.color.blue[100]};
   color: ${props => props.theme.color.monochrome[900]};
   line-height: 1;
   vertical-align: baseline;
@@ -37,7 +37,7 @@ const Wrapper = styled.span`
   ${props =>
     props.secondary &&
     `
-    background-color: ${props.theme.color.monochrome[200]};
+    background-color: ${props.theme.color.red[100]};
     color: ${props.theme.color.monochrome[900]};
   `}
 `;
