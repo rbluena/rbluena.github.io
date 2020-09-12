@@ -13,6 +13,7 @@ function SEO({ title, description, lang, newMeta }) {
             title
             description
             author
+            image
             keywords
           }
         }
@@ -24,11 +25,16 @@ function SEO({ title, description, lang, newMeta }) {
 
   const metaTitle = title || metaData.title;
   const metaDescription = description || metaData.description;
+  const image = metaData.image;
 
   const meta = [
     {
       name: `description`,
       content: metaDescription,
+    },
+    {
+      name: `image`,
+      content: image,
     },
     {
       property: `og:title`,
@@ -37,6 +43,10 @@ function SEO({ title, description, lang, newMeta }) {
     {
       property: `og:description`,
       content: metaDescription,
+    },
+    {
+      property: `og:image`,
+      content: image,
     },
     {
       property: `og:type`,
@@ -58,12 +68,17 @@ function SEO({ title, description, lang, newMeta }) {
       name: `twitter:description`,
       content: metaDescription,
     },
+    {
+      name: `twitter:image`,
+      content: image,
+    },
   ].concat(newMeta || []);
 
   return (
     <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
       <html lang={lang} amp />
       <title>{metaTitle}</title>
+      <link rel="icon" href={image} type="image/png" sizes="48x48"></link>
 
       {meta &&
         meta.length &&

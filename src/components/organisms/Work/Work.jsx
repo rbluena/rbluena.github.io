@@ -51,7 +51,9 @@ const Work = () => {
           <ContentItem key={key}>
             <CompanyInfo>
               <ImageBox>
-                {item.image && item.image.length && <Image src={imgPath} />}
+                {item.image && item.image.length && (
+                  <Image src={imgPath} alt={item.company} />
+                )}
               </ImageBox>
               <CompanyDetails>
                 <Heading>{item.company}</Heading>
