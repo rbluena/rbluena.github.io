@@ -1,4 +1,4 @@
-import Text from "./assets/Text";
+import Text from "./atoms/Text";
 
 // Atoms
 import Badge from "./atoms/Badge";

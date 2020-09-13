@@ -182,7 +182,7 @@ Text.propTypes = {
   ]),
 
   /** Font weight, default is medium */
-  weight: PropTypes.oneOf(["thin", "regular", "medium", "semibold", "bold"]),
+  weight: PropTypes.oneOf(["thin", "regular", "medium", "bold", "xbold"]),
 
   /** These are classes used by storybook to override the style. */
   className: PropTypes.string,
