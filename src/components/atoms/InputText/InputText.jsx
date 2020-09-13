@@ -94,7 +94,7 @@ InputText.defaultProps = {
 };
 
 InputText.propTypes = {
-  /** Unique identifier of a form input.  */
+  /** Unique identifier of a form input. TODO: This should be changed to name rather than a id  */
   id: PropTypes.string.isRequired,
 
   /** Label of a form input. */
@@ -103,10 +103,10 @@ InputText.propTypes = {
   /** Value of a form input. */
   value: PropTypes.string,
 
-  /** Error message from user. */
+  /** Error message from user interacting with form input. */
   error: PropTypes.string,
 
-  /** Change handler a form input. */
+  /** Change handler for a form input. */
   onChange: PropTypes.func,
 };
 
