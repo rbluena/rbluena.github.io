@@ -49,13 +49,13 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
-  /** Relative or absolute URL of the link. */
+  /** Relative or absolute URL. */
   to: PropTypes.string.isRequired,
 
-  /** Identifies if link takes user to a external page. */
+  /** Identifying if link is an external link. */
   external: PropTypes.bool,
 
-  /** Label of the link */
+  /** Label for the link */
   children: PropTypes.node.isRequired,
 
   /** Used by styled-component to update style of the component. */

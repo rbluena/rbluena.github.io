@@ -1,0 +1,20 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import Link from "./Link";
+
+<Meta title="Design System/Atoms/Link" component={Link} />
+
+# Link
+
+<br />
+
+## Props
+
+<ArgsTable of={Link} />
+
+<Canvas>
+  <Story name="Link" args={{ children: "Something" }}>
+    <Link to="https://abc.xyz/" external>
+      The Alphabet Company
+    </Link>
+  </Story>
+</Canvas>
