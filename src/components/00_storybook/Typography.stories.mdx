@@ -1,12 +1,9 @@
 import { Meta, Typeset, ArgsTable } from "@storybook/addon-docs/blocks";
-import { defaultTheme as theme } from "../../../utils/themes";
-import Typography from "./Typography";
+import { defaultTheme as theme } from "../../utils/themes";
 
-<Meta title="Design System/Assets/Typography" />
+<Meta title="Design System/Foundation/Typography" />
 
 # Typography
-
-<ArgsTable of={Typography} />
 
 <Typeset
   fontSizes={[
@@ -16,6 +13,7 @@ import Typography from "./Typography";
     `${Number(theme.typography.size.h4)}px`,
     `${Number(theme.typography.size.h5)}px`,
     `${Number(theme.typography.size.h6)}px`,
+    `${Number(theme.typography.size.xl)}px`,
     `${Number(theme.typography.size.large)}px`,
     `${Number(theme.typography.size.base)}px`,
     `${Number(theme.typography.size.sm)}px`,
