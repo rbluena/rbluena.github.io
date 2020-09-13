@@ -64,7 +64,7 @@ const PersonalDetails = () => {
 
   return (
     <Wrapper>
-      <Title>Rabii Luena</Title>
+      <Title>{metadata.title}</Title>
 
       <Heading>{metadata.description}</Heading>
 
