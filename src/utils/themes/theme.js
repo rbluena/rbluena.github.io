@@ -19,7 +19,7 @@ export const defaultTheme = {
       300: "#ff90cd",
     },
     green: {
-      200: "#00ffa2",
+      100: "#00ffa2",
     },
     monochrome: {
       100: "#333333",
