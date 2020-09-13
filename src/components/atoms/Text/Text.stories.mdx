@@ -1,0 +1,23 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import { defaultTheme as theme } from "../../../utils/themes";
+import Text from "./Text";
+
+<Meta title="Design System/Atoms/Text" />
+
+# Text
+
+<ArgsTable of={Text} />
+
+<Canvas>
+  <Story name="All">
+    <Text size="title">Title which is h1 component</Text>
+    <Text size="heading">Heading which is h2 component</Text>
+    <Text size="subheading">Subheading which is h3 component</Text>
+    <Text size="xl">Extra large paragraph</Text>
+    <Text size="large">Large paragraph</Text>
+    <Text>Default paragraph</Text>
+    <Text size="sm">small paragraph</Text>
+    <br />
+    <Text size="xs">Extra small which is inline span</Text>
+  </Story>
+</Canvas>
