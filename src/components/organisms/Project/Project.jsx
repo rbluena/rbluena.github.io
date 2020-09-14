@@ -102,6 +102,18 @@ const Project = ({ project, reverse }) => {
                 Style Guide
               </StyledLink>
             )}
+            &nbsp; &nbsp;
+            {project.workflow && project.workflow.length && (
+              <StyledLink
+                href={project.workflow}
+                link
+                target="blank"
+                rel="noopener noreferrer"
+                primary
+              >
+                Work Management
+              </StyledLink>
+            )}
           </Buttons>
           {/* end: end of buttons */}
         </Footer>
