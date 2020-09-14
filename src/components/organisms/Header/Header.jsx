@@ -9,14 +9,17 @@ import PersonalDetails from "./PersonalDetails";
 const Wrapper = styled.header``;
 
 const Header = ({ showHero }) => {
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  /**
+   * Used to set shadow effect on navigation bar when scrolling
+   */
   useLayoutEffect(() => {
     const onScroll = () => {
       if (window && window.scrollY > 20) {
-        setScrolling(true);
+        setScrolled(true);
       } else if (window && window.scrollY < 5) {
-        setScrolling(false);
+        setScrolled(false);
       }
     };
 
@@ -28,7 +31,7 @@ const Header = ({ showHero }) => {
 
   return (
     <Wrapper>
-      <Navbar scrolling={scrolling} />
+      <Navbar scrolled={scrolled} />
       {showHero && (
         <Hero>
           <CoverBG />
