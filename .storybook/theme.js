@@ -7,10 +7,9 @@ export default create({
   brandUrl: "https://rabiiluena.com",
 
   colorPrimary: "white",
-  // colorSecondary: "white",
-  textColor: "white",
 
-  appBg: "#2643b9",
+  // UI
+  appBg: "#63C7FF",
   appBorderRadius: 4,
 
   // Toolbar
