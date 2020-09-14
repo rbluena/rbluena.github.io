@@ -19,7 +19,7 @@ const FormGroup = styled.div`
   margin-bottom: ${props => props.theme.spacing.sm}px;
 `;
 
-const ContactForm = ({ handleSubmit }) => {
+const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
@@ -30,7 +30,7 @@ const ContactForm = ({ handleSubmit }) => {
    *
    * @param {Object} evt
    */
-  function onSubmit(evt) {
+  async function onSubmit(evt) {
     evt.preventDefault();
     setError("");
 
@@ -56,11 +56,17 @@ const ContactForm = ({ handleSubmit }) => {
     }
 
     // Submiting data
-    handleSubmit({
+    const success = await handleSubmit({
       name,
       email,
       description,
     });
+
+    if (success) {
+      setName("");
+      setEmail("");
+      setDescription("");
+    }
   }
 
   return (
@@ -71,7 +77,7 @@ const ContactForm = ({ handleSubmit }) => {
           label="Enter Fullname"
           value={name}
           onChange={evt => setName(evt.target.value)}
-          error={(error && error.name && error.name) || ""}
+          error={(error && error.name && error.name.length) || ""}
           required
           aria-required="true"
         />
@@ -82,7 +88,7 @@ const ContactForm = ({ handleSubmit }) => {
           label="Enter Email"
           value={email}
           onChange={evt => setEmail(evt.target.value)}
-          error={(error && error.email && error.email) || ""}
+          error={(error && error.email && error.email.length) || ""}
           required
           aria-required="true"
         />
@@ -93,22 +99,29 @@ const ContactForm = ({ handleSubmit }) => {
           label="Tell me some good news!"
           value={description}
           onChange={evt => setDescription(evt.target.value)}
-          error={(error && error.description && error.description) || ""}
+          error={(error && error.description && error.description.length) || ""}
           required
           aria-required="true"
         />
       </FormGroup>
       <FormGroup>
-        <Button type="submit" dark size="wide">
-          Submit
+        <Button type="submit" dark size="wide" disabled={disableSubmit}>
+          {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
       </FormGroup>
     </Form>
   );
 };
 
+ContactForm.defaultProps = {
+  isSubmitting: false,
+  disableSubmit: false,
+};
+
 ContactForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  isSubmitting: PropTypes.bool,
+  disableSubmit: PropTypes.bool,
 };
 
 export default ContactForm;
