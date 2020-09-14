@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { FiGithub, FiTwitter, FiCodepen } from "react-icons/fi";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import Link from "@app-components/atoms/Link";
 
 const Wrapper = styled.section`

@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import SectionBox from "@app-components/molecules/SectionBox";
 import styled from "styled-components";
 import { data } from "@app-data/tags.json";

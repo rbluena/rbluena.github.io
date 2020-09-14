@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "@app-components/atoms/Link";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import Logo from "@app-components/assets/images/Logo";
 import navItems from "@app-data/main-nav.json";
 import { FiMenu } from "react-icons/fi";

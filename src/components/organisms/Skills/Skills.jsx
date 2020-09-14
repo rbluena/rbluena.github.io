@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import SkillBlock from "@app-components/molecules/SkillBlock";
 import { Section } from "@app-components";
 import { data } from "@app-data/skills.json";

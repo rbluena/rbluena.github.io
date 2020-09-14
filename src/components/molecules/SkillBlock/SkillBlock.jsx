@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 
 const Wrapper = styled.div`
   border-left: 4px solid gray;

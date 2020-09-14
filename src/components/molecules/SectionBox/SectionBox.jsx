@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 
 const Wrapper = styled.section`
   background-color: ${props => props.theme.color.monochrome[700]};

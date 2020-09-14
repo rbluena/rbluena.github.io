@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Section } from "@app-components";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import Link from "@app-components/atoms/Link";
 import Wave from "@app-components/assets/images/Wave";
 import { FiTwitter, FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";

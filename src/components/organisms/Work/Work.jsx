@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "@app-components/assets/Typography";
+import { Text } from "@app-components";
 import SectionBox from "@app-components/molecules/SectionBox";
 import { data } from "@app-data/work.json";
 
