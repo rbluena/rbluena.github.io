@@ -36,11 +36,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `domain.com`,
-        short_name: `domain.com`,
+        name: `rabiiluena.com`,
+        short_name: `rabiiluena.com`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#1abc9c`,
+        theme_color: `#21edfc`,
         display: `standalone`,
         icon: `src/images/appicons/favicon.png`,
         icons: [
