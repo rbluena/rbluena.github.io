@@ -5,10 +5,13 @@ import Logo from "@app-components/assets/images/Logo";
 import navItems from "@app-data/main-nav.json";
 
 const StyledNavbar = styled.nav`
-  padding: ${props => props.theme.spacing.sm}px
-    ${props => props.theme.spacing.large}px;
-  border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
   background-color: ${props => props.theme.color.monochrome[900]};
+  border-bottom: 1px solid ${props => props.theme.color.monochrome[700]};
+  padding: ${props => props.theme.spacing.sm}px 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: ${props => props.scrolling && props.theme.shadow.sm};
+  transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 `;
 
 const Container = styled.div`
@@ -96,11 +99,11 @@ const Toggler = styled.button`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ scrolling }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <StyledNavbar>
+    <StyledNavbar scrolling={scrolling}>
       <Container>
         <Brand>
           <BrandLink to="/" aria-label="brand logo">
