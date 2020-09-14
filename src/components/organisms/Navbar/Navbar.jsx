@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Text, MenuIcon, Link } from "@app-components";
 import Logo from "@app-components/assets/images/Logo";
 import navItems from "@app-data/main-nav.json";
-import { FiMenu } from "react-icons/fi";
 
 const StyledNavbar = styled.nav`
   padding: ${props => props.theme.spacing.sm}px
@@ -38,9 +37,20 @@ const Menu = styled.div`
     top: 64px;
     height: 100vh;
     z-index: 1;
-    opacity: 0.95;
     box-shadow: ${props => props.theme.elevation.default};
-    display: ${props => (props.toggler ? "block" : "none")};
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.85);
+    transition: all 300ms;
+    overflow: hidden;
+
+    ${props =>
+      props.toggle &&
+      `
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    `}
   }
 `;
 
@@ -79,6 +89,7 @@ const Toggler = styled.button`
   cursor: pointer;
   height: 32px;
   display: none;
+  background: transparent;
 
   @media ${props => props.theme.devices.max_tablet} {
     display: block;
@@ -86,7 +97,7 @@ const Toggler = styled.button`
 `;
 
 const Navbar = () => {
-  const [toggler, setToggler] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <StyledNavbar>
@@ -97,7 +108,7 @@ const Navbar = () => {
           </BrandLink>
         </Brand>
 
-        <Menu toggler={toggler}>
+        <Menu toggle={toggle}>
           <MobileMenuHeading>
             <Text size="large">Navigation</Text>
           </MobileMenuHeading>
@@ -109,8 +120,8 @@ const Navbar = () => {
           ))}
         </Menu>
 
-        <Toggler onClick={() => setToggler(!toggler)} aria-label="Menu">
-          <MenuIcon />
+        <Toggler onClick={() => setToggle(!toggle)} aria-label="Menu">
+          <MenuIcon toggle={toggle} />
           {/* <FiMenu /> */}
         </Toggler>
       </Container>
