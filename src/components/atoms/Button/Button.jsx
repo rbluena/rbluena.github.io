@@ -62,7 +62,6 @@ const StyledButton = styled.button`
     `}
 
     /* Dark */
-
   ${props =>
     props.dark &&
     `
@@ -92,6 +91,7 @@ const StyledButton = styled.button`
     ${props =>
       props.size === "wide" &&
       `
+      padding: ${props.theme.spacing.sm}px;
       width: 100%;
     `}
 `;

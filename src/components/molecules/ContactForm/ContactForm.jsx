@@ -99,7 +99,7 @@ const ContactForm = ({ handleSubmit }) => {
         />
       </FormGroup>
       <FormGroup>
-        <Button type="submit" dark large wide>
+        <Button type="submit" dark size="wide">
           Submit
         </Button>
       </FormGroup>
