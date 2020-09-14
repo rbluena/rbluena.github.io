@@ -21,6 +21,8 @@ const Tags = styled.div`
 
 const Buttons = styled.div`
   padding: ${props => `${props.theme.spacing.sm}px 0`};
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const StyledLink = styled(Button)``;
@@ -58,7 +60,7 @@ const Project = ({ project, reverse }) => {
               project.tags.map(tag => {
                 return (
                   <React.Fragment key={tag}>
-                    <Badge label={tag} primary />
+                    <Badge size="sm" label={tag} primary />
                     &nbsp;&nbsp;
                   </React.Fragment>
                 );

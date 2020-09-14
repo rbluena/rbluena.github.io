@@ -50,10 +50,14 @@ const Social = styled.ul`
   list-style: none;
   margin-top: ${props => props.theme.spacing.xs}px;
   padding: 0;
+  font-size: 150%;
 
   li {
     display: inline-block;
-    padding-right: ${props => props.theme.spacing.xs}px;
+
+    a {
+      padding: ${props => props.theme.spacing.xs}px;
+    }
   }
 `;
 
