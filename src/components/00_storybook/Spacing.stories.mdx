@@ -1,3 +1,14 @@
-import { Meta } from "@storybook/addon-docs/blocks";
+import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
+import Spacing from "./Spacing";
 
 <Meta title="Design System/Design Tokens/Spacing" />
+
+# Spacing
+
+With exception to 'xxs' all space sizes are multiples of 8, therefore any size bigger than specified sizes, you can create new one by multiply with 8. Eg. 8 \* 16;
+
+<Canvas>
+  <Story name="Spacing">
+    <Spacing />
+  </Story>
+</Canvas>
