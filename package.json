@@ -31,6 +31,7 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
     "react-svg": "^11.0.36",
+    "sort-array": "^4.1.2",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7",
     "typeface-advent-pro": "0.0.69",
