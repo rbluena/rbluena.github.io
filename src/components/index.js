@@ -1,6 +1,6 @@
-import Text from "./atoms/Text";
-
+import MenuIcon from "./assets/MenuIcon";
 // Atoms
+import Text from "./atoms/Text";
 import Badge from "./atoms/Badge";
 import Link from "./atoms/Link";
 import Button from "./atoms/Button";
@@ -30,6 +30,7 @@ import ContactMe from "./organisms/ContactMe";
 import ContactInfo from "./organisms/ContactInfo";
 
 export {
+  MenuIcon,
   Text,
   Badge,
   Button,
