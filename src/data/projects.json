@@ -2,11 +2,11 @@
   "data": {
     "portfolio": {
       "title": "Portfolio",
-      "description": "This is personal portfolio where you are reading this article from.",
+      "description": "This is personal portfolio and branding site which you are browsing through right now.",
       "achievements": [
-        "Documenting UI components with storybook.",
+        "Documenting UI components with Storybook.",
         "Creating reusable components with atomic design approach.",
-        "Using static site generator for SEO optimization."
+        "Using static site generator for SEO optimization. They call it \"The Amazing Gatsby\"."
       ],
       "url": "https://rabiiluena.com",
       "repo": "https://github.com/rbluena/rbluena",
@@ -25,47 +25,49 @@
     },
     "engineer guide": {
       "title": "Software Engineering Knowledge Base",
-      "description": "This started as personal guidance to become a better software engineer, then I had realized making it available to the public might help other individuals becoming ones as well. There is always a way to make it better somehow, if you feel like contributing to it please click \"Repository\" button.",
+      "description": "This was started as personal guidance for my journey to 10x software engineer destination(Only if that place exists). It contains self-learning guidence to become a better developer based on level of experience, references to learning resources and adding personal notes.",
       "achievements": [
-        "Programming Guide.",
-        "Data Structure and Algorithms Guide.",
-        "Industrial 4.0 Guide",
-        "Soft Skills Guide",
-        "Job Applications Guide"
+        "Programming.",
+        "Computer Science",
+        "Industrial 4.0",
+        "Soft Skills",
+        "Job Applications"
       ],
-      "url": "https://softwareengineer.guide",
+      "old_url": "https://softwareengineer.guide",
       "repo": "https://github.com/rbluena/SE-knowledge-base",
-      "tags": ["Markdown", "Notion"]
+      "tags": ["Markdown", "Notion", "GitHub"]
     },
-    "pinning": {
-      "title": "Pinning",
-      "description": "Chrome extension that can be used to pin comments on any part of any webiste's UI. Pins and comments can also be shared with other people who are having similar extension installed in their browser. This is WIP experimental project.",
-      "features": ["Real-time Communication"],
-      "repo": "https://github.com/rbluena/pinning",
-      "tags": ["React", "Chrome Extension"]
-    },
-
     "greenrush": {
       "title": "GreenRush",
-      "description": "One of the largest online marketplaces for cannabis patients in US and Canada.",
+      "description": "One of the largest online marketplace for cannabis patients in the US and Canada.",
       "achievements": [
-        "Built the whole backbone of the front-end from scratch.",
-        "Optimized and improved the checkout process.",
-        "I was introduced into agile world using scrum framework."
+        "Created the backbone on the front-end for the shopping experience using React.",
+        "Integrated google map API in the checkout for delivery selection.",
+        "I was introduced to the agile world with scrum framework."
       ],
       "url": "https://greenrush.com/shop",
       "tags": ["React", "Redux", "redux-saga", "Google Analytics"]
     },
     "cloudboost": {
       "title": "CloudBoost",
-      "description": "I was mostly responsible with ReactJS on the front-end, and partially responsible with ExpressJS and MongoDB in the back-end. It was a great experience to be hired as junior full-stack developer.",
+      "description": "I was mostly responsible with ReactJS on the front-end, and partially responsible with ExpressJS and MongoDB in the back-end. It was a great experience to be hired as a junior full-stack developer.",
       "achievements": [
-        "Re-created a new authentication process with React.",
-        "Refactored customers' dashboard.",
+        "Recreated a new authentication process with React.",
+        "Refactored customer's dashboard on the front-end.",
         "Refactored back-end payment process with TDD approach."
       ],
       "url": "https://cloudboost.io",
-      "tags": ["React", "Redux", "Stripe", "ExpressJS", "Mocha", "Chai"]
+      "tags": ["React", "Redux", "Stripe", "ExpressJS", "Mocha", "Chai"],
+
+      "ARCHIVED": {
+        "pinning": {
+          "title": "Pinning",
+          "description": "Chrome extension that can be used to pin comments on any part of any webiste's UI. Pins and comments can also be shared with other people who are having similar extension installed in their browser. This is WIP experimental project.",
+          "features": ["Real-time Communication"],
+          "repo": "https://github.com/rbluena/pinning",
+          "tags": ["React", "Chrome Extension"]
+        }
+      }
     }
   }
 }
