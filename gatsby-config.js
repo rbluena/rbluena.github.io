@@ -45,13 +45,18 @@ module.exports = {
         icon: `src/images/appicons/favicon.png`,
         icons: [
           {
-            src: `favicons/icon-48x48.png`,
+            src: `src/images/appicons/icon48.png`,
             sizes: `48x48`,
             type: `image/png`,
           },
           {
-            src: `favicons/icon-72x72.png`,
+            src: `src/images/appicons/icon72.png`,
             sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/appicons/icon114.png`,
+            sizes: `114x114`,
             type: `image/png`,
           },
         ],
