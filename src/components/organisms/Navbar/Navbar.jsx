@@ -21,6 +21,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 ${props => props.theme.spacing.large}px;
 `;
 
 const Brand = styled.div`
