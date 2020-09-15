@@ -2,11 +2,11 @@
   "data": {
     "accessible": {
       "title": "Accessibility",
-      "description": "Aligning my apps with WAI-ARIA specs.  Building applications that inclusively targeting folks with impairments has been one of development satisfactory to me."
+      "description": "Aligning my applications with WIA-ARIA specs during development and testing. It's so satisfying to build apps that are inclusively targeting folks with impairments."
     },
     "responsive": {
       "title": "Responsiveness",
-      "description": "As I am striving to be the mobile-first kind of developer, one of my development checklist is to make sure an app is widely accessible from all sort of devices with different screen sizes.",
+      "description": "I am striving to be a mobile-first kind of developer. One of my development checklists is to make sure an application is widely accessible from all sorts of devices with different screen sizes.",
       "checklist": [
         "Responsive Containers",
         "Responsive Typography",
@@ -16,11 +16,11 @@
     },
     "optimization": {
       "title": "Optimization",
-      "description": "Light weight engineered, offline accessible with PWA, and SEO optimized are the things make me call myself a progressive learner."
+      "description": "Lightweight engineered, offline accessible with PWA, and SEO optimized application, that is hitting a home run my friend."
     },
     "documentation": {
       "title": "Documentation",
-      "description": "Documenting UI and UX of reusable components of an application using style guides and design systems."
+      "description": "Documenting UI and UX of reusable components of an application by creating style guides and design systems for the app."
     }
   }
 }
