@@ -25,15 +25,16 @@
     },
     "engineer guide": {
       "title": "Software Engineering Knowledge Base",
-      "description": "This was started as personal guidance for my journey to 10x software engineer destination(Only if that place exists). It contains self-learning guidence to become a better developer based on level of experience, references to learning resources and adding personal notes.",
+      "description": "This is self-learning guidance to reach a place called 10x software engineer(Only if that place exists). Anyone can use it to find knowledge gap and use listed references to cover the gap.",
       "achievements": [
         "Programming.",
         "Computer Science",
-        "Industrial 4.0",
+        "Industry 4.0",
         "Soft Skills",
         "Job Applications"
       ],
       "old_url": "https://softwareengineer.guide",
+      "url": "https://www.notion.so/Software-Engineering-Knowledge-Base-2020-2b76ba62e7954194b00957f3b1916f70",
       "repo": "https://github.com/rbluena/SE-knowledge-base",
       "tags": ["Markdown", "Notion", "GitHub"]
     },
@@ -66,6 +67,10 @@
           "features": ["Real-time Communication"],
           "repo": "https://github.com/rbluena/pinning",
           "tags": ["React", "Chrome Extension"]
+        },
+        "SSCRUM": {
+          "title": "SSCRUM",
+          "description": "SSCRUM is learning management system(LMS) for self-learners. It contains shareable, distributed and engaging content that can help students especially self-learners to track their progress on learning particular skills or achieving learning milestones."
         }
       }
     }
