@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import { FiGithub, FiTwitter, FiCodepen } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiCodepen, FiLinkedin } from "react-icons/fi";
 import { Text } from "@app-components";
 import Link from "@app-components/atoms/Link";
 
@@ -22,12 +22,12 @@ const Social = styled.div`
   margin-top: ${props => props.theme.spacing.large}px;
 
   .icon {
-    font-size: 24px;
+    font-size: 170%;
   }
 
   a {
     padding: 0px;
-    padding-right: ${props => props.theme.spacing.xs}px;
+    padding-right: ${props => props.theme.spacing.sm}px;
     color: ${props => props.theme.color.monochrome[400]};
 
     &:hover {
@@ -44,6 +44,14 @@ const Heading = styled(Text).attrs({
   size: "heading",
 })`
   margin-bottom: ${props => props.theme.spacing["2xl"]}px;
+`;
+
+const LinkedinBadge = styled.div`
+  display: none;
+
+  @media ${props => props.theme.devices.tablet} {
+    display: block;
+  }
 `;
 
 const PersonalDetails = () => {
@@ -68,24 +76,36 @@ const PersonalDetails = () => {
 
       <Heading>{metadata.description}</Heading>
 
-      <div
-        className="LI-profile-badge"
-        data-version="v1"
-        data-size="medium"
-        data-locale="en_US"
-        data-type="horizontal"
-        data-theme="dark"
-        data-vanity="rbluena"
-      >
-        <a
-          className="LI-simple-link"
-          href="https://ke.linkedin.com/in/rbluena?trk=profile-badge"
+      <LinkedinBadge>
+        <div
+          className="LI-profile-badge"
+          data-version="v1"
+          data-size="medium"
+          data-locale="en_US"
+          data-type="horizontal"
+          data-theme="dark"
+          data-vanity="rbluena"
         >
-          LinkedIn Badge
-        </a>
-      </div>
+          <a
+            className="LI-simple-link"
+            href="https://ke.linkedin.com/in/rbluena?trk=profile-badge"
+          >
+            LinkedIn Badge
+          </a>
+        </div>
+      </LinkedinBadge>
 
       <Social>
+        <Link
+          external
+          className="icon"
+          to="https://ke.linkedin.com/in/rbluena"
+          rel="noreferrer"
+          target="_blank"
+          aria-label="Visit my LinkedIn profile"
+        >
+          <FiLinkedin />
+        </Link>
         <Link
           external
           className="icon"

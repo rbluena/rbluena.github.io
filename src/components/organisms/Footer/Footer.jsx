@@ -46,7 +46,6 @@ const FooterNav = styled.ul`
 `;
 
 const Social = styled.ul`
-  font-size: 20px;
   list-style: none;
   margin-top: ${props => props.theme.spacing.xs}px;
   padding: 0;
