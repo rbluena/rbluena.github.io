@@ -1,7 +1,11 @@
 [
   { "label": "About", "url": "/" },
   { "label": "Projects", "url": "/projects" },
-  { "label": "Resume", "url": "https://google.com", "external": true },
+  {
+    "label": "Resume",
+    "url": "https://bit.ly/2FVWiWF",
+    "external": true
+  },
   { "label": "Blog", "url": "/blog" },
   { "label": "Contact", "url": "/contact" }
 ]

@@ -127,7 +127,6 @@ const Navbar = ({ scrolled }) => {
 
         <Toggler onClick={() => setToggle(!toggle)} aria-label="Menu">
           <MenuIcon toggle={toggle} />
-          {/* <FiMenu /> */}
         </Toggler>
       </Container>
     </StyledNavbar>

@@ -30,7 +30,14 @@ const StyledGatsbyLink = styled(GatsbyLink)`
 const Link = ({ children, to, external, className, ...rest }) => {
   if (external) {
     return (
-      <StyledLink href={to} as="a" className={className} {...rest}>
+      <StyledLink
+        href={to}
+        as="a"
+        className={className}
+        target="_blank"
+        rel="noreferrer noopener"
+        {...rest}
+      >
         {children}
       </StyledLink>
     );
