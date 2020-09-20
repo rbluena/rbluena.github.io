@@ -9,6 +9,13 @@ module.exports = {
       "rabii luena, luena, rabii, software engineer, software developer, hiring, web developer, react developer, front-end developer, front-end engineer, javascript developer",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WDR53PG",
+        includeInDevelopment: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
