@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FiGithub, FiTwitter, FiCodepen, FiLinkedin } from "react-icons/fi";
 import { Text } from "@app-components";
 import Link from "@app-components/atoms/Link";
+import { RiDribbbleLine } from "react-icons/ri";
 
 const Wrapper = styled.section`
   text-align: center;
@@ -100,8 +101,6 @@ const PersonalDetails = () => {
           external
           className="icon"
           to="https://ke.linkedin.com/in/rbluena"
-          rel="noreferrer"
-          target="_blank"
           aria-label="Visit my LinkedIn profile"
         >
           <FiLinkedin />
@@ -110,8 +109,6 @@ const PersonalDetails = () => {
           external
           className="icon"
           to="https://github.com/rbluena"
-          rel="noreferrer"
-          target="_blank"
           aria-label="Visit my GitHub profile"
         >
           <FiGithub />
@@ -120,8 +117,6 @@ const PersonalDetails = () => {
           external
           className="icon"
           to="https://www.codepen.com/rbluena"
-          rel="noreferrer"
-          target="_blank"
           aria-label="Visit my codepen profile"
         >
           <FiCodepen />
@@ -129,9 +124,15 @@ const PersonalDetails = () => {
         <Link
           external
           className="icon"
+          to="https://www.dribbble.com/rbluena"
+          aria-label="Visit my codepen profile"
+        >
+          <RiDribbbleLine />
+        </Link>
+        <Link
+          external
+          className="icon"
           to="https://twitter.com/rbluena"
-          rel="noreferrer"
-          target="_blank"
           aria-label="Visit my twitter profile"
         >
           <FiTwitter />

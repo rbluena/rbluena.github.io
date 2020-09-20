@@ -5,6 +5,7 @@ import { Text } from "@app-components";
 import Link from "@app-components/atoms/Link";
 import Wave from "@app-components/assets/images/Wave";
 import { FiTwitter, FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
+import { RiDribbbleLine } from "react-icons/ri";
 import linksData from "@app-data/main-nav.json";
 
 const Wrapper = styled.footer`
@@ -112,11 +113,19 @@ const Footer = props => {
                   external
                   className="icon"
                   to="https://www.codepen.com/rbluena"
-                  rel="noreferrer"
-                  target="_blank"
                   aria-label="Visit my codepen profile"
                 >
                   <FiCodepen />
+                </StyledLink>
+              </li>
+              <li>
+                <StyledLink
+                  external
+                  className="icon"
+                  to="https://www.dribbble.com/rbluena"
+                  aria-label="Visit my codepen profile"
+                >
+                  <RiDribbbleLine />
                 </StyledLink>
               </li>
               <li id="my-twitter-account">
