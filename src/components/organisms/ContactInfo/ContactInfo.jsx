@@ -147,8 +147,8 @@ const ContactInfo = () => {
               <Text size="heading">Location</Text>
             </InfoHeading>
             <InfoDetails>
-              <Text size="large">Arusha, Tanzania</Text>
               <Text size="large">Nairobi, Kenya</Text>
+              <Text size="large">Arusha, Tanzania</Text>
             </InfoDetails>
             {/* end: Location */}
 
@@ -160,7 +160,8 @@ const ContactInfo = () => {
               <Text size="heading">Mobile</Text>
             </InfoHeading>
             <InfoDetails>
-              <Text size="large">+255 714 061234</Text>
+              <Text size="large">+254 743 226635</Text>
+              <Text size="large">+255 714 061234 - WhatsApp</Text>
             </InfoDetails>
             {/* end: Phone */}
 
