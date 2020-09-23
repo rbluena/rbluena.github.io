@@ -2,8 +2,8 @@
   "name": "rbluena",
   "private": true,
   "description": "This is personal site for Rabii Luena.",
-  "version": "0.1.0",
-  "author": "Rabii Luena <rbluena@gmail.com>",
+  "version": "1.0.0",
+  "author": "Rabii Luena <itisrabii@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
