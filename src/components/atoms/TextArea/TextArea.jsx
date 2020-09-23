@@ -44,25 +44,25 @@ const Wrapper = styled.div`
   border-color: ${props => props.theme.color.monochrome[200]};
 `;
 
-const TextArea = ({ id, label, value, error, onChange, ...rest }) => {
+const TextArea = ({ name, label, value, error, onChange, ...rest }) => {
   const [focused, setFocused] = useState(false);
 
-  const errorId = `${id}-error`;
+  const errorId = `${name}-error`;
   const errorMessage = error;
 
   return (
     <>
       <Wrapper>
         <Label
-          htmlFor={id}
+          htmlFor={name}
           focused={focused}
           notEmpty={value && value.length > 0}
         >
           {label}
         </Label>
         <StyledTextArea
-          id={id}
-          name={id}
+          id={name}
+          name={name}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={onChange}
@@ -82,10 +82,10 @@ TextArea.defaultProps = {
 };
 
 TextArea.propTypes = {
-  /** Unique identifier of a form input.  */
-  id: PropTypes.string.isRequired,
+  /** Unique identifier for a form input.  */
+  name: PropTypes.string.isRequired,
 
-  /** Label of a form input. */
+  /** Label for a form input. */
   label: PropTypes.string.isRequired,
 
   /** Value of a form input. */

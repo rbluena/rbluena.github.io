@@ -73,7 +73,7 @@ const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
     <Form onSubmit={onSubmit}>
       <FormGroup>
         <InputText
-          id="name"
+          name="name"
           label="Enter Fullname"
           value={name}
           onChange={evt => setName(evt.target.value)}
@@ -84,7 +84,7 @@ const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
       </FormGroup>
       <FormGroup>
         <InputText
-          id="email"
+          name="email"
           label="Enter Email"
           value={email}
           onChange={evt => setEmail(evt.target.value)}
@@ -95,7 +95,7 @@ const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
       </FormGroup>
       <FormGroup>
         <TextArea
-          id="description"
+          name="description"
           label="Tell me some good news!"
           value={description}
           onChange={evt => setDescription(evt.target.value)}
