@@ -75,7 +75,7 @@ function SEO({ title, description, lang, newMeta }) {
   ].concat(newMeta || []);
 
   return (
-    <Helmet title={metaTitle} titleTemplate={`%s | ${metaData.title}`}>
+    <Helmet title={metaTitle} titleTemplate={`${metaData.title} | %s`}>
       <html lang={lang} amp />
       <title>{metaTitle}</title>
       <link rel="icon" href={image} type="image/png" sizes="48x48"></link>
