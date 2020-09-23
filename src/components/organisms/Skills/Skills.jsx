@@ -62,6 +62,10 @@ const Skills = () => {
           );
         })}
       </SkillsContainer>
+      <div>
+        <Text size="sm">* Learning in progress.</Text>&nbsp;&nbsp;
+        <Text size="sm">** Wishing to master.</Text>
+      </div>
     </Wrapper>
   );
 };
