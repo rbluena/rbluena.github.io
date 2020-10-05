@@ -4,16 +4,16 @@
       "title": "Programming Languages",
       "items": [
         { "name": "JavaScript" },
-        { "name": "TypeScript *" },
         { "name": "CSS" },
         { "name": "SCSS" },
+        { "name": "TypeScript *" },
         { "name": "Python *" },
         { "name": "Rust **" }
       ]
     },
     "databases": {
       "title": "Databases",
-      "items": [{ "name": "MongoDB" }, { "name": "SQL" }]
+      "items": [{ "name": "NoSQL" }, { "name": "SQL" }]
     },
     "frameworks": {
       "title": "Frameworks",
