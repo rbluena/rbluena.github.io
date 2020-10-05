@@ -74,7 +74,7 @@ const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
       <FormGroup>
         <InputText
           name="name"
-          label="Enter Fullname"
+          label="Enter fullname"
           value={name}
           onChange={evt => setName(evt.target.value)}
           error={(error && error.name && error.name.length) || ""}
@@ -85,7 +85,7 @@ const ContactForm = ({ handleSubmit, disableSubmit, isSubmitting }) => {
       <FormGroup>
         <InputText
           name="email"
-          label="Enter Email"
+          label="Enter email"
           value={email}
           onChange={evt => setEmail(evt.target.value)}
           error={(error && error.email && error.email.length) || ""}
