@@ -47,14 +47,6 @@ const Heading = styled(Text).attrs({
   margin-bottom: ${props => props.theme.spacing["2xl"]}px;
 `;
 
-const LinkedinBadge = styled.div`
-  display: none;
-
-  @media ${props => props.theme.devices.tablet} {
-    display: block;
-  }
-`;
-
 const PersonalDetails = () => {
   const { site } = useStaticQuery(
     graphql`

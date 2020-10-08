@@ -2,11 +2,14 @@ import React, { useLayoutEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Hero, Navbar } from "@app-components";
-import CoverBG from "@app-components/assets/CoverBG";
 import Illustration from "@app-components/assets/Illustration";
 import PersonalDetails from "./PersonalDetails";
 
 const Wrapper = styled.header``;
+
+const IllustrationContainer = styled.div`
+  margin-top: ${props => props.theme.spacing["3xl"]}px;
+`;
 
 const Header = ({ showHero }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +37,10 @@ const Header = ({ showHero }) => {
       <Navbar scrolled={scrolled} />
       {showHero && (
         <Hero>
-          <CoverBG />
           <PersonalDetails />
-          <Illustration />
+          <IllustrationContainer>
+            <Illustration />
+          </IllustrationContainer>
         </Hero>
       )}
     </Wrapper>
