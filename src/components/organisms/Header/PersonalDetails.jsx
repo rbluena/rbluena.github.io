@@ -77,25 +77,6 @@ const PersonalDetails = () => {
 
       <Heading>{metadata.description}</Heading>
 
-      <LinkedinBadge>
-        <div
-          className="LI-profile-badge"
-          data-version="v1"
-          data-size="medium"
-          data-locale="en_US"
-          data-type="horizontal"
-          data-theme="dark"
-          data-vanity="rbluena"
-        >
-          <a
-            className="LI-simple-link"
-            href="https://ke.linkedin.com/in/rbluena?trk=profile-badge"
-          >
-            LinkedIn Badge
-          </a>
-        </div>
-      </LinkedinBadge>
-
       <Social>
         <Link
           external
