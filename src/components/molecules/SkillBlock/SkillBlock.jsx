@@ -21,8 +21,8 @@ const ContentList = styled.ul`
   padding: 0;
 
   @media screen and (min-width: ${props => props.theme.mediaQuery.tablet}) {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
   }
 
   li {

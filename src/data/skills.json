@@ -3,12 +3,11 @@
     "programming": {
       "title": "Programming Languages",
       "items": [
-        { "name": "JavaScript" },
         { "name": "CSS" },
         { "name": "SCSS" },
-        { "name": "TypeScript *" },
-        { "name": "Python *" },
-        { "name": "Rust **" }
+        { "name": "JavaScript" },
+        { "name": "TypeScript" },
+        { "name": "Python" }
       ]
     },
     "databases": {
@@ -27,6 +26,14 @@
     "testing": {
       "title": "Test",
       "items": [{ "name": "Mocha" }, { "name": "Chai" }, { "name": "JEST" }]
+    },
+    "computer": {
+      "title": "Computer Science",
+      "items": [
+        { "name": "Data Structures" },
+        { "name": "Algorithms and Analysis" },
+        { "name": "Distributed Systems" }
+      ]
     }
   }
 }
