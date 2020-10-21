@@ -2,11 +2,11 @@
   "data": {
     "portfolio": {
       "title": "Portfolio",
-      "description": "This is personal portfolio and branding site which you are browsing through right now.",
+      "description": "This is personal portfolio and branding site which you are browsing through.",
       "achievements": [
         "Documenting UI components with Storybook.",
         "Creating reusable components with atomic design approach.",
-        "Using static site generator for SEO optimization. They call it \"The Amazing Gatsby\"."
+        "Using static site generator for SEO optimization."
       ],
       "url": "https://rabiiluena.com",
       "repo": "https://github.com/rbluena/rbluena",
