@@ -3,37 +3,39 @@
     "programming": {
       "title": "Programming Languages",
       "items": [
-        { "name": "CSS" },
         { "name": "SCSS" },
         { "name": "JavaScript" },
-        { "name": "TypeScript" },
-        { "name": "Python" }
+        { "name": "TypeScript" }
       ]
     },
     "databases": {
       "title": "Databases",
-      "items": [{ "name": "NoSQL" }, { "name": "SQL" }]
+      "items": [{ "name": "MongoDB" }]
     },
     "frameworks": {
       "title": "Frameworks",
       "items": [
         { "name": "React" },
-        { "name": "React Native" },
-        { "name": "Gatsby" },
         { "name": "NextJS" },
         { "name": "ExpressJS" }
       ]
     },
     "testing": {
       "title": "Test",
-      "items": [{ "name": "Mocha" }, { "name": "Chai" }, { "name": "JEST" }]
+      "items": [
+        { "name": "TDD" },
+        { "name": "Unit Testing" },
+        { "name": "Integration Testing" }
+      ]
     },
     "computer": {
-      "title": "Computer Science",
+      "title": "Other",
       "items": [
         { "name": "Data Structures" },
         { "name": "Algorithms and Analysis" },
-        { "name": "Distributed Systems" }
+        { "name": "Distributed Systems" },
+        { "name": "Git" },
+        { "name": "GraphQL" }
       ]
     }
   }
