@@ -148,7 +148,6 @@ const ContactInfo = () => {
             </InfoHeading>
             <InfoDetails>
               <Text size="large">Nairobi, Kenya</Text>
-              <Text size="large">Arusha, Tanzania</Text>
             </InfoDetails>
             {/* end: Location */}
 
