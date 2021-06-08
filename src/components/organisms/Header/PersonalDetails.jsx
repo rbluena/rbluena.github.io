@@ -73,7 +73,7 @@ const PersonalDetails = () => {
         <Link
           external
           className="icon"
-          to="https://ke.linkedin.com/in/rbluena"
+          to="https://www.linkedin.com/in/rbluena/"
           aria-label="Visit my LinkedIn profile"
         >
           <FiLinkedin />
@@ -86,19 +86,19 @@ const PersonalDetails = () => {
         >
           <FiGithub />
         </Link>
-        <Link
+        {/* <Link
           external
           className="icon"
-          to="https://www.codepen.com/rbluena"
+          to="https://www.codepen.io/rbluena"
           aria-label="Visit my codepen profile"
         >
           <FiCodepen />
-        </Link>
+        </Link> */}
         <Link
           external
           className="icon"
           to="https://www.dribbble.com/rbluena"
-          aria-label="Visit my codepen profile"
+          aria-label="Visit my dribbble profile"
         >
           <RiDribbbleLine />
         </Link>

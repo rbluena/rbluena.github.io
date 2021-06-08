@@ -2,30 +2,28 @@
   "data": {
     "programming": {
       "title": "Programming Languages",
-      "items": [
-        { "name": "SCSS" },
-        { "name": "JavaScript" },
-        { "name": "TypeScript" }
-      ]
+      "items": [{ "name": "SCSS" }, { "name": "JavaScript" }]
     },
     "databases": {
       "title": "Databases",
       "items": [{ "name": "MongoDB" }]
     },
     "frameworks": {
-      "title": "Frameworks",
+      "title": "Frameworks & Libs",
       "items": [
         { "name": "React" },
         { "name": "NextJS" },
-        { "name": "ExpressJS" }
+        { "name": "ExpressJS" },
+        { "name": "TailwindCSS" }
       ]
     },
     "testing": {
-      "title": "Test",
+      "title": "Testing",
       "items": [
-        { "name": "TDD" },
+        { "name": "BDD" },
         { "name": "Unit Testing" },
-        { "name": "Integration Testing" }
+        { "name": "Integration Testing" },
+        { "name": "e2e Testing" }
       ]
     },
     "computer": {
