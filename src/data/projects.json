@@ -1,5 +1,39 @@
 {
   "data": {
+    "asteyo_1": {
+      "title": "Asteyo - Task Management and Scheduler",
+      "description": "It was part of applications lead to founding of Asteyo Inc. Scheduler and task management software running on the web.",
+      "achievements": [
+        "Build front-end with NextJS, TailwindCSS and Ant Design.",
+        "Built the backend with ExpressJS and MongoDB."
+      ],
+      "url": "https://youtu.be/a6xQikKh2Tc",
+      "tags": [
+        "NextJS",
+        "TailwindaCSS",
+        "MongoDB",
+        "NGINX",
+        "DigitalOcean",
+        "Google Analytics"
+      ]
+    },
+    "asteyo_2": {
+      "title": "Asteyo - Financial Tracker",
+      "description": "Financial tracking web application for local users in my country. It was part of founding Asteyo.",
+      "achievements": [
+        "Build front-end with NextJS, TailwindCSS and Ant Design.",
+        "Built the backend with ExpressJS and MongoDB."
+      ],
+      "url": "https://youtu.be/_i94SOBo53U",
+      "tags": [
+        "NextJS",
+        "TailwindaCSS",
+        "MongoDB",
+        "NGINX",
+        "DigitalOcean",
+        "Google Analytics"
+      ]
+    },
     "portfolio": {
       "title": "Portfolio",
       "description": "This is personal portfolio and branding site which you are browsing through.",
