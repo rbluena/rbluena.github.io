@@ -26,12 +26,15 @@ const Heading = styled(Text).attrs({ size: "heading" })`
   margin-bottom: ${props => props.theme.spacing["xs"]}px;
 `;
 
-const ImageBox = styled.div``;
+const ImageBox = styled.div`
+  width: ${props => props.theme.spacing["2xl"]}px;
+  height: ${props => props.theme.spacing["2xl"]}px;
+  margin-right: ${props => props.theme.spacing["sm"]}px;
+`;
 
 const Image = styled.img`
   width: ${props => props.theme.spacing["2xl"]}px;
   height: ${props => props.theme.spacing["2xl"]}px;
-  margin-right: ${props => props.theme.spacing["sm"]}px;
 `;
 
 const Description = styled.div``;

@@ -1,5 +1,16 @@
 {
   "data": {
+    "asteyo": {
+      "company": "Asteyo",
+      "position": "Founder & CEO",
+      "location": "Remote",
+      "type": "Seasonal",
+      "from": "Nov 2020",
+      "to": "June 2021",
+      "project": "Asteyo - Bajeti, Asteyo - Time Management",
+      "url": "",
+      "image": "asteyo.png"
+    },
     "am": {
       "company": "AM2Studio",
       "position": "Front-end Developer",
@@ -39,8 +50,7 @@
       "type": "Contract",
       "from": "May 2013",
       "to": "Oct 2015",
-      "url": "",
-      "image": ""
+      "url": ""
     }
   }
 }
