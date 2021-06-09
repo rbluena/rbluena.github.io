@@ -78,7 +78,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "NODE_ENV=production start-storybook -p 6006 -s static",
     "build-storybook": "build-storybook",
-    "predeploy": "gatsby clean && gatsby build --prefix-paths && cp CNAME ./public",
+    "predeploy": "gatsby clean && gatsby build --prefix-paths",
     "deploy": "gh-pages -d public -b master",
     "flow": "flow ./src/"
   },
