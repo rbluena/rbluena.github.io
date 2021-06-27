@@ -2,7 +2,7 @@
   "data": {
     "accessible": {
       "title": "Accessibility",
-      "description": "Aligning my applications with WIA-ARIA specs during development and testing. It's so satisfying to build apps that are inclusively targeting folks with impairments."
+      "description": "Aligning my applications with WAI-ARIA specs during development and testing. It's so satisfying to build apps that are inclusively targeting folks with impairments."
     },
     "responsive": {
       "title": "Responsiveness",
