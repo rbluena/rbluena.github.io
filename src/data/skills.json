@@ -42,7 +42,11 @@
     },
     "learning": {
       "title": "Learning",
-      "items": [{ "name": "GraphQL" }, { "name": "Go" }]
+      "items": [
+        { "name": "GraphQL" },
+        { "name": "Cloud-Native with Docker and AWS" },
+        { "name": "Go" }
+      ]
     }
   }
 }
