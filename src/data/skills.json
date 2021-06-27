@@ -2,11 +2,15 @@
   "data": {
     "programming": {
       "title": "Programming Languages",
-      "items": [{ "name": "SCSS" }, { "name": "JavaScript" }]
+      "items": [
+        { "name": "SCSS" },
+        { "name": "JavaScript" },
+        { "name": "TypeScript" }
+      ]
     },
     "databases": {
       "title": "Databases",
-      "items": [{ "name": "MongoDB" }]
+      "items": [{ "name": "MongoDB" }, { "name": "SQL" }]
     },
     "frameworks": {
       "title": "Frameworks & Libs",
@@ -14,13 +18,13 @@
         { "name": "React" },
         { "name": "NextJS" },
         { "name": "ExpressJS" },
+        { "name": "CSS-in-JS" },
         { "name": "TailwindCSS" }
       ]
     },
     "testing": {
       "title": "Testing",
       "items": [
-        { "name": "BDD" },
         { "name": "Unit Testing" },
         { "name": "Integration Testing" },
         { "name": "e2e Testing" }
@@ -33,8 +37,12 @@
         { "name": "Algorithms and Analysis" },
         { "name": "Distributed Systems" },
         { "name": "Git" },
-        { "name": "GraphQL" }
+        { "name": "CI/CD Pipelining" }
       ]
+    },
+    "learning": {
+      "title": "Learning",
+      "items": [{ "name": "GraphQL" }, { "name": "Go" }]
     }
   }
 }
